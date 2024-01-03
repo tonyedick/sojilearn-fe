@@ -1,0 +1,34 @@
+import { Link } from 'react-router-dom'
+
+export default function SimplifyAdmit() {
+  return (
+    <div>
+        <section className="gray">
+        <div className="container">
+
+            <div className="row align-items-center justify-content-between">
+                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div className="lmp_caption">
+                        <span className="theme-cl">Join over 5,000 International Students</span>
+                        <h2 className="mb-3">We simplify international admissions for students.</h2>
+                        <p>Sojilearn helps students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential. </p>
+                        <p>We help students navigate & assess their journey thus far, matching them to personalised mentors, counsels them towards their higher education dream with an employability lens, and makes sure that everyone punched way above their weight to make dreams come alive and truly be able to level up.</p>
+                        <div className="foot-news-last mt-4">
+                            <div className="inline_btn">
+								<Link to="http://127.0.0.1:8000" className="btn theme-bg text-white">Access Your Student Dashboard</Link>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                    <div className="lmp_thumb">
+                        <img src="assets/img/news.png" className="img-fluid" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+  )
+}
