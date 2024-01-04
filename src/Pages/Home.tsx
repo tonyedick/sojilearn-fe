@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../Components/Banner';
 import AppLayout from '../Components/Layouts/AppLayout';
 import Explore from '../Components/Explore';
-import StudyInUK from '../Components/StudyInUk';
+import StudyInUKCom from '../Components/StudyInUkCom';
 import StudyInCanada from '../Components/StudyInCanada';
 import Steps from '../Components/Steps';
 import News from '../Components/News';
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Explore />
         <Steps />
-        <StudyInUK />
+        <StudyInUKCom />
         <SimplifyAdmit />
         <StudyInCanada />
         <FAQ />

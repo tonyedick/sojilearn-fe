@@ -11,7 +11,7 @@ export default function News() {
                 <div className="col-lg-7 col-md-8">
                     <div className="sec-heading center">
                         <h2>Latest News &amp; <span className="theme-cl">Articles</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <p>Explore New Destinations.</p>
                     </div>
                 </div>
             </div>

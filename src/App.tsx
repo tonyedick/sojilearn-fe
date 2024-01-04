@@ -7,6 +7,7 @@ import Contact from './Pages/Contact';
 import About from './Pages/About';
 import Blog from './Pages/Blog';
 import ScrollToTop from './Components/ScrollToTop';
+import StudyInUK from './Pages/StudyInUK';
 
 const NotFound = React.lazy(() => import('./Pages/NotFound'))
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/not-found" element={<NotFound />} />
+          <Route path="/study-in-uk" element={<StudyInUK />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
       </Suspense>

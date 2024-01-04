@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function StudyInUK() {
+export default function StudyInUkCom() {
   return (
     <div>
         <section className="white">
@@ -27,7 +27,7 @@ export default function StudyInUK() {
                     </div>
 
                     <div className="inline_btn">
-                        <Link to="/blog" className="btn theme-bg text-white">Read More</Link>
+                        <Link to="/study-in-uk" className="btn theme-bg text-white">Read More</Link>
                     </div>
                 </div>
             </div>
