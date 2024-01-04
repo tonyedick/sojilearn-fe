@@ -1,11 +1,27 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import bakimage from "../assets/img/uk_banner.jpg"; 
+import bakimageLarge from "../assets/img/uk_banner.jpg";
+import bakimageSmall from "../assets/img/uk_banner_small.jpeg"; 
 import flag from "../assets/img/uk_icon.webp";
 
 export default function BannerStudyInUk() {
+    const [backgroundImage, setBackgroundImage] = useState(bakimageLarge);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setBackgroundImage(window.innerWidth <= 796 ? bakimageSmall : bakimageLarge);
+      };
+  
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
   return (
     <>    
-        <div className="hero_banner image-cover image_bottom h6_bg pt-0" style={{backgroundImage: `url(${bakimage})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundColor: "black"}}>
+        <div className="hero_banner image-cover image_bottom h6_bg pt-0" style={{backgroundImage: `url(${backgroundImage})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundColor: "black"}}>
           <div className="container" >
               <div className="row align-items-center">
                     <div className="simple-search-wrap">
@@ -21,7 +37,7 @@ export default function BannerStudyInUk() {
           </div>
         </div>
           {/* // <!-- ============================ Hero Banner End ================================== --> */}
-        {/* <section className="p-0">
+        <section className="p-0">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-12 col-md-12 col-sm-12">
@@ -31,8 +47,9 @@ export default function BannerStudyInUk() {
                                     <div className="dro_140">
                                         <div className="dro_141 de"><i className="fa fa-journal-whills"></i></div>
                                         <div className="dro_142">
-                                            <h6>Research & Discovery</h6>
-                                            <p>Dive into a world of diverse destinations, prestigious universities, and exciting courses.</p>
+                                            <h6>AFTER 12TH / UG</h6>
+                                            <p><strong>How to Apply: </strong>All UG Applications are submitted through UCAS.</p>
+                                            <p><strong>Cost Estimate: </strong>£9,000 - 30,000 per year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -40,8 +57,9 @@ export default function BannerStudyInUk() {
                                     <div className="dro_140">
                                         <div className="dro_141 de"><i className="fa fa-business-time"></i></div>
                                         <div className="dro_142">
-                                            <h6>Shortlisting</h6>
-                                            <p>Share your profile, and let us recommend the best-matched universities and courses for you.</p>
+                                            <h6>MASTERS</h6>
+                                            <p><strong>How to Apply: </strong>PG applications are directly sent via online or offline modes.</p>
+                                            <p><strong>Cost Estimate: </strong>£15,000 - 35,000 per year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,8 +67,9 @@ export default function BannerStudyInUk() {
                                     <div className="dro_140">
                                         <div className="dro_141 de"><i className="fa fa-user-shield"></i></div>
                                         <div className="dro_142">
-                                            <h6>Applications & Offers</h6>
-                                            <p>Stay Ahead with Real-Time Updates on your Applications from our partner universities</p>
+                                            <h6>MBA</h6>
+                                            <p><strong>How to Apply: </strong>MBA applications are submitted directly to the universities.</p>
+                                            <p><strong>Cost Estimate: </strong>£12,000 - 80,000 per year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +79,7 @@ export default function BannerStudyInUk() {
                 </div>
 
             </div>
-        </section> */}
+        </section>
     </>
   )
 }

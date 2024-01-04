@@ -12,10 +12,10 @@ export default function RequirementsUK() {
     <section>
     <div className="container">
         <div className="row justify-content-center">
-            <div className="col-lg-8 col-md-8">
+            <div className="col-lg-12 col-md-8">
                 <div className="sec-heading center">
-                    <h1>Admission Requirements for <span className="theme-cl">United Kingdom Study Abroad</span></h1>
-                    <p className="h3">Here are the major requirements to study in UK which you need to ensure while applying to a UK university:</p>
+                    <h2>Admission Requirements for <span className="theme-cl">United Kingdom Study Abroad</span></h2>
+                    <p className="h6">Here are the major requirements to study in UK which you need to ensure while applying to a UK university:</p>
                 </div>
             </div>
         </div>

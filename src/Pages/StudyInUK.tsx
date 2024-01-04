@@ -6,6 +6,7 @@ import StudyInUKFull from '../Components/StudyInUkFull';
 import CTA from '../Components/CTA';
 import FAQUK from '../Components/FAQUK';
 import RequirementsUK from '../Components/RequirementsUK';
+import PostUniUK from '../Components/PostUniUK';
 // import { CardsCarousel } from '../Components/CardsCarousel';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <ExploreUK />
         <StudyInUKFull />
         <RequirementsUK />
+        <PostUniUK />
         {/* <CardsCarousel /> */}
         <FAQUK />
         <CTA />

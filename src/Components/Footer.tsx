@@ -35,12 +35,13 @@ export default function Footer() {
         
                                 <div className="col-lg-4 col-md-4">
                                     <div className="footer_widget">
-                                        <h4 className="widget_title">Elearning</h4>
+                                        <h4 className="widget_title">Destinations</h4>
                                         <ul className="footer-menu">
-                                            <li><Link to="/">Courses<span className="new">New</span></Link></li>
-                                            <li><Link to="/">Countries</Link></li>
-                                            <li><Link to="/">Testimonials<span className="new">New</span></Link></li>
-                                            <li><Link to="/">Videos</Link></li>
+                                            <li><Link to="/study-in-uk">Study in UK<span className="new">New</span></Link></li>
+                                            <li><Link to="/study-in-canada">Study in Canada</Link></li>
+                                            <li><Link to="/study-in-usa">Study in USA<span className="new">New</span></Link></li>
+                                            <li><Link to="/">Study in Ireland</Link></li>
+                                            <li><Link to="/">Study in Dubai</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +52,6 @@ export default function Footer() {
                                         <ul className="footer-menu">
                                             <li><Link to="/about">About</Link></li>
                                             <li><Link to="/blog">Blog</Link></li>
-                                            <li><Link to="/">Pricing</Link></li>
                                             <li><Link to="http://127.0.0.1:8000/register" target="_blank">Join Us</Link></li>
                                             <li><Link to="http://127.0.0.1:8000" target="_blank">Login</Link></li>
                                         </ul>

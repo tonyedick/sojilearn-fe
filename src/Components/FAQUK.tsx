@@ -1,20 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 export default function FAQUK() {
   return (
     
-    <section>
+    <section className="gray">
         <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-7 col-md-8">
+            <div className="row justify-content-left">
+                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div className="sec-heading center">
                         <h2>Frequently Asked <span className="theme-cl">Questions</span></h2>
                     </div>
-                </div>
-            </div>
-            <div className="row justify-content-center">
-                <div className="col-xl-9 col-lg-10 col-md-12 col-sm-12">
                     <div id="accordionExample" className="accordion">
 
                         <div className="card">
@@ -74,10 +69,9 @@ export default function FAQUK() {
 
                     </div>
                 </div>
-
-                <div className="foot-news-last mt-4">
-                    <div className="inline_btn">
-                        <Link to="http://127.0.0.1:8000" className="btn theme-bg text-white">Talk to an Expert Counsellor for FREE</Link>
+                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div className="lmp_thumb">
+                        <img src="../assets/img/side-1.png" className="img-fluid" alt=""/>
                     </div>
                 </div>
             </div>
