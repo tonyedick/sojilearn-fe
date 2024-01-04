@@ -7,7 +7,8 @@ import CTA from '../Components/CTA';
 import FAQUK from '../Components/FAQUK';
 import RequirementsUK from '../Components/RequirementsUK';
 import PostUniUK from '../Components/PostUniUK';
-// import { CardsCarousel } from '../Components/CardsCarousel';
+import PartTimeCareersUK from '../Components/PartTimeCareersUK';
+import CustomScroll from '../Components/CustomScroll';
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <StudyInUKFull />
         <RequirementsUK />
         <PostUniUK />
-        {/* <CardsCarousel /> */}
+        <PartTimeCareersUK />
+        <CustomScroll />
         <FAQUK />
         <CTA />
         </>
