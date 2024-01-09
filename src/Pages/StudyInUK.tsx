@@ -1,16 +1,16 @@
 import React from 'react';
-import BannerStudyInUk from '../Components/BannerStudyInUk';
+import BannerStudyInUk from '../Components/UK/BannerStudyInUk';
 import AppLayout from '../Components/Layouts/AppLayout';
-import ExploreUK from '../Components/ExploreUK';
-import StudyInUKFull from '../Components/StudyInUkFull';
-import CTA from '../Components/CTA';
-import FAQUK from '../Components/FAQUK';
-import RequirementsUK from '../Components/RequirementsUK';
-import PostUniUK from '../Components/PostUniUK';
-import PartTimeCareersUK from '../Components/PartTimeCareersUK';
-import CustomScroll from '../Components/CustomScroll';
+import ExploreUK from '../Components/UK/ExploreUK';
+import StudyInUKFull from '../Components/UK/StudyInUkFull';
+import CTAUK from '../Components/UK/CTAUK';
+import FAQUK from '../Components/UK/FAQUK';
+import RequirementsUK from '../Components/UK/RequirementsUK';
+import PostUniUK from '../Components/UK/PostUniUK';
+import PartTimeCareersUK from '../Components/UK/PartTimeCareersUK';
+// import CustomScroll from '../Components/CustomScroll';
 
-export default function Home() {
+export default function StudyInUK() {
   return (
     <AppLayout>
         <>
@@ -20,9 +20,9 @@ export default function Home() {
         <RequirementsUK />
         <PostUniUK />
         <PartTimeCareersUK />
-        <CustomScroll />
+        {/* <CustomScroll /> */}
         <FAQUK />
-        <CTA />
+        <CTAUK />
         </>
     </AppLayout>
   )

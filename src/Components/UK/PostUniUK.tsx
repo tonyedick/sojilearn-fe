@@ -1,9 +1,9 @@
 import React from 'react';
-import cost from "../assets/img/cost.webp";
-import rent from "../assets/img/rent.svg";
-import food from "../assets/img/food.svg";
-import transport from "../assets/img/transport.svg";
-import misc from "../assets/img/misc.svg";
+import cost from "../../assets/img/cost.webp";
+import rent from "../../assets/img/rent.svg";
+import food from "../../assets/img/food.svg";
+import transport from "../../assets/img/transport.svg";
+import misc from "../../assets/img/misc.svg";
 
 export default function PostUniUK() {
   return (

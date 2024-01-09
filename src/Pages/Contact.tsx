@@ -1,8 +1,51 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-import AppLayout from '../Components/Layouts/AppLayout'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import AppLayout from '../Components/Layouts/AppLayout';
+import { Link } from 'react-router-dom';
+
+type FormValues = {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  message: string;
+};
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  const submit = async (data: FormValues) => {
+    try {
+      const apiUrl = `${process.env.REACT_APP_BASEURL}/api/contactus`;
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success('Submitted successfully, we will get back to you shortly');
+        reset();
+      } else {
+        const errorMessage = result?.message?.content?.[0] || 'Something went wrong, please try again!';
+        toast.error(errorMessage);
+      }
+    } catch (error) {
+      console.error('An unexpected error occurred:', error);
+      toast.error('An unexpected error occurred, please try again!');
+    }
+  };
   return (
     <AppLayout>
         <>
@@ -31,7 +74,13 @@ export default function Contact() {
                 <div className="row align-items-start">
 
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                        <form action="{{Route('contact.store')}}" method="POST" >
+                        <form 
+                            action="."
+                            method="post"
+                            autoComplete="off"
+                            encType="multipart/form-data" 
+                            onSubmit={handleSubmit(submit)}
+                        >
                             <div className="form-group">
                                 <h4>We'd love to here from you</h4>
                                 <span>Send a message and we'll respond as soon as possible </span>
@@ -40,31 +89,47 @@ export default function Contact() {
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                     <div className="form-group">
                                         <label>Name *</label>
-                                        <input type="text" name="name" className="form-control" placeholder="Name" required />
+                                        <input 
+                                            {...register('name', {
+                                            required: 'Name is required',
+                                            })}
+                                            type="text" name="name" className="form-control" placeholder="Name" />
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                     <div className="form-group">
                                         <label>Email *</label>
-                                        <input type="email" name="email" className="form-control" placeholder="Email" required />
+                                        <input 
+                                            {...register('email', {
+                                                required: 'Email is required',
+                                            })}
+                                            type="email" name="email" className="form-control" placeholder="Email" />
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                     <div className="form-group">
                                         <label>Company</label>
-                                        <input type="text" name="company" className="form-control" />
+                                        <input 
+                                            {...register('company')}
+                                            type="text" name="company" className="form-control" />
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                     <div className="form-group">
                                         <label>Phone</label>
-                                        <input type="tel" name="phone" className="form-control" />
+                                        <input 
+                                            {...register('phone')}
+                                            type="tel" name="phone" className="form-control" />
                                     </div>
                                 </div>
                                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div className="form-group">
                                         <label>Your Message *</label>
-                                        <textarea name="message" required className="form-control"></textarea>
+                                        <textarea 
+                                             {...register('message', {
+                                                required: 'Message is required',
+                                            })}
+                                            name="message" required className="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">

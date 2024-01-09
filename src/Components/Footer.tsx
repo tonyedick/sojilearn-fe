@@ -26,9 +26,7 @@ export default function Footer() {
                                         <ul className="footer-menu">
                                             <li><Link to="/">Home</Link></li>
                                             <li><Link to="/about">About US</Link></li>
-                                            <li><Link to="/">Services</Link></li>
                                             <li><Link to="/contact">Contact Page</Link></li>
-                                            <li><Link to="/blog">Blog</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +49,7 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/about">About</Link></li>
-                                            <li><Link to="/blog">Blog</Link></li>
+                                            <li><Link to="/">Blog<span className="new">Coming Soon</span></Link></li>
                                             <li><Link to="http://127.0.0.1:8000/register" target="_blank">Join Us</Link></li>
                                             <li><Link to="http://127.0.0.1:8000" target="_blank">Login</Link></li>
                                         </ul>
@@ -63,12 +61,11 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-    
             <div className="footer-bottom">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12 text-center">
-                            <p className="mb-0">© 2023 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn</Link>.</p>
+                            <p className="mb-0">© 2024 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn</Link>.</p>
                         </div>
                     </div>
                 </div>

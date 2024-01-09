@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import capital from "../assets/img/capital.webp";
-import population from "../assets/img/population.webp";
-import language from "../assets/img/language.webp";
-import students from "../assets/img/students.webp";
-import gdp from "../assets/img/gdp.webp";
-import currency from "../assets/img/currency.webp";
-import dialing from "../assets/img/dialing.webp";
+import capital from "../../assets/img/capital.webp";
+import population from "../../assets/img/population.webp";
+import language from "../../assets/img/language.webp";
+import students from "../../assets/img/students.webp";
+import gdp from "../../assets/img/gdp.webp";
+import currency from "../../assets/img/currency.webp";
+import dialing from "../../assets/img/dialing.webp";
 
 export default function ExploreUK() {
   return (
@@ -45,7 +45,7 @@ export default function ExploreUK() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Population</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>68 Mn</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>68 Million</li>
                                 </ul>
                             </div>
                         </div>

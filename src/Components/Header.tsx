@@ -61,7 +61,7 @@ export default function Header() {
                     <Link to="/" onClick={handleNavLinkClick}>Home</Link>
                 </li>
                 <li className={activeLink === '/search' ? 'active' : ''}>
-                    <Link to="/search" onClick={handleNavLinkClick}>Find Course</Link>
+                    <Link to="/" onClick={handleNavLinkClick}>Find Course</Link>
                 </li>
                 <li className={activeLink === '/about' ? 'active' : ''}>
                     <Link to="/about" onClick={handleNavLinkClick}>About Us</Link>
@@ -70,7 +70,7 @@ export default function Header() {
                     <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
                 </li>
                 <li className={activeLink === '/blog' ? 'active' : ''}>
-                    <Link to="/blog" onClick={handleNavLinkClick}>Blog</Link>
+                    <Link to="/" onClick={handleNavLinkClick}>Blog</Link>
                 </li>
             </ul>
             <ul className="nav-menu nav-menu-social align-to-right">

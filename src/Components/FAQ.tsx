@@ -62,10 +62,10 @@ export default function FAQ() {
                         </div>
 
                         <div className="card">
-                            <div id="headingFour" className="card-header bg-white shadow-sm border-0">
-                            <h6 className="mb-0 accordion_title"><a href="/" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" className="d-block position-relative collapsed text-dark collapsible-link py-2">What are the countries you process admission for?</a></h6>
+                            <div id="headingFive" className="card-header bg-white shadow-sm border-0">
+                            <h6 className="mb-0 accordion_title"><a href="/" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" className="d-block position-relative collapsed text-dark collapsible-link py-2">What are the countries you process admission for?</a></h6>
                             </div>
-                            <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" className="collapse">
+                            <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
                                 <p>Currently, our partner universities are in UK, USA, Canada, Ireland and Dubai.</p>
                             </div>

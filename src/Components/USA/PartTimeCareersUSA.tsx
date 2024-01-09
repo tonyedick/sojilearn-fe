@@ -1,22 +1,22 @@
 import React from 'react';
-import arts from "../assets/img/arts.png";
-import architecture from "../assets/img/architecture.png";
-import socialsciences from "../assets/img/socialsciences.png";
-import law from "../assets/img/law.png";
-import engineering from "../assets/img/engineering.png";
-import design from "../assets/img/design.png";
-import medicine from "../assets/img/medicine.png";
-import naturalsciences from "../assets/img/naturalsciences.png";
+import arts from "../../assets/img/arts.png";
+import architecture from "../../assets/img/architecture.png";
+import socialsciences from "../../assets/img/socialsciences.png";
+import law from "../../assets/img/law.png";
+import engineering from "../../assets/img/engineering.png";
+import design from "../../assets/img/design.png";
+import medicine from "../../assets/img/medicine.png";
+import naturalsciences from "../../assets/img/naturalsciences.png";
 
-export default function PartTimeCareersUK() {
+export default function PartTimeCareersUSA() {
   return (
     <section className="white">
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-lg-10 col-md-8">
                 <div className="sec-heading center">
-                    <h2>Part time Careers and Work Opportunities in United Kingdom</h2>
-                    <p className="h6">Studying in the UK offers a variety of experiences. The cultural and traditional values of the UK attract several international students every year. The popular areas of employment in UK are as follows:</p>
+                    <h2>Part time Careers and Work Opportunities in United States</h2>
+                    <p className="h6">Studying in the USA offers a variety of experiences. The flexibility, growth opportunities and diversity in US universities attract several international students every year. The popular areas of employment in the USA are as follows:</p>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@ export default function PartTimeCareersUK() {
                         <div className="row p-4 rounded" style={{backgroundColor: '#8A5DAF'}}>
                             <div className="col text-center">
                                 <h5 className="text-white">Post Study Work VISA</h5>
-                                <p className="text-white">Students completing a Bachelors or Masters program get a work VISA of 2 years. PhD graduates get a work VISA of 3 years.</p>
+                                <p className="text-white">With F-1 Visa: Students completing a Bachelors or Masters program can get Optional Practical Training (OPT) extension and stay for 12 months in the USA. Students pursuing STEM courses get an additional 17 months (making a total of 29 months) under STEM OPT extension. With J-1 or M-1 Visa: Students get a grace period of 30 days to apply for a work visa.</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export default function PartTimeCareersUK() {
                         <div className="row p-4 rounded" style={{backgroundColor: '#8A5DAF'}}>
                             <div className="col text-center">
                                 <h5 className="text-white">Part-time Work Opportunities</h5>
-                                <p className="text-white">Maximum of 20 hours per week for regular students. Maximum of 10 hours per week for language center students</p>
+                                <p className="text-white">Students are allowed a maximum of 20 hours per week. With F-1 Visa: on-campus work is allowed and off-campus work is permitted only after the first academic year. Maximum of 40 hours per week during breaks.</p>
                             </div>
                         </div>
                     </div>

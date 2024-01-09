@@ -77,7 +77,7 @@ export default function About() {
                                 <h6 className="mb-0 ml-3">And a lot more</h6>
                                 </div>
                             </div>
-                            <div className="text-left mt-4"><Link to="/register" className="btn btn-md text-light theme-bg">Register</Link></div>
+                            <div className="text-left mt-4"><Link to="http://127.0.0.1:8000/register" className="btn btn-md text-light theme-bg">Register</Link></div>
                         </div>
                     </div>
 

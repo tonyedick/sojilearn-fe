@@ -1,0 +1,3 @@
+{/* <Link to={`/blog-detail/${item?.id}?featuredImage=${item?.featuredImage}&title=${encodeURIComponent(item?.title)}&detailsOne=${encodeURIComponent(item?.detailsOne)}&detailsTwo=${encodeURIComponent(item?.detailsTwo)}&detailsThree=${encodeURIComponent(item?.detailsThree)}&image=${item?.image}&category=${item?.category}&created_at=${item?.created_at}`} target="_blank">Read More</Link> */}
+
+export{}

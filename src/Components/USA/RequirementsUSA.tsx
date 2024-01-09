@@ -1,21 +1,21 @@
 import React from 'react';
-import copy from "../assets/img/copy.webp";
-import gmat from "../assets/img/gmat.webp";
-import lor from "../assets/img/lor.webp";
-import cv from "../assets/img/cv.webp";
-import toefl from "../assets/img/toefl.webp";
-import portfolio from "../assets/img/portfolio.webp";
-import statement from "../assets/img/statement.webp";
+import copy from "../../assets/img/copy.webp";
+import gmat from "../../assets/img/gmat.webp";
+import lor from "../../assets/img/lor.webp";
+import cv from "../../assets/img/cv.webp";
+import toefl from "../../assets/img/toefl.webp";
+import portfolio from "../../assets/img/portfolio.webp";
+import statement from "../../assets/img/statement.webp";
 
-export default function RequirementsUK() {
+export default function RequirementsCA() {
   return (
     <section>
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-lg-12 col-md-8">
                 <div className="sec-heading center">
-                    <h2>Admission Requirements for <span className="theme-cl">UK</span></h2>
-                    <p className="h6">Here are the major requirements to study in UK which you need to ensure while applying to a UK university:</p>
+                    <h2>Admission Requirements for <span className="theme-cl">USA</span></h2>
+                    <p className="h6">Here are the major requirements to study in the USA, which you need to ensure while applying to a USA university:</p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ export default function RequirementsUK() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs</h5>
+                            <h5 className="mb-0 ml-3">ACT/SAT/LSAT for UG programs, GMAT/GRE scores for PG programs</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -43,7 +43,7 @@ export default function RequirementsUK() {
                             <div className="list_crs_img">
                                 <img src={lor} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Letter of Recommendations (LORs)</h5>
+                            <h5 className="mb-0 ml-3">Academic Reference Letters, the number of reference letters depends from university to university</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -51,7 +51,23 @@ export default function RequirementsUK() {
                             <div className="list_crs_img">
                                 <img src={cv} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">A CV (if applicable)</h5>
+                            <h5 className="mb-0 ml-3">CV/ Resume</h5>
+                        </div>
+                    </div>
+                    <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
+                        <div className="d-flex align-items-center">
+                            <div className="list_crs_img">
+                                <img src={portfolio} className="img-fluid" alt="" />
+                            </div>
+                            <h5 className="mb-0 ml-3">Evidence of funds</h5>
+                        </div>
+                    </div>
+                    <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
+                        <div className="d-flex align-items-center">
+                            <div className="list_crs_img">
+                                <img src={toefl} className="img-fluid" alt="" />
+                            </div>
+                            <h5 className="mb-0 ml-3">Certificates of extracurricular activities</h5>
                         </div>
                     </div>
                 </div>
@@ -64,7 +80,7 @@ export default function RequirementsUK() {
                             <div className="list_crs_img">
                                 <img src={toefl} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">TOEFL/IELTS/C1 Advanced scores</h5>
+                            <h5 className="mb-0 ml-3">Proof of English proficiency (TOEFL/IELTS test scores)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -72,7 +88,23 @@ export default function RequirementsUK() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Academic Transcripts</h5>
+                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs</h5>
+                        </div>
+                    </div>
+                    <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
+                        <div className="d-flex align-items-center">
+                            <div className="list_crs_img">
+                                <img src={gmat} className="img-fluid" alt="" />
+                            </div>
+                            <h5 className="mb-0 ml-3">Academic Transcripts from the previous study</h5>
+                        </div>
+                    </div>
+                    <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
+                        <div className="d-flex align-items-center">
+                            <div className="list_crs_img">
+                                <img src={lor} className="img-fluid" alt="" />
+                            </div>
+                            <h5 className="mb-0 ml-3">Letters of recommendation from the employer/manager (if applicable)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">

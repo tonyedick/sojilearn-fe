@@ -5,9 +5,11 @@ import avatarApp from '../src/assets/img/favicon.png';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
-import Blog from './Pages/Blog';
+import BlogDetail from './Pages/BlogDetail';
 import ScrollToTop from './Components/ScrollToTop';
 import StudyInUK from './Pages/StudyInUK';
+import StudyInCanada from './Pages/StudyInCanada';
+import StudyInUSA from './Pages/StudyInUSA';
 
 const NotFound = React.lazy(() => import('./Pages/NotFound'))
 
@@ -49,9 +51,11 @@ function App() {
           {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog-detail/:id" element={<BlogDetail />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="/study-in-uk" element={<StudyInUK />} />
+          <Route path="/study-in-usa" element={<StudyInUSA />} />
+          <Route path="/study-in-canada" element={<StudyInCanada />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
       </Suspense>
