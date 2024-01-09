@@ -18,6 +18,7 @@ export const store = configureStore({
 
     // CATEGORIES
     categories: CategoryReducer,
+
   },
   // devTools: false
 });

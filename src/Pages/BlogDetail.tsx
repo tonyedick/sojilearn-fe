@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
 import avatar from "../assets/img/dick.jpg";
+import toast from 'react-hot-toast';
 import post1 from "../assets/img/b-6.png";
 import { AppDispatch, RootState } from '../state/store';
 import { fetchBlogById } from '../state/blogs/blogSlice';
@@ -11,7 +13,15 @@ import { fetchCategories, selectCategoriesState } from '../state/blogs/categorie
 import AppLayout from '../Components/Layouts/AppLayout';
 import { fetchPosts } from '../state/blogs/post';
 
+type FormValues = {
+    blog_id: number;
+    name: string;
+    email: string;
+    comment: string;
+  };
+
 export default function BlogDetail() {
+
     const { id } = useParams<{ id: string }>();
     const dispatch = useDispatch<AppDispatch>();
     const { blog, featuredImage, image } = useSelector(
@@ -20,6 +30,43 @@ export default function BlogDetail() {
     const { posts } = useSelector(
         (state: RootState) => state.posts
     );
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm<FormValues>();
+
+    const submit = async (data: FormValues) => {
+        try {
+          const apiUrl = `${process.env.REACT_APP_BASEURL}/api/comment`;
+          
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ...data,
+                blog_id: Number(id), 
+            }),
+          });
+    
+          const result = await response.json();
+    
+          if (response.ok) {
+            toast.success('Comment received! Waiting for admin approval');
+            reset();
+          } else {
+            const errorMessage = result?.message?.content?.[0] || 'Something went wrong, please try again!';
+            toast.error(errorMessage);
+          }
+        } catch (error) {
+          console.error('An unexpected error occurred:', error);
+          toast.error('An unexpected error occurred, please try again!');
+        }
+      };
 
     useEffect(() => {
         dispatch(fetchBlogById(Number(id)));
@@ -109,28 +156,96 @@ export default function BlogDetail() {
                         <div className="article_detail_wrapss single_article_wrap format-standard">
                             <div className="comment-area">
                                 <div className="comment-box submit-form">
-                                    <h3 className="reply-title">Post Comment</h3>
+                                    {/* <div className="box-comment">
+                                        <h3 className="comments-title">2 Comments</h3>
+                                        <ol className="comment-list">
+                                            <li className="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="comment-2">
+                                                <div className="the-comment">
+                                                    <div className="comment-box">
+                                                        <div className="clearfix">
+                                                            
+                                                            <div className="d-sm-flex">
+                                                                <div className="inner-left">
+                                                                    <h3 className="name-comment"><a href="https://demoapus1.com/skillup" className="url" rel="ugc">admin</a></h3>
+                                                                    <div className="date text-theme">April 12, 2022</div>
+                                                                </div>
+                                                                <div className="ms-auto">
+                                                                    <div className="comment-author">
+                                                                        <a rel="nofollow" className="comment-reply-link" href="https://demoapus1.com/skillup/lets-know-how-skillup-work-fast-and-secure-3/?replytocom=2#respond" data-commentid="2" data-postid="40" data-belowelement="comment-2" data-respondelement="respond" data-replyto="Reply to admin" aria-label="Reply to admin"><span className="text-reply"><i className="ti-back-left"></i>Reply</span></a>								
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="comment-text">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                            </li>
+                                            <li className="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-3">
+                                                <div className="the-comment">
+                                                    <div className="comment-box">
+                                                        <div className="clearfix">
+                                                            
+                                                            <div className="d-sm-flex">
+                                                                <div className="inner-left">
+                                                                    <h3 className="name-comment"><a href="https://demoapus1.com/skillup" className="url" rel="ugc">admin</a></h3>
+                                                                    <div className="date text-theme">April 12, 2022</div>
+                                                                </div>
+                                                                <div className="ms-auto">
+                                                                    <div className="comment-author">
+                                                                        <a rel="nofollow" className="comment-reply-link" href="https://demoapus1.com/skillup/lets-know-how-skillup-work-fast-and-secure-3/?replytocom=3#respond" data-commentid="3" data-postid="40" data-belowelement="comment-3" data-respondelement="respond" data-replyto="Reply to admin" aria-label="Reply to admin"><span className="text-reply"><i className="ti-back-left"></i>Reply</span></a>								</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="comment-text">
+                                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+					                </div> */}
+                                    <h3 className="reply-title">Leave a Comment</h3>
                                     <div className="comment-form">
-                                        <form action="#">
+                                        <form 
+                                            action="."
+                                            method="post"
+                                            autoComplete="off"
+                                            encType="multipart/form-data" 
+                                            onSubmit={handleSubmit(submit)}
+                                        >
                                             <div className="row">
                                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Your Name" />
+                                                        <input 
+                                                            {...register('name', {
+                                                            required: 'Name is required',
+                                                            })}
+                                                        type="text" name="name" className="form-control" placeholder="Your Name" />
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6 col-md-6 col-sm-12">
                                                     <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="Your Email" />
+                                                        <input 
+                                                             {...register('email', {
+                                                                required: 'Email is required',
+                                                                })}
+                                                        type="email" name="email" className="form-control" placeholder="Your Email" />
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-12 col-md-12 col-sm-12">
                                                     <div className="form-group">
-                                                        <textarea name="comment" className="form-control" cols={30} rows={6} placeholder="Type your comments...."></textarea>
+                                                        <textarea 
+                                                            {...register('comment', {
+                                                                required: 'Comment is required',
+                                                            })}
+                                                        name="comment" className="form-control" cols={30} rows={6} placeholder="Type your comments...."></textarea>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-12 col-md-12 col-sm-12">
                                                     <div className="form-group">
-                                                        <Link to="/" className="btn theme-bg text-white">Submit Now</Link>
+                                                        <button className="btn theme-bg text-white">Submit Now</button>
                                                     </div>
                                                 </div>
                                             </div>
