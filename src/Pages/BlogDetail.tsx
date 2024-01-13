@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../state/store';
 import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
 import Moment from "moment";
@@ -7,7 +8,6 @@ import { dateFormat } from "../Helpers/types";
 import avatar from "../assets/img/dick.jpg";
 import toast from 'react-hot-toast';
 import post1 from "../assets/img/b-6.png";
-import { AppDispatch, RootState } from '../state/store';
 import { fetchBlogById } from '../state/blogs/blogSlice';
 import { fetchCategories, selectCategoriesState } from '../state/blogs/categoriesSlice';
 import AppLayout from '../Components/Layouts/AppLayout';

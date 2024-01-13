@@ -48,7 +48,6 @@ export default function Footer() {
                                     <div className="footer_widget">
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
-                                            <li><Link to="/about">About</Link></li>
                                             <li><Link to="/">Blog<span className="new">Coming Soon</span></Link></li>
                                             <li><Link to="http://127.0.0.1:8000/register" target="_blank">Join Us</Link></li>
                                             <li><Link to="http://127.0.0.1:8000" target="_blank">Login</Link></li>

@@ -69,8 +69,14 @@ export default function Header() {
                 <li className={activeLink === '/contact' ? 'active' : ''}>
                     <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
                 </li>
-                <li className={activeLink === '/blog' ? 'active' : ''}>
-                    <Link to="/" onClick={handleNavLinkClick}>Blog</Link>
+                <li className={activeLink === '/study-in-uk' ? 'active' : ''}>
+                    <Link to="/study-in-uk" onClick={handleNavLinkClick}>Study in UK</Link>
+                </li>
+                <li className={activeLink === '/study-in-canada' ? 'active' : ''}>
+                    <Link to="/study-in-canada" onClick={handleNavLinkClick}>Study in Canada</Link>
+                </li>
+                <li className={activeLink === '/study-in-usa' ? 'active' : ''}>
+                    <Link to="/study-in-usa" onClick={handleNavLinkClick}>Study in USA</Link>
                 </li>
             </ul>
             <ul className="nav-menu nav-menu-social align-to-right">
