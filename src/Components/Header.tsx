@@ -21,7 +21,7 @@ export default function Header() {
                       <div className="mobile_nav">
                           <ul>
                               <li>
-                                  <Link to="http://127.0.0.1:8000" data-toggle="modal" data-target="#login" className="crs_yuo12">
+                                  <Link to="https://portal.sojilearn.com" data-toggle="modal" data-target="#login" className="crs_yuo12">
                                       <span className="embos_45"><i className="fas fa-sign-in-alt"></i></span>
                                   </Link>
                               </li>
@@ -40,13 +40,13 @@ export default function Header() {
 
                       <ul className="nav-menu nav-menu-social align-to-right">
                           <li>
-                              <Link to="http://127.0.0.1:8000" className="alio_green" >
+                              <Link to="https://portal.sojilearn.com" className="alio_green" >
                                   <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
                               </Link>
                           </li>
 
                           <li className="add-listing theme-bg">
-                              <Link to="http://127.0.0.1:8000/register" className="text-white">Get Started</Link>
+                              <Link to="https://portal.sojilearn.com" className="text-white">Get Started</Link>
                           </li>
 
                       </ul>
