@@ -2,97 +2,162 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
-  const [activeLink, setActiveLink] = useState('');
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
-  const location = useLocation();
+  // const [activeLink, setActiveLink] = useState('');
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  // const location = useLocation();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 768);
+  //   };
 
-    window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);  // Empty dependency array ensures that this effect runs once on mount
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);  // Empty dependency array ensures that this effect runs once on mount
 
-  useEffect(() => {
-    setActiveLink(location.pathname);
-    setMobileNavOpen(false);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   setActiveLink(location.pathname);
+  //   setMobileNavOpen(false);
+  // }, [location.pathname]);
 
-  const toggleMobileNav = () => {
-    setMobileNavOpen(!isMobileNavOpen);
-  };
+  // const toggleMobileNav = () => {
+  //   setMobileNavOpen(!isMobileNavOpen);
+  // };
 
-  const handleNavLinkClick = () => {
-    if (isMobileNavOpen) {
-      setMobileNavOpen(false);
-    }
-  };
+  // const handleNavLinkClick = () => {
+  //   if (isMobileNavOpen) {
+  //     setMobileNavOpen(false);
+  //   }
+  // };
 
   return (
-    <div className={`header header-light dark-text ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
-      <div className="container">
-        <nav id="navigation" className={`navigation navigation-landscape ${activeLink === '/' ? 'active' : ''}`}>
-          <div className="nav-header">
-            <Link className="nav-brand" to="/">
-              <img src="assets/img/logo-dark.png" className="logo" alt="" />
-            </Link>
-            {isMobile && (
-              <div className="nav-toggle" onClick={toggleMobileNav}></div>
-            )}
-            <div className={`mobile_nav ${isMobileNavOpen ? 'show' : ''}`}>
-              <ul>
-                <li>
-                  <Link to="http://127.0.0.1:8000"  target="_blank" data-toggle="modal" data-target="#login" className="crs_yuo12">
-                    <span className="embos_45"><i className="fas fa-sign-in-alt"></i></span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+    // <div className={`header header-light dark-text ${isMobileNavOpen ? 'mobile-nav-open' : ''}`}>
+    //   <div className="container">
+    //     <nav id="navigation" className={`navigation navigation-landscape ${activeLink === '/' ? 'active' : ''}`}>
+    //       <div className="nav-header">
+    //         <Link className="nav-brand" to="/">
+    //           <img src="assets/img/logo-dark.png" className="logo" alt="" />
+    //         </Link>
+    //         {isMobile && (
+    //           <div className="nav-toggle" onClick={toggleMobileNav}></div>
+    //         )}
+    //         {/* <div className={`mobile_nav ${isMobileNavOpen ? 'show' : ''}`}>
+    //           <ul>
+    //             <li>
+    //               <Link to="http://127.0.0.1:8000"  target="_blank" data-toggle="modal" data-target="#login" className="crs_yuo12">
+    //                 <span className="embos_45"><i className="fas fa-sign-in-alt"></i></span>
+    //               </Link>
+    //             </li>
+    //           </ul>
+    //         </div> */}
+    //       </div>
+    //       <div className="nav-menus-wrapper">
+    //         <ul className="nav-menu">
+    //             <li className={activeLink === '/' ? 'active' : ''}>
+    //                 <Link to="/" onClick={handleNavLinkClick}>Home</Link>
+    //             </li>
+    //             <li className={activeLink === '/search' ? 'active' : ''}>
+    //                 <Link to="/" onClick={handleNavLinkClick}>Find Course</Link>
+    //             </li>
+    //             <li className={activeLink === '/about' ? 'active' : ''}>
+    //                 <Link to="/about" onClick={handleNavLinkClick}>About Us</Link>
+    //             </li>
+    //             <li className={activeLink === '/contact' ? 'active' : ''}>
+    //                 <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
+    //             </li>
+    //             <li className={activeLink === '/study-in-uk' ? 'active' : ''}>
+    //                 <Link to="/study-in-uk" onClick={handleNavLinkClick}>Study in UK</Link>
+    //             </li>
+    //             <li className={activeLink === '/study-in-canada' ? 'active' : ''}>
+    //                 <Link to="/study-in-canada" onClick={handleNavLinkClick}>Study in Canada</Link>
+    //             </li>
+    //             <li className={activeLink === '/study-in-usa' ? 'active' : ''}>
+    //                 <Link to="/study-in-usa" onClick={handleNavLinkClick}>Study in USA</Link>
+    //             </li>
+    //         </ul>
+    //         <ul className="nav-menu nav-menu-social align-to-right">
+    //           <li>
+    //             <Link to="http://127.0.0.1:8000/"  target="_blank" className="alio_green">
+    //               <i className="fas fa-sign-in-alt mr-1"></i>
+    //               <span className="dn-lg">Sign In</span>
+    //             </Link>
+    //           </li>
+    //           <li className="add-listing theme-bg">
+    //             <Link to="http://127.0.0.1:8000/register"  target="_blank" className="text-white">Get Started</Link>
+    //           </li>
+    //         </ul>
+    //       </div>
+    //     </nav>
+    //   </div>
+    // </div>
+      <div className="header header-light dark-text">
+          <div className="container">
+              <nav id="navigation" className="navigation navigation-landscape">
+                  <div className="nav-header">
+                      <Link className="nav-brand" to="#">
+                          <img src="assets/img/logo-dark.png" className="logo" alt="" />
+                      </Link>
+                      <div className="nav-toggle"></div>
+                      <div className="mobile_nav">
+                          <ul>
+                                  <li>
+                                      <Link to="javascript:void(0);" data-toggle="modal" data-target="#login" className="crs_yuo12">
+                                          <span className="embos_45"><i className="fas fa-sign-in-alt"></i></span>
+                                      </Link>
+                                  </li>
+
+                          </ul>
+                      </div>
+                  </div>
+                  <div className="nav-menus-wrapper">
+                      <ul className="nav-menu">
+
+                          <li className="<?php echo $tab = (isset($name) && str_contains($name,'main')) ? 'active' : '' ?>"><Link to="{{Route('main')}}">Home   </Link>
+
+                          </li>
+
+
+                          <li className="<?php echo $tab = (isset($name) && str_contains($name,'search')) ? 'active' : '' ?>"><Link to="{{Route('search')}}">Search Courses </Link></li>
+
+                          <li><Link to="#">Explore<span className="submenu-indicator"></span></Link>
+                              <ul className="nav-dropdown nav-submenu">
+
+                              </ul>
+                          </li><li><Link to="#">Pages<span className="submenu-indicator"></span></Link>
+                              <ul className="nav-dropdown nav-submenu">
+
+
+                                  <li><Link to="../blog">Blogs</Link></li>
+                                  <li><Link to="../pricing">Pricing</Link></li>
+                                  <li><Link to="../faq">FAQs</Link></li>
+                              </ul>
+                          </li>
+                          <li className="<?php echo $tab = (isset($name) && str_contains($name,'about')) ? 'active' : '' ?>"><Link to="../../../../../../about">About Us</Link></li>
+                          <li className="<?php echo $tab = (isset($name) && str_contains($name,'contact')) ? 'active' : '' ?>"><Link to="../../../../../../contact">Contact Us</Link></li>
+                          <li className="<?php echo $tab = (isset($name) && str_contains($name,'blog')) ? 'active' : '' ?>"><Link to="../../../../../../blog">Blog</Link></li>
+
+                      </ul>
+
+                      <ul className="nav-menu nav-menu-social align-to-right">
+                          <li>
+                              <Link to="{{ route('login') }}" className="alio_green" >
+                                  <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
+                              </Link>
+                          </li>
+
+                          <li className="add-listing theme-bg">
+                              <Link to="{{ route('register') }}" className="text-white">Get Started</Link>
+                          </li>
+
+                      </ul>
+                  </div>
+              </nav>
           </div>
-          <div className="nav-menus-wrapper">
-            <ul className="nav-menu">
-                <li className={activeLink === '/' ? 'active' : ''}>
-                    <Link to="/" onClick={handleNavLinkClick}>Home</Link>
-                </li>
-                <li className={activeLink === '/search' ? 'active' : ''}>
-                    <Link to="/" onClick={handleNavLinkClick}>Find Course</Link>
-                </li>
-                <li className={activeLink === '/about' ? 'active' : ''}>
-                    <Link to="/about" onClick={handleNavLinkClick}>About Us</Link>
-                </li>
-                <li className={activeLink === '/contact' ? 'active' : ''}>
-                    <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
-                </li>
-                <li className={activeLink === '/study-in-uk' ? 'active' : ''}>
-                    <Link to="/study-in-uk" onClick={handleNavLinkClick}>Study in UK</Link>
-                </li>
-                <li className={activeLink === '/study-in-canada' ? 'active' : ''}>
-                    <Link to="/study-in-canada" onClick={handleNavLinkClick}>Study in Canada</Link>
-                </li>
-                <li className={activeLink === '/study-in-usa' ? 'active' : ''}>
-                    <Link to="/study-in-usa" onClick={handleNavLinkClick}>Study in USA</Link>
-                </li>
-            </ul>
-            <ul className="nav-menu nav-menu-social align-to-right">
-              <li>
-                <Link to="http://127.0.0.1:8000/"  target="_blank" className="alio_green">
-                  <i className="fas fa-sign-in-alt mr-1"></i>
-                  <span className="dn-lg">Sign In</span>
-                </Link>
-              </li>
-              <li className="add-listing theme-bg">
-                <Link to="http://127.0.0.1:8000/register"  target="_blank" className="text-white">Get Started</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
-    </div>
+
   );
 }
