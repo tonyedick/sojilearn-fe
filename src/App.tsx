@@ -35,6 +35,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <FloatingWhatsApp
         phoneNumber={phoneNumber}
         accountName={accountName}
@@ -42,7 +43,6 @@ function App() {
         statusMessage={statusMessage}
         onSubmit={handleFormSubmit}
       />
-      <ScrollToTop />
       <Suspense fallback={loading}>
         <Routes>
           <Route path="/" element={<Home />} />
