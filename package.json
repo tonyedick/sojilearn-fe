@@ -6,9 +6,6 @@
   "author": "Dick Tonye <sojilearn@gmail.com>",
   "private": true,
   "dependencies": {
-    "@mantine/carousel": "^7.4.0",
-    "@mantine/core": "^7.4.0",
-    "@mantine/hooks": "^7.4.0",
     "@reduxjs/toolkit": "^2.0.1",
     "@tabler/icons-react": "^2.45.0",
     "@testing-library/jest-dom": "^5.17.0",
