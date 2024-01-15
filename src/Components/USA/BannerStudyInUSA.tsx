@@ -9,7 +9,7 @@ export default function BannerStudyInUSA() {
 
     useEffect(() => {
       const handleResize = () => {
-        setBackgroundImage(window.innerWidth <= 796 ? bakimageSmall : bakimageLarge);
+        setBackgroundImage(window.innerWidth <= 768 ? bakimageSmall : bakimageLarge);
       };
   
       handleResize();
@@ -21,7 +21,14 @@ export default function BannerStudyInUSA() {
   
   return (
     <>    
-        <div className="hero_banner image-cover image_bottom h6_bg pt-0" style={{backgroundImage: `url(${backgroundImage})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundColor: "black"}}>
+        <div className="hero_banner image-cover image_bottom h6_bg pt-0" 
+                style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundPosition: "center center",
+                backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+                backgroundColor: "black"
+                }}
+            >
           <div className="container" >
               <div className="row align-items-center">
                     <div className="simple-search-wrap">

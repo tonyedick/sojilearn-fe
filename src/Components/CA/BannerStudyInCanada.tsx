@@ -25,7 +25,7 @@ export default function BannerStudyInCanada() {
             style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundPosition: "center center",
-            backgroundSize: window.innerWidth <= 768 ? "contain" : "cover", // Adjust the background size for smaller screens
+            backgroundSize: window.innerWidth <= 768 ? "contain" : "cover", 
             backgroundColor: "black"
             }}
             >
