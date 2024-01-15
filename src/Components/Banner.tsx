@@ -13,7 +13,7 @@ export default function Banner() {
                               <h1 className="banner_title mb-4">Dreaming of <br />Studying Abroad?<br /><span className="light">Start planning today!</span></h1>
                               <p className="font-lg mb-4">The Most Comprehensive & Personalised Study Abroad Plan. <br />Obsessed with Student Success.</p>
                               <div className="inline_btn">
-                                  <Link to="http://127.0.0.1:8000/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>
+                                  <Link to="https://portal.sojilearn.com/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>
                               </div>
                           </div>
                       </div>

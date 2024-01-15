@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './nav.css';
+// import './nav.css';
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState('');
@@ -77,7 +77,7 @@ export default function Header() {
 
                       </ul>
                   </div>
-                  <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
+                  {/* <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} /> */}
               </nav>
           </div>
       </div>

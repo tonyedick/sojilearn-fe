@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bakimageLarge from "../../assets/img/canada_banner.jpeg";
-import bakimageSmall from "../../assets/img/uk_banner_small.jpeg"; 
-import flag from "../../assets/img/uk_icon.webp";
+import bakimageSmall from "../../assets/img/canada-banner-small.jpeg"; 
+import flag from "../../assets/img/canada-flag.webp";
 
 export default function BannerStudyInCanada() {
     const [backgroundImage, setBackgroundImage] = useState(bakimageLarge);
 
     useEffect(() => {
       const handleResize = () => {
-        setBackgroundImage(window.innerWidth <= 796 ? bakimageSmall : bakimageLarge);
+        setBackgroundImage(window.innerWidth <= 768 ? bakimageSmall : bakimageLarge);
       };
   
       handleResize();
@@ -21,7 +21,14 @@ export default function BannerStudyInCanada() {
   
   return (
     <>    
-        <div className="hero_banner image-cover image_bottom h6_bg pt-0" style={{backgroundImage: `url(${backgroundImage})`, backgroundPosition: "center center", backgroundSize: "cover", backgroundColor: "black"}}>
+        <div className="hero_banner image-cover image_bottom h6_bg pt-0" 
+            style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundPosition: "center center",
+            backgroundSize: window.innerWidth <= 768 ? "contain" : "cover", // Adjust the background size for smaller screens
+            backgroundColor: "black"
+            }}
+            >
           <div className="container" >
               <div className="row align-items-center">
                     <div className="simple-search-wrap">
@@ -29,7 +36,7 @@ export default function BannerStudyInCanada() {
                             <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px gray"}} 
                             ><span><img src={flag} alt="" height="45" width="60" /></span> Study in Canada<br /></h1>
                             <div className="inline_btn">
-                                <Link to="http://127.0.0.1:8000/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>                            </div>
+                                <Link to="https://portal.sojilearn.com/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>                            </div>
                         </div>
                     </div>
               </div>

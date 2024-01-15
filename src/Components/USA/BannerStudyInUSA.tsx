@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bakimageLarge from "../../assets/img/usa_banner.png";
-import bakimageSmall from "../../assets/img/uk_banner_small.jpeg"; 
-import flag from "../../assets/img/uk_icon.webp";
+import bakimageSmall from "../../assets/img/usa-banner-small.png"; 
+import flag from "../../assets/img/usa-flag.webp";
 
 export default function BannerStudyInUSA() {
     const [backgroundImage, setBackgroundImage] = useState(bakimageLarge);
@@ -29,7 +29,7 @@ export default function BannerStudyInUSA() {
                             <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px gray"}} 
                             ><span><img src={flag} alt="" height="45" width="60" /></span> Study in USA<br /></h1>
                             <div className="inline_btn">
-                                <Link to="http://127.0.0.1:8000/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>                            </div>
+                                <Link to="https://portal.sojilearn.com/register" target="_blank" className="btn theme-bg text-white">Get Started</Link>                            </div>
                         </div>
                     </div>
               </div>

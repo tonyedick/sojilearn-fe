@@ -77,7 +77,7 @@ export default function FAQ() {
 
                 <div className="foot-news-last mt-4">
                     <div className="inline_btn">
-                        <Link to="http://127.0.0.1:8000" className="btn theme-bg text-white">Talk to an Expert Counsellor for FREE</Link>
+                        <Link to="https://portal.sojilearn.com/register" className="btn theme-bg text-white">Get Started</Link>
                     </div>
                 </div>
             </div>
