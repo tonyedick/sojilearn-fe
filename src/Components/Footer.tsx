@@ -11,9 +11,9 @@ export default function Footer() {
                             <div className="footer_widget">
                                 <img src="assets/img/logo-dark.png" className="img-footer small mb-2" alt="" />
                                 <p className="mt-2">Sojilearn helps students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.</p>
-                                <p><strong>Address:</strong> 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State</p>
+                                <p><strong>Address:</strong> 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State.<br/>Obaladejobi Street, Ikeja GRA, Lago, Nigeria.</p>
                                 <p><strong>Phone:</strong> +234 813 780 6643</p>
-                                <p><strong>Email:</strong> sojilearn@gmail.com</p>
+                                <p><strong>Email:</strong> sojilearn@gmail.com, info@sojilearn.com</p>
                             </div>
                         </div>
         

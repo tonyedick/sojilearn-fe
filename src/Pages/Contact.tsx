@@ -152,7 +152,8 @@ export default function Contact() {
                                 <div className="ml-3 ml-md-4">
                                 <h4>Reach Us</h4>
                                 <p>
-                                    21, Agbaje Akio Street,<br />Okeafo GRA, Iwo,<br />Osun State, Nigeria
+                                    Obaladejobi Street, Ikeja GRA, Lago, Nigeria.<br />
+                                    21, Agbaje Akio Street, Okeafo GRA, Iwo,<br />Osun State, Nigeria
                                 </p>
                                 </div>
                             </li>
@@ -163,7 +164,8 @@ export default function Contact() {
                                 <div className="ml-3 ml-md-4">
                                 <h4>Drop A Mail</h4>
                                 <p>
-                                    sojilearn@gmail.com<br />info@sojilearn.com
+                                    sojilearn@gmail.com<br />
+                                    info@sojilearn.com
                                 </p>
                                 </div>
                             </li>
