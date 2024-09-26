@@ -40,11 +40,11 @@ export default function Header() {
           <div className="container">
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
-                      <Link className="nav-brand" to="#">
+                      <Link className="nav-brand" to="/">
                           <img src="assets/img/logo-dark.png" className="logo" alt="" />
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
-                      <div className="mobile_nav">
+                      {/* <div className="mobile_nav">
                           <ul>
                               <li>
                                   <Link to="https://portal.sojilearn.com" data-toggle="modal" data-target="#login" className="crs_yuo12">
@@ -52,7 +52,7 @@ export default function Header() {
                                   </Link>
                               </li>
                           </ul>
-                      </div>
+                      </div> */}
                   </div>
                   <div className={`nav-menus-wrapper ${isNavOpen ? 'nav-menus-wrapper-open' : ''}`} style={navMenusWrapperStyle}>
                       <ul className="nav-menu">
@@ -65,14 +65,14 @@ export default function Header() {
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
-                          <li>
+                          {/* <li>
                               <Link to="https://portal.sojilearn.com" className="alio_green" >
                                   <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
                               </Link>
-                          </li>
+                          </li> */}
 
                           <li className="add-listing theme-bg">
-                              <Link to="https://portal.sojilearn.com" className="text-white">Get Started</Link>
+                              <Link to="mailto:sojilearn@gmail.com" className="text-white">Get Started</Link>
                           </li>
 
                       </ul>

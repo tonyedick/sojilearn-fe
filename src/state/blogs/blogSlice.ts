@@ -56,7 +56,7 @@ const blogSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchBlogById.fulfilled, (state, { payload }) => {
-        const { blog, featuredImage, image } = payload; // Destructure properties
+        const { blog, featuredImage, image } = payload; 
         state.blog = blog;
         state.featuredImage = featuredImage;
         state.image = image;

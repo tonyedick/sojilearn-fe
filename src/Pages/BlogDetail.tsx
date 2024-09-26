@@ -118,7 +118,7 @@ export default function BlogDetail() {
                                 <div className="article_top_info">
                                     <ul className="article_middle_info">
                                         <li><Link to="/"><span className="icons"><i className="ti-user"></i></span>by Dick Tonye</Link></li>
-                                        <li><Link to="/"><span className="icons"><i className="ti-comment-alt"></i></span>45 Comments</Link></li>
+                                        {/* <li><Link to="/"><span className="icons"><i className="ti-comment-alt"></i></span>45 Comments</Link></li> */}
                                     </ul>
                                 </div>
                                 <h2 className="post-title">{blog.title}</h2>

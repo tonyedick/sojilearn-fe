@@ -31,9 +31,9 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">1</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Create account</h4>
+                                    <h4>Send an Email</h4>
                                     <p>
-                                        Register with us to create your personalized account, where you can track all applications at a go.
+                                        Send an email to us at <em>sojilearn@gmail.com</em>, stating your level of education, desired course of study and country of choice.
                                     </p>
                                 </div>
                             </li>
@@ -42,20 +42,20 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">3</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Upload Documents</h4>
+                                    <h4>Required Documents</h4>
                                     <p>
-                                    Upload your documents and revelant credentials for evaluation and screening.
+                                        We respond, asking you to send us the documents and revelant credentials for evaluation and screening.
                                     </p>
                                 </div>
                             </li>
                             <li className="d-flex align-items-start my-3 my-md-4">
                                 <div className="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center theme-bg">
+                                <div className="ml-3 ml-md-4">
                                     <div className="position-absolute text-white h5 mb-0">3</div>
                                 </div>
-                                <div className="ml-3 ml-md-4">
                                     <h4>Application Process</h4>
                                     <p>
-                                    We apply to five (5) universities, working closely with our partner universities in student's country of choice.
+                                        We initiate the application process, applying to five (5) of our partner universities in student's country of choice.
                                     </p>
                                 </div>
                             </li>
@@ -66,7 +66,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Get Admit</h4>
                                     <p>
-                                    Student receives admission letter in less than 4 weeks.
+                                        Student receives admission letter in less than 4 weeks.
                                     </p>
                                 </div>
                             </li>
@@ -77,7 +77,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Fees, Visa & Travel</h4>
                                     <p>
-                                    Secure your visa with VFS world-renowned service and enjoy exclusive benefits from our international travel partners.
+                                        We help you secure your visa with VFS world-renowned service and enjoy exclusive benefits from our international travel partners.
                                     </p>
                                 </div>
                             </li>
