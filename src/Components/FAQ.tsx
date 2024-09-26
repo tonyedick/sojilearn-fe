@@ -75,11 +75,11 @@ export default function FAQ() {
                     </div>
                 </div>
 
-                <div className="foot-news-last mt-4">
+                {/* <div className="foot-news-last mt-4">
                     <div className="inline_btn">
                         <Link to="https://portal.sojilearn.com/register" className="btn theme-bg text-white">Get Started</Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </section>

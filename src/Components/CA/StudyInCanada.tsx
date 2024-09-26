@@ -27,7 +27,7 @@ export default function StudyInCanada() {
                     </div>
 
                     <div className="inline_btn">
-                        <Link to="/study-in-canada" className="btn theme-bg text-white">Read More</Link>
+                        <Link to="/study-in-canada" className="btn theme-bg text-white">View More</Link>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 type FormValues = {
   name: string;
   email: string;
-  company?: string;
+  country?: string;
   phone?: string;
   message: string;
 };
@@ -58,7 +58,7 @@ export default function Contact() {
                             <h1 className="breadcrumb-title">Get in Touch</h1>
                             <nav className="transparent">
                                 <ol className="breadcrumb p-0">
-                                    <li className="breadcrumb-item"><Link to="../">Home</Link></li>
+                                    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                                     <li className="breadcrumb-item active theme-cl" aria-current="page">Contact Us</li>
                                 </ol>
                             </nav>
@@ -82,7 +82,7 @@ export default function Contact() {
                             onSubmit={handleSubmit(submit)}
                         >
                             <div className="form-group">
-                                <h4>We'd love to here from you</h4>
+                                <h4>We'd love to hear from you</h4>
                                 <span>Send a message and we'll respond as soon as possible </span>
                             </div>
                             <div className="row">
@@ -108,9 +108,9 @@ export default function Contact() {
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                     <div className="form-group">
-                                        <label>Company</label>
+                                        <label>Country</label>
                                         <input 
-                                            {...register('company')}
+                                            {...register('country')}
                                             type="text" name="company" className="form-control" />
                                     </div>
                                 </div>
@@ -201,7 +201,6 @@ export default function Contact() {
                                 <h3>Do You Have Questions ?</h3>
                                 <span>We are here to help you grow your career and empower your dreams.</span>
                             </div>
-                            <Link to="{{Route('contact')}}" className="btn btn-call_action_wrap">Contact Us Today</Link>
                         </div>
 
                     </div>

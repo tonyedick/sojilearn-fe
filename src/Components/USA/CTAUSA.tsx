@@ -16,7 +16,7 @@ export default function CTAUSA() {
                                 <h3>Make Your Dream To Study in USA</h3>
                                 <h3 style={{textShadow: "8px 8px 8px gray"}}>A Reality With Our Experts!</h3>
                             </div>
-                            <Link to="/" className="btn btn-call_action_wrap">Contact Us Today</Link>
+                            <Link to="/contact" className="btn btn-call_action_wrap">Contact Us Today</Link>
                         </div>
 
                     </div>

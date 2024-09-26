@@ -49,8 +49,8 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/">Blog<span className="new">Coming Soon</span></Link></li>
-                                            <li><Link to="https://portal.sojilearn.com" target="_blank">Join Us</Link></li>
-                                            <li><Link to="https://portal.sojilearn.com" target="_blank">Login</Link></li>
+                                            <li><Link to="mailto:sojilearn@gmail.com" target="_blank">Get Started</Link></li>
+                                            <li><Link to="mailto:sojilearn@gmail.com" target="_blank">Social Media</Link></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -31,31 +31,32 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">1</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Send an Email</h4>
+                                    <h4>Contact Us</h4>
                                     <p>
-                                        Send an email to us at <em>sojilearn@gmail.com</em>, stating your level of education, desired course of study and country of choice.
+                                        Send an email to us at <strong>sojilearn@gmail.com</strong>, stating your level of education, desired course of study and country of choice.
                                     </p>
                                 </div>
                             </li>
                             <li className="d-flex align-items-start my-3 my-md-4">
                                 <div className="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center theme-bg">
-                                    <div className="position-absolute text-white h5 mb-0">3</div>
+                                    <div className="position-absolute text-white h5 mb-0">2</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
                                     <h4>Required Documents</h4>
                                     <p>
-                                        We respond, asking you to send us the documents and revelant credentials for evaluation and screening.
+                                        Our respondent will contact you within 24 hours, with details of documents and revelant credentials for evaluation and screening.
                                     </p>
                                 </div>
                             </li>
                             <li className="d-flex align-items-start my-3 my-md-4">
                                 <div className="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center theme-bg">
-                                <div className="ml-3 ml-md-4">
                                     <div className="position-absolute text-white h5 mb-0">3</div>
                                 </div>
+
+                                <div className="ml-3 ml-md-4">
                                     <h4>Application Process</h4>
                                     <p>
-                                        We initiate the application process, applying to five (5) of our partner universities in student's country of choice.
+                                        We initiate the application process, applying to five (5) of our partner universities in your choice country.
                                     </p>
                                 </div>
                             </li>
@@ -66,7 +67,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Get Admit</h4>
                                     <p>
-                                        Student receives admission letter in less than 4 weeks.
+                                        You receive your admission letter in less than 4 weeks.
                                     </p>
                                 </div>
                             </li>
