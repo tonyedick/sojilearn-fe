@@ -80,7 +80,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={toefl} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Proof of English proficiency (TOEFL/IELTS test scores)</h5>
+                            <h5 className="mb-0 ml-3">Proof of English proficiency (TOEFL/IELTS test scores) - optional</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -96,7 +96,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Academic Transcripts from the previous study</h5>
+                            <h5 className="mb-0 ml-3">Academic Transcripts from the previous study (student copy needed to start the process)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">

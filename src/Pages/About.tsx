@@ -31,8 +31,8 @@ export default function About() {
                         <div className="lmp_caption">
                             <span className="theme-cl">About Us</span>
                             <h2 className="mb-3">What We Do &amp; Our Aim</h2>
-                            <p>We are Sojilearn.
-                            <br/>A Study Abroad <span className="theme-cl"><strong>Agency</strong></span>
+                            <p>We are Sojilearn Optimum Solutions Ltd.
+                            <br/>A <span className="theme-cl"><strong>Technology Workforce Development Company </strong></span> and <span className="theme-cl"><strong>Study Abroad Agency</strong></span>
                             <br/>
                             <br/>At Sojilearn, we help students navigate & assess their educational journey, matching them to personalised mentors, counsels them towards their higher education dream with an employability lens, and makes sure that everyone punched way above their weight to make dreams come alive and truly be able to level up.</p>
                             <p>We take pride in helping students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.
@@ -77,7 +77,7 @@ export default function About() {
                                 <h6 className="mb-0 ml-3">And a lot more</h6>
                                 </div>
                             </div>
-                            <div className="text-left mt-4"><Link to="mailto:sojilearn@gmail.com" className="btn btn-md text-light theme-bg">Get Started</Link></div>
+                            <div className="text-left mt-4"><Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-md text-light theme-bg">Get Started</Link></div>
                         </div>
                     </div>
 
@@ -95,7 +95,7 @@ export default function About() {
                 <div className="row justify-content-center">
                     <div className="col-lg-7 col-md-8">
                         <div className="sec-heading center">
-                            <h2>Trusted By <span className="theme-cl">2500+ students</span></h2>
+                            <h2>Trusted By <span className="theme-cl">500+ students</span></h2>
                             <p>We are building the global citizens of tomorrow by simplifying international admissions for students & our partners</p>
                         </div>
                     </div>
@@ -117,9 +117,8 @@ export default function About() {
                                 <h3>Do You Have Questions ?</h3>
                                 <span>We are here to help you grow your career and empower your dreams.</span>
                             </div>
-                            <Link to="/contact" className="btn btn-call_action_wrap">Contact Us Today</Link>
+                            <Link to="mailto:sojilearn@gmail.com" className="btn btn-call_action_wrap">Contact Us Today</Link>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -33,7 +33,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Contact Us</h4>
                                     <p>
-                                        Send an email to us at <strong>sojilearn@gmail.com</strong>, stating your level of education, desired course of study and country of choice.
+                                        Send an email to us at <strong>info@sojilearn.com, sojilearn@gmail.com</strong> or fill the online form where we get all necessary details about your interest.
                                     </p>
                                 </div>
                             </li>
@@ -44,7 +44,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Required Documents</h4>
                                     <p>
-                                        Our respondent will contact you within 24 hours, with details of documents and revelant credentials for evaluation and screening.
+                                        Our respondent will contact you within 48 hours, with details of documents and revelant credentials for evaluation and screening.
                                     </p>
                                 </div>
                             </li>
@@ -56,7 +56,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Application Process</h4>
                                     <p>
-                                        We initiate the application process, applying to five (5) of our partner universities in your choice country.
+                                        We initiate the application process, applying to our partner universities in your choice country.
                                     </p>
                                 </div>
                             </li>
@@ -67,7 +67,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Get Admit</h4>
                                     <p>
-                                        You receive your admission letter in less than 4 weeks.
+                                        Upon receiving your admission letter, we provide necessary guide for next steps.
                                     </p>
                                 </div>
                             </li>
@@ -78,7 +78,7 @@ export default function Steps() {
                                 <div className="ml-3 ml-md-4">
                                     <h4>Fees, Visa & Travel</h4>
                                     <p>
-                                        We help you secure your visa with VFS world-renowned service and enjoy exclusive benefits from our international travel partners.
+                                        Where necessary, we can help provide guidance for visa processing, flight and help with accommodation.
                                     </p>
                                 </div>
                             </li>

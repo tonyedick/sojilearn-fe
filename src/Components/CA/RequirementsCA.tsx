@@ -43,7 +43,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={toefl} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">English proficiency scores (TOEFL/IELTS)</h5>
+                            <h5 className="mb-0 ml-3">TOEFL/IELTS/English Test (optional)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -59,7 +59,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={portfolio} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Evidence of funds</h5>
+                            <h5 className="mb-0 ml-3">Evidence of funds (POF)</h5>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs</h5>
+                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs (optional)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -80,7 +80,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Academic Transcripts</h5>
+                            <h5 className="mb-0 ml-3">Academic Transcripts (Student copy needed to start the process)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">

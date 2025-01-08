@@ -16,9 +16,8 @@ export default function CTA() {
                                 <h3>Make Your Dream To Study in UK</h3>
                                 <h3 style={{textShadow: "8px 8px 8px gray"}}>A Reality With Our Experts!</h3>
                             </div>
-                            <Link to="/contact" className="btn btn-call_action_wrap">Contact Us Today</Link>
+                            <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-call_action_wrap">Get Started Today</Link>
                         </div>
-
                     </div>
                 </div>
             </div>

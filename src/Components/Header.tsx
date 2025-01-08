@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from "../assets/img/logo-dark.png";
 // import './nav.css';
 
 export default function Header() {
@@ -41,7 +42,7 @@ export default function Header() {
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
                       <Link className="nav-brand" to="/">
-                          <img src="assets/img/logo-dark.png" className="logo" alt="" />
+                          <img src={logo} className="logo" alt="" />
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
                       {/* <div className="mobile_nav">
@@ -62,6 +63,7 @@ export default function Header() {
                           <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Study in UK</Link></li>
                           <li className={activeLink === '/study-in-canada' ? 'active' : ''}><Link to="/study-in-canada">Study in Canada</Link></li>
                           <li className={activeLink === '/study-in-usa' ? 'active' : ''}><Link to="/study-in-usa">Study in USA</Link></li>
+                          <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
@@ -72,7 +74,7 @@ export default function Header() {
                           </li> */}
 
                           <li className="add-listing theme-bg">
-                              <Link to="mailto:sojilearn@gmail.com" className="text-white">Get Started</Link>
+                              <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="text-white">Get Started</Link>
                           </li>
 
                       </ul>

@@ -10,6 +10,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import StudyInUK from './Pages/StudyInUK';
 import StudyInCanada from './Pages/StudyInCanada';
 import StudyInUSA from './Pages/StudyInUSA';
+import StudyInGermany from './Pages/StudyInGermany';
 
 const NotFound = React.lazy(() => import('./Pages/NotFound'))
 
@@ -22,7 +23,7 @@ const loading = (
 function App() {
 
   const phoneNumber = '+2348137806643'; 
-  const accountName = 'Sojilearn - Study in UK | USA | Canada | Dubai | Ireland'; 
+  const accountName = 'Sojilearn - Study in UK | USA | Canada | Germany | UAE'; 
 
   // Other optional props
   const avatar = avatarApp; 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/study-in-uk" element={<StudyInUK />} />
           <Route path="/study-in-usa" element={<StudyInUSA />} />
           <Route path="/study-in-canada" element={<StudyInCanada />} />
+          <Route path="/study-in-germany" element={<StudyInGermany />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
       </Suspense>

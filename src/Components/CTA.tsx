@@ -18,7 +18,6 @@ export default function CTA() {
                             </div>
                             <Link to="mailto:sojilearn@gmail.com" className="btn btn-call_action_wrap">Contact Us Today</Link>
                         </div>
-
                     </div>
                 </div>
             </div>

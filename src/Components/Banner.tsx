@@ -9,11 +9,10 @@ export default function Banner() {
                   <div className="col-lg-6 col-md-6 col-sm-12">
                       <div className="simple-search-wrap text-left">
                           <div className="hero_search-2">
-                              <div className="elsio_tag yellow">LISTEN TO OUR LATEST PODCAST</div>
                               <h1 className="banner_title mb-4">Dreaming of <br />Studying Abroad?<br /><span className="light">Start planning today!</span></h1>
                               <p className="font-lg mb-4">The Most Comprehensive & Personalised Study Abroad Plan. <br />Obsessed with Student Success.</p>
                               <div className="inline_btn">
-                                  <Link to="mailto:sojilearn@gmail.com" target="_blank" className="btn theme-bg text-white">Get Started</Link>
+                                  <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">Get Started</Link>
                               </div>
                           </div>
                       </div>
