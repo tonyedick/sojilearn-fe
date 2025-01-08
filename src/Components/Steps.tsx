@@ -31,9 +31,9 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">1</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Contact Us</h4>
+                                    <h4>Fill the Online Form</h4>
                                     <p>
-                                        Send an email to us at <strong>info@sojilearn.com, sojilearn@gmail.com</strong> or fill the online form where we get all necessary details about your interest.
+                                        Click to fill this <strong><i>🔗</i> <a href="https://forms.gle/Lu3kEE3SsxdkVbrU7">ONLINE FORM</a></strong> where we get all necessary details about your interest.
                                     </p>
                                 </div>
                             </li>

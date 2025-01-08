@@ -51,7 +51,7 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/">Blog<span className="new">Coming Soon</span></Link></li>
-                                            <li><Link to="mailto:sojilearn@gmail.com" target="_blank">Get Started</Link></li>
+                                            <li><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank">Get Started</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ export default function Footer() {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12 text-center">
-                            <p className="mb-0">© 2022 - 2024 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn</Link>.</p>
+                            <p className="mb-0">© 2022 - 2025 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn</Link>.</p>
                         </div>
                     </div>
                 </div>
