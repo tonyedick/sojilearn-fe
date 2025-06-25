@@ -40,8 +40,8 @@ export default function Footer() {
                                             <li><Link to="/study-in-uk">Study in UK<span className="new">New</span></Link></li>
                                             <li><Link to="/study-in-canada">Study in Canada</Link></li>
                                             <li><Link to="/study-in-usa">Study in USA<span className="new">New</span></Link></li>
-                                            <li><Link to="/">Study in Germany</Link></li>
-                                            <li><Link to="/">Study in UAE</Link></li>
+                                            <li><Link to="/study-in-germany">Study in Germany</Link></li>
+                                            <li><Link to="/study-in-malta">Study in Malta</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/">Blog<span className="new">Coming Soon</span></Link></li>
-                                            <li><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank">Get Started</Link></li>
+                                            <li className="font-weight-bold"><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank">Register Now</Link></li>
                                         </ul>
                                     </div>
                                 </div>

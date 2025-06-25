@@ -64,6 +64,7 @@ export default function Header() {
                           <li className={activeLink === '/study-in-canada' ? 'active' : ''}><Link to="/study-in-canada">Study in Canada</Link></li>
                           <li className={activeLink === '/study-in-usa' ? 'active' : ''}><Link to="/study-in-usa">Study in USA</Link></li>
                           <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
+                          <li className={activeLink === '/study-in-malta' ? 'active' : ''}><Link to="/study-in-malta">Study in Malta</Link></li>
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
@@ -79,7 +80,7 @@ export default function Header() {
 
                       </ul>
                   </div>
-                  {/* <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} /> */}
+                  <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
               </nav>
           </div>
       </div>

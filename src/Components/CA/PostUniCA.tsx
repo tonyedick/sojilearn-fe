@@ -7,7 +7,7 @@ import misc from "../../assets/img/misc.svg";
 
 export default function PostUniCA() {
   return (
-    <section className="white">
+    <section className="gray">
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-lg-12 col-md-8">
