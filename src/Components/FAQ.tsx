@@ -23,7 +23,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Sojilearn does not charge students any fee to process undergraduate or post graduate admission. Except in cases where the university requests payment for admission form, like Canada or few universities in the UK.</p>
+                                <p>Sojilearn charges a one-time fee of $199 to process undergraduate or post graduate admission in Canada, while for the UK, Germany, Malta, Ireland, we charge a one-time fee of $70.</p>
                             </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Yes, when we submit your application, we apply to at least 5 universities for you, your applications can be tracked in your dashboard.</p>
+                                <p>Yes, when we submit your application, we apply to at least 5 universities for you.</p>
                             </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Login to your dashboard or Create an Account to track your applications at any time with notifications available. </p>
+                                <p>Our team will keep you updated on the status of your applications via email and your dashboard.</p>
                             </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Currently, our partner universities are in UK, USA, Canada, Ireland and Dubai.</p>
+                                <p>Currently, our partner universities are in Malta, Germany, UK, USA, Canada, Ireland and Dubai.</p>
                             </div>
                             </div>
                         </div>
