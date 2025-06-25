@@ -31,9 +31,9 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">1</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Fill the Online Form</h4>
+                                    <h4>Required Documents</h4>
                                     <p>
-                                        Click to fill this <strong><i>🔗</i> <a href="https://forms.gle/Lu3kEE3SsxdkVbrU7">ONLINE FORM</a></strong> where we get all necessary details about your interest.
+                                        Visit the specific country of your choice at the <strong>Top Navigation</strong> for details of documents required to process your admission. 
                                     </p>
                                 </div>
                             </li>
@@ -42,9 +42,9 @@ export default function Steps() {
                                     <div className="position-absolute text-white h5 mb-0">2</div>
                                 </div>
                                 <div className="ml-3 ml-md-4">
-                                    <h4>Required Documents</h4>
+                                    <h4>Fill the Online Form</h4>
                                     <p>
-                                        Our respondent will contact you within 48 hours, with details of documents and revelant credentials for evaluation and screening.
+                                        Click to fill this <strong><i>🔗</i> <a href="https://forms.gle/Lu3kEE3SsxdkVbrU7">ONLINE FORM</a></strong> where we get all necessary details about your interest.
                                     </p>
                                 </div>
                             </li>
