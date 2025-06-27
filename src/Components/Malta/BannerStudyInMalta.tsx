@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import bakimageLarge from "../../assets/img/uk_banner.jpg";
-import bakimageSmall from "../../assets/img/uk-banner-small.jpeg"; 
+import bakimageLarge from "../../assets/img/malta_banner.png";
+import bakimageSmall from "../../assets/img/malta_banner_small.png"; 
 import flag from "../../assets/img/uk_icon.webp";
 
 export default function BannerStudyInMalta() {
