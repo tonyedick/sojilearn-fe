@@ -44,3 +44,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+vaul sonner recharts react-resizable-panels react-day-picker next-themes input-otp embla-carousel-react date-fns cmdk clsx class-variance-authority @tanstack/react-query @supabase/supabase-js @radix-ui/react-tooltip @radix-ui/react-toggle-group

@@ -105,7 +105,7 @@ export default function FAQGY() {
                         {/* Nine */}
                         <div className="card">
                             <div id="headingNine" className="card-header bg-white shadow-sm border-0">
-                            <h6 className="mb-0 accordion_title"><a href="/" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" className="d-block position-relative collapsed text-dark collapsible-link py-2">Is it required to be able to communicate in German in order to study in Germany?</a></h6>
+                            <h6 className="mb-0 accordion_title"><a href="/" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" className="d-block position-relative collapsed text-dark collapsible-link py-2">Is it required to communicate in German in order to study in Germany?</a></h6>
                             </div>
                             <div id="collapseNine" aria-labelledby="headingNine" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">

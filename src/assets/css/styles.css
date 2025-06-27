@@ -1,9 +1,9 @@
 /*
-* Theme Name: SkillUp - Online Learning Platform HTML Template
-* Author: Themezhub
+* Theme Name: Sojilearn - Study Abroad | UK | USA | Canada | Australia | Malta
+* Author: Dick Tonye
 * Version: 1.0
-* Last Change: 29 Aug 2021
-  Author URI    : https://themezhub.com/
+* Last Change: 29 Aug 2022
+  Author URI    : https://sojilearn.com/
 -------------------------------------------------------------------*/
 /*------------- List Of Table -----------
 # Fonts
@@ -7544,6 +7544,53 @@ footer.skin-dark-footer ul.footer-bottom-social li a:hover, footer.skin-dark-foo
     background-color:#ffffff;
     color:#333c56;
 }
+
+.btn-inverse.btn-theme:hover {
+  color: var(--skillup-theme-color);
+  background: #FFFFFF;
+}
+
+.btn-inverse.btn-second:hover {
+  color: var(--skillup-second-color);
+  background: #FFFFFF;
+}
+
+.btn-theme.btn-white {
+  background: #fff;
+  color: var(--skillup-theme-color) !important;
+  border-color: #fff;
+}
+
+.btn-theme.btn-white:active, .btn-theme.btn-white:hover {
+  background-color: var(--skillup-theme-color);
+  color: #fff !important;
+  border-color: var(--skillup-theme-color);
+}
+
+.btn-theme.btn-outline {
+  color: var(--skillup-theme-color);
+  border-color: var(--skillup-theme-color);
+  background: transparent;
+}
+
+.btn-theme.btn-outline:hover, .btn-theme.btn-outline:active {
+  color: #fff;
+  background: var(--skillup-theme-color);
+  border-color: var(--skillup-theme-color);
+}
+
+.btn-outline.btn-green {
+  color: #48C740;
+  border-color: #48C740;
+  background: transparent;
+}
+
+.btn-outline.btn-green:hover, .btn-outline.btn-green:active {
+  color: #fff;
+  background: #48C740;
+  border-color: #48C740;
+}
+
 
 /*--------------------------------------------------
 	Responsiveness Start

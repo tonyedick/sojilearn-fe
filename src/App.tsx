@@ -5,9 +5,10 @@ import avatarApp from '../src/assets/img/favicon.png';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
-import BlogDetail from './Pages/BlogDetail';
+import Blog from './Pages/Blog';
 import ScrollToTop from './Components/ScrollToTop';
 import StudyInUK from './Pages/StudyInUK';
+import StudyInMalta from './Pages/StudyInMalta';
 import StudyInCanada from './Pages/StudyInCanada';
 import StudyInUSA from './Pages/StudyInUSA';
 import StudyInGermany from './Pages/StudyInGermany';
@@ -23,7 +24,7 @@ const loading = (
 function App() {
 
   const phoneNumber = '+2348137806643'; 
-  const accountName = 'Sojilearn - Study in UK | USA | Canada | Germany | UAE'; 
+  const accountName = 'Sojilearn - Study in Malta | UK | USA | Canada | Germany | Ireland'; 
 
   // Other optional props
   const avatar = avatarApp; 
@@ -52,12 +53,14 @@ function App() {
           {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          {/* <Route path="/blog-detail/:id" element={<BlogDetail />} /> */}
           <Route path="/not-found" element={<NotFound />} />
           <Route path="/study-in-uk" element={<StudyInUK />} />
+          <Route path="/study-in-malta" element={<StudyInMalta />} />
           <Route path="/study-in-usa" element={<StudyInUSA />} />
           <Route path="/study-in-canada" element={<StudyInCanada />} />
           <Route path="/study-in-germany" element={<StudyInGermany />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
       </Suspense>

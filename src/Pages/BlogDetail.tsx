@@ -317,7 +317,6 @@ export default function BlogDetail() {
                         </div>
                         
                     </div>
-                    
                 </div>				
                 
             </div>

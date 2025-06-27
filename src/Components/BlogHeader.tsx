@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from "../assets/img/logo-dark.png";
 // import './nav.css';
 
-export default function Header() {
+export default function BlogHeader() {
   const [activeLink, setActiveLink] = useState('');
   const [isMobile, setIsMobile] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -57,14 +57,12 @@ export default function Header() {
                   </div>
                   <div className={`nav-menus-wrapper ${isNavOpen ? 'nav-menus-wrapper-open' : ''}`} style={navMenusWrapperStyle}>
                       <ul className="nav-menu">
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Home</Link></li>
-                          <li className={activeLink === '/about' ? 'active' : ''}><Link to="/about">About</Link></li>
-                          <li className={activeLink === '/contact' ? 'active' : ''}><Link to="/contact">Contact Us</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Study in UK</Link></li>
-                          <li className={activeLink === '/study-in-canada' ? 'active' : ''}><Link to="/study-in-canada">Study in Canada</Link></li>
-                          <li className={activeLink === '/study-in-usa' ? 'active' : ''}><Link to="/study-in-usa">Study in USA</Link></li>
-                          <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
-                          <li className={activeLink === '/study-in-malta' ? 'active' : ''}><Link to="/study-in-malta">Study in Malta</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Study Abroad</Link></li>
+                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Scholarships</Link></li>
+                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Success Stories</Link></li>
+                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Visa and Immigration</Link></li>
+                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Scholarships and Grants</Link></li>
+                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">SOP</Link></li>
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
@@ -75,7 +73,7 @@ export default function Header() {
                           </li> */}
 
                           <li className="add-listing theme-bg">
-                              <Link to="/blog" target="_blank" className="text-white">Visit our Blog</Link>
+                              <Link to="/blog" target="_blank" className="text-white btn-login btn btn-theme btn-inverse">Subscribe <i className="fas fa-sign-in-alt pre"></i></Link>
                           </li>
 
                       </ul>
