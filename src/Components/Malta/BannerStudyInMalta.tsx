@@ -21,20 +21,25 @@ export default function BannerStudyInMalta() {
   
   return (
     <>    
-        <div className="hero_banner image-cover image_bottom h6_bg pt-0" 
-             style={{
-                backgroundImage: `url(${backgroundImage})`,
-                backgroundPosition: "center center",
-                backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
-                backgroundColor: "black"
-                }}
-            >
+        <div
+            className="hero_banner image-cover image_bottom h6_bg pt-0"
+            style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundPosition: "center center",
+            backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+            backgroundColor: "black",
+            minHeight: "600px", // Set a minimum height
+            height: "400px",    // Set a fixed or max height as needed
+            maxHeight: "50vh",  // Optional: limit to half the viewport height
+            overflow: "hidden"  // Prevent content overflow
+            }}
+        >
           <div className="container" >
               <div className="row align-items-center">
                     <div className="simple-search-wrap">
                         <div className="hero_search-2">
                             <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px gray"}} 
-                            ><span><img src={flag} alt="" height="45" width="60" /></span> Study in Malta<br /></h1>
+                            ><span><img src={flag} alt="" height="45" width="60" /></span> Study in Malta<br />Hidden Gem of Europe</h1>
                             <div className="inline_btn">
                                 <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">Online Form</Link>
                             </div>

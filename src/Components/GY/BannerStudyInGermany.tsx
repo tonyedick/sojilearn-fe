@@ -25,7 +25,11 @@ export default function BannerStudyInCanada() {
             backgroundImage: `url(${backgroundImage})`,
             backgroundPosition: "center center",
             backgroundSize: window.innerWidth <= 768 ? "contain" : "cover", 
-            backgroundColor: "black"
+            backgroundColor: "black",
+            minHeight: "600px", // Set a minimum height
+            height: "400px",    // Set a fixed or max height as needed
+            maxHeight: "50vh",  // Optional: limit to half the viewport height
+            overflow: "hidden" 
             }}
             >
           <div className="container" >
