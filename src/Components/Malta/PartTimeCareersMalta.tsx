@@ -15,8 +15,10 @@ export default function PartTimeCareersMalta() {
         <div className="row justify-content-center">
             <div className="col-lg-10 col-md-8">
                 <div className="sec-heading center">
-                    <h2>Part time Careers and Work Opportunities in United Kingdom</h2>
-                    <p className="h6">Studying in the UK offers a variety of experiences. The cultural and traditional values of the UK attract several international students every year. The popular areas of employment in UK are as follows:</p>
+                    <h2>Part time Careers and Work Opportunities in Malta</h2>
+                    <p className="h6">Discover a hidden gem in the heart of the Mediterranean that offers high 
+quality english speaking education, affordable tuition, a safe environment, 
+and strong job prospects in sectors like tourism, finance, and tech:</p>
                 </div>
             </div>
         </div>
@@ -106,7 +108,7 @@ export default function PartTimeCareersMalta() {
                         <div className="row p-4 rounded" style={{backgroundColor: '#8A5DAF'}}>
                             <div className="col text-center">
                                 <h5 className="text-white">Post Study Work VISA</h5>
-                                <p className="text-white">Students completing a Bachelors or Masters program get a work VISA of 2 years. PhD graduates get a work VISA of 3 years.</p>
+                                <p className="text-white">Students completing a Bachelors or Masters program get a work VISA of 1 year.</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +116,7 @@ export default function PartTimeCareersMalta() {
                         <div className="row p-4 rounded" style={{backgroundColor: '#8A5DAF'}}>
                             <div className="col text-center">
                                 <h5 className="text-white">Part-time Work Opportunities</h5>
-                                <p className="text-white">Maximum of 20 hours per week for regular students. Maximum of 10 hours per week for language center students</p>
+                                <p className="text-white">Maximum of 20 hours per week for regular students.</p>
                             </div>
                         </div>
                     </div>

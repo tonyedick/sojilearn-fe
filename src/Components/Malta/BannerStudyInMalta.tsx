@@ -60,8 +60,8 @@ export default function BannerStudyInMalta() {
                                         <div className="dro_141 de"><i className="fa fa-journal-whills"></i></div>
                                         <div className="dro_142">
                                             <h6>AFTER 12TH / UG</h6>
-                                            <p><strong>How to Apply: </strong>All UG Applications are submitted through UCAS.</p>
-                                            <p><strong>Cost Estimate: </strong>£9,000 - 30,000 per year</p>
+                                            <p><strong>How to Apply: </strong>You can apply by filling the online form on this website.</p>
+                                            <p><strong>Cost Estimate: </strong>€6,000 per year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ export default function BannerStudyInMalta() {
                                         <div className="dro_142">
                                             <h6>MASTERS</h6>
                                             <p><strong>How to Apply: </strong>PG applications are directly sent via online or offline modes.</p>
-                                            <p><strong>Cost Estimate: </strong>£15,000 - 35,000 per year</p>
+                                            <p><strong>Cost Estimate: </strong>€7,000 - 10,000 per year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -80,8 +80,8 @@ export default function BannerStudyInMalta() {
                                         <div className="dro_141 de"><i className="fa fa-user-shield"></i></div>
                                         <div className="dro_142">
                                             <h6>MBA</h6>
-                                            <p><strong>How to Apply: </strong>MBA applications are submitted directly to the universities.</p>
-                                            <p><strong>Cost Estimate: </strong>£12,000 - 80,000 per year</p>
+                                            <p><strong>How to Apply: </strong>MBA applications are processed through the online form.</p>
+                                            <p><strong>Cost Estimate: </strong>€10,000 per year</p>
                                         </div>
                                     </div>
                                 </div>

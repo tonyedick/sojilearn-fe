@@ -19,7 +19,7 @@ export default function PostUniMalta() {
         <div className="row align-items-center justify-content-between border border-dark-subtle rounded p-4">
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div className="lmp_caption">
-                <h4>Cost Of Living in United Kingdom</h4>
+                <h4>Cost Of Living in Malta</h4>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
@@ -56,7 +56,7 @@ export default function PostUniMalta() {
                                     <div className="list_crs_img">
                                         <img src={rent} height="50" width="50" className="img-fluid" alt="" />
                                         <h4 className="mt-3">Rent</h4>
-                                        <p>£ 470 - £ 739</p>
+                                        <p>€550 - €865</p>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ export default function PostUniMalta() {
                                     <div className="list_crs_img">
                                         <img src={food} height="50" width="50" className="img-fluid" alt="" />
                                         <h4 className="mt-3">Food</h4>
-                                        <p>£ 107 - £ 336</p>
+                                        <p>€125 - €395</p>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ export default function PostUniMalta() {
                                     <div className="list_crs_img">
                                         <img src={transport} height="50" width="50" className="img-fluid" alt="" />
                                         <h4 className="mt-3">Transport</h4>
-                                        <p>£ 54 - £ 107</p>
+                                        <p>Free Transport</p>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function PostUniMalta() {
                                     <div className="list_crs_img">
                                         <img src={misc} height="50" width="50" className="img-fluid" alt="" />
                                         <h4 className="mt-3">Miscellaneous</h4>
-                                        <p>£ 337 - £ 672</p>
+                                        <p>€395 - €790</p>
                                     </div>
                                 </div>
                             </div>

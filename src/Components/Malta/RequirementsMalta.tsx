@@ -14,8 +14,8 @@ export default function RequirementsMalta() {
         <div className="row justify-content-center">
             <div className="col-lg-12 col-md-8">
                 <div className="sec-heading center">
-                    <h2>Admission Requirements for <span className="theme-cl">UK</span></h2>
-                    <p className="h6">Here are the major requirements to study in UK which you need to ensure while applying to a UK university:</p>
+                    <h2>Admission Requirements for <span className="theme-cl">Malta</span></h2>
+                    <p className="h6">Here are the major requirements to study in Malta which you need to ensure while applying to a Maltese university:</p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ export default function RequirementsMalta() {
                             <div className="list_crs_img">
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs (optional)</h5>
+                            <h5 className="mb-0 ml-3">Duolingo - 105 (optional)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -64,7 +64,7 @@ export default function RequirementsMalta() {
                             <div className="list_crs_img">
                                 <img src={toefl} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">TOEFL/IELTS/English Test (optional)</h5>
+                            <h5 className="mb-0 ml-3">IELTS - 6.0 (optional)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">

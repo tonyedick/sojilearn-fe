@@ -17,7 +17,7 @@ export default function ExploreMalta() {
                 <div className="row justify-content-center">
                     <div className="col-lg-7 col-md-10 text-center">
                         <div className="sec-heading center mb-4">
-                            <h2>Explore <span className="theme-cl">UK</span></h2>
+                            <h2>Explore <span className="theme-cl">Malta</span></h2>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Capital</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>London</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>Valletta</li>
                                 </ul>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Population</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>68 Million</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>535,000</li>
                                 </ul>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Language</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>English</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>Maltese and English</li>
                                 </ul>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">International Students</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>485,645</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>1,700</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">GDP</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>$ 3.12 Trillion</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>$22.7 billion</li>
                                 </ul>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Dialing Code</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>+44</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>+356</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,7 +115,7 @@ export default function ExploreMalta() {
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Currency</Link></h4>
                                 <ul className="meta">
-                                    <li className="video"><i className="ti-video-clapper"></i>Pound Sterling</li>
+                                    <li className="video"><i className="ti-video-clapper"></i>Euro (€)</li>
                                 </ul>
                             </div>
                         </div>

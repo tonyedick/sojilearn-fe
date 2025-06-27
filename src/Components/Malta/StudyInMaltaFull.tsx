@@ -16,17 +16,26 @@ export default function StudyInMaltaFull() {
             <div className="row align-items-center justify-content-between">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3">
                     <div className="lmp_caption">
-                        <h1 className="mb-3">Why Study in United Kingdom?</h1>
+                        <h1 className="mb-3">Why Study in Malta?</h1>
                         {showFullText ? (
                             <>
-                                <p>The United Kingdom is home to the world's most esteemed universities and is among the popular destinations for studying abroad. Ranked as the best education systems in the world, the British Education System provides a plethora of courses in various subjects including Business, Engineering, Medicine, Arts, and Design delivered through exceptional teaching styles.</p>
-                                <p>The curriculum is designed in a flexible way which helps students customize their courses depending on their unique interests.</p>
-                                <p>The United Kingdom is among the top countries for advanced research and has contributed consistently to groundbreaking discoveries. Apart from ranking high in academic excellence, the UK is known for its multicultural ethos that attracts many students globally. Famed for its heritage sites and art, students can also indulge a dynamic culture which makes their stay merrier. Being the global hub of Europe, the country has a high-income economy making it the best place to find various job opportunities.</p>
+                                <p>Discover a hidden gem in the heart of the Mediterranean that offers high 
+quality english speaking education, affordable tuition, a safe environment, 
+and strong job prospects in sectors like tourism, finance, and tech, Malta 
+combines a vibrant cultural experience with career-building opportunities, 
+making it a prime study destination.</p>
+                                <p>Accreditation by MQF (Malta Qualification Framework), Programmes accredited by “Get Qualified Scheme”, High Quality Teaching and Learning, Global Academic Progression, Student Visa support, MFHEA Approved, Great Scholarships.</p>
+                                <p>Study at GBS Malta, a vibrant business hub, and gain the skills, global 
+connections, and experience to thrive in international markets.</p>
                             </>
                         ) : (
                             <> 
-                                <p>The United Kingdom is home to the world's most esteemed universities and is among the popular destinations for studying abroad. Ranked as the best education systems in the world, the British Education System provides a plethora of courses in various subjects including Business, Engineering, Medicine, Arts, and Design delivered through exceptional teaching styles.</p>
-                                <p>The curriculum is designed in a flexible way which helps students customize their courses depending on their unique interests ....</p>
+                                <p>Discover a hidden gem in the heart of the Mediterranean that offers high 
+quality english speaking education, affordable tuition, a safe environment, 
+and strong job prospects in sectors like tourism, finance, and tech, Malta 
+combines a vibrant cultural experience with career-building opportunities, 
+making it a prime study destination.</p>
+                                <p>Accreditation by MQF (Malta Qualification Framework)....</p>
                             </>
                         )}
                     </div>
