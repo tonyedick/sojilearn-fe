@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../state/store';
+import React, { useEffect, useState } from 'react';
+import { supabase } from '../integrations/supabase/client';
 import { useForm } from 'react-hook-form';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useSearchParams, useParams } from 'react-router-dom';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
 import avatar from "../assets/img/dick.jpg";
 import toast from 'react-hot-toast';
 import post1 from "../assets/img/b-6.png";
-import { fetchBlogById } from '../state/blogs/blogSlice';
-import { fetchCategories, selectCategoriesState } from '../state/blogs/categoriesSlice';
 import BlogLayout from '../Components/Layouts/BlogLayout';
-import { fetchPosts } from '../state/blogs/post';
+import { Search, Calendar, User, Clock } from 'lucide-react';
+import { BlogPost } from '../types/blog';
 
 type FormValues = {
     blog_id: number;
@@ -23,60 +21,97 @@ type FormValues = {
 export default function Blog() {
 
     const { id } = useParams<{ id: string }>();
-    const dispatch = useDispatch<AppDispatch>();
-    const { blog, featuredImage, image } = useSelector(
-        (state: RootState) => state.blog);
-    const { categories, loading: categoriesLoading, error: categoriesError } = useSelector(selectCategoriesState);
-    const { posts } = useSelector(
-        (state: RootState) => state.posts
-    );
+    const [posts, setPosts] = useState<BlogPost[]>([]);
+    const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedFilter, setSelectedFilter] = useState('all');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [searchParams] = useSearchParams();
+    const postsPerPage = 9;
 
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
-    } = useForm<FormValues>();
-
-    const submit = async (data: FormValues) => {
-        try {
-          const apiUrl = `${process.env.REACT_APP_BASEURL}/api/comment`;
-          
-          const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                ...data,
-                blog_id: Number(id), 
-            }),
-          });
-    
-          const result = await response.json();
-    
-          if (response.ok) {
-            toast.success('Comment received! Waiting for admin approval');
-            reset();
-          } else {
-            const errorMessage = result?.message?.content?.[0] || 'Something went wrong, please try again!';
-            toast.error(errorMessage);
-          }
-        } catch (error) {
-          console.error('An unexpected error occurred:', error);
-          toast.error('An unexpected error occurred, please try again!');
-        }
-      };
+    const categories = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta'];
+    const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships'];
 
     useEffect(() => {
-        dispatch(fetchBlogById(Number(id)));
-        dispatch(fetchCategories());
-        dispatch(fetchPosts());
-    }, [dispatch, id]);
-    
-//     if (!blog || !blog.title || !blog.detailsOne) {
-//     return <div>Loading...</div>;
-//   }
+        fetchPosts();
+        
+        // Check for category parameter in URL
+        const categoryParam = searchParams.get('category');
+        if (categoryParam && categories.includes(categoryParam)) {
+        setSelectedCategory(categoryParam);
+        }
+    }, [searchParams]);
+
+    useEffect(() => {
+        filterPosts();
+    }, [posts, searchTerm, selectedCategory, selectedFilter]);
+
+    const fetchPosts = async () => {
+        try {
+        const { data, error } = await supabase
+            .from('blog_posts' as any)
+            .select('*')
+            .eq('is_published', true)
+            .order('published_date', { ascending: false });
+
+        if (error) throw error;
+        setPosts((data as any[]) || []);
+        } catch (error) {
+        console.error('Error fetching posts:', error);
+        } finally {
+        setLoading(false);
+        }
+    };
+
+    const filterPosts = () => {
+        let filtered = posts;
+
+        if (searchTerm) {
+        filtered = filtered.filter(post =>
+            post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        );
+        }
+
+        if (selectedCategory !== 'all') {
+        filtered = filtered.filter(post => post.category === selectedCategory);
+        }
+
+        if (selectedFilter !== 'all') {
+        filtered = filtered.filter(post => post.filter_type === selectedFilter);
+        }
+
+        setFilteredPosts(filtered);
+        setCurrentPage(1);
+    };
+
+    const paginatedPosts = filteredPosts.slice(
+        (currentPage - 1) * postsPerPage,
+        currentPage * postsPerPage
+    );
+
+    const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+
+    const formatDate = (dateString: string) => {
+        return new Date(dateString).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+        });
+    };
+
+    if (loading) {
+        return (
+        <div className="min-h-screen bg-background p-8">
+            <div className="max-w-7xl mx-auto">
+            <div className="text-center">Loading blog posts...</div>
+            </div>
+        </div>
+        );
+    }
 
   return (
         <BlogLayout>
@@ -85,7 +120,6 @@ export default function Blog() {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 col-md-12">
-
                                 <div className="breadcrumbs-wrap">
                                     <h1 className="breadcrumb-title text-light">Study Abroad Blogs</h1>
                                     <nav className="transparent">
@@ -142,7 +176,14 @@ export default function Blog() {
                                 <div className="single_widgets widget_search">
                                     <h4 className="title">Search</h4>
                                     <form action="#" className="sidebar-search-form">
-                                        <input type="search" name="search" placeholder="Search.." />
+                                        <input 
+                                            type="search" 
+                                            name="search" 
+                                            placeholder="Search blog posts..."
+                                            value={searchTerm}
+                                            onChange={(e) => setSearchTerm(e.target.value)}
+                                            className="pl-10"
+                                        />
                                         <button type="submit"><i className="ti-search"></i></button>
                                     </form>
                                 </div>
@@ -150,7 +191,7 @@ export default function Blog() {
                                 <div className="single_widgets widget_category">
                                     <h4 className="title">Categories</h4>
                                     <ul>
-                                        {categoriesLoading ? (
+                                        {/* {categoriesLoading ? (
                                         <li>Loading categories...</li>
                                         ) : categoriesError ? (
                                             <li>Error fetching categories...</li>
@@ -162,7 +203,7 @@ export default function Blog() {
                                             </li>
                                             ))}
                                         </ul>
-                                        )}
+                                        )} */}
                                     </ul>
                                 </div>
                                 
