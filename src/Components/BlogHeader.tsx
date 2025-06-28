@@ -58,11 +58,11 @@ export default function BlogHeader() {
                   <div className={`nav-menus-wrapper ${isNavOpen ? 'nav-menus-wrapper-open' : ''}`} style={navMenusWrapperStyle}>
                       <ul className="nav-menu">
                           <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Study Abroad</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Scholarships</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Success Stories</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Visa and Immigration</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Scholarships and Grants</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">SOP</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Scholarships</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Success Stories</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Visa and Immigration</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Scholarships and Grants</Link></li>
+                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">SOP</Link></li>
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
