@@ -48,7 +48,7 @@ export default function PostUniMalta() {
 
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div className="lmp_caption">
-                <h4>Monthly Living Expenses in United Kingdom</h4>
+                <h4>Monthly Living Expenses in Malta</h4>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="row mt-4">
                             <div className="col-lg-6 col-mg-6 col-sm-6">
