@@ -16,7 +16,11 @@ type FormValues = {
     name: string;
     email: string;
     comment: string;
-  };
+};
+
+interface BlogSidebarProps {
+  currentPost?: BlogPost;
+}
 
 export default function Blog() {
 
@@ -139,15 +143,29 @@ export default function Blog() {
                         <div className="row justify-content-center">
                             <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                                 <div className="row">
-                                    <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                    {paginatedPosts.length > 0 ? (
+                                    paginatedPosts.map(post => (
+                                    <div  key={post.id} className="col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div className="blg_grid_box">
                                             <div className="blg_grid_thumb">
-                                                <a href="blog-detail.html"><img src="assets/img/b-1.png" className="img-fluid" alt=""/></a>
+                                                {post.featured_image_url && (
+                                                    <Link to="blog-detail.html">
+                                                        <img 
+                                                            src={post.featured_image_url}
+                                                            alt={post.title}
+                                                            className="img-fluid"
+                                                            loading="lazy"
+                                                            />
+                                                    </Link>
+                                                )}
                                             </div>
                                             <div className="blg_grid_caption">
-                                                <div className="blg_tag"><span>Marketing</span></div>
-                                                <div className="blg_title"><h4><a href="blog-detail.html">How To Register &amp; Enrolled on SkillUp Step by Step?</a></h4></div>
-                                                <div className="blg_desc"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p></div>
+                                                <div className="blg_tag"><span>{post.category}</span></div>{" "}
+                                                    {post.filter_type && (
+                                                        <div className="blg_tag">{post.filter_type}</div>
+                                                    )}
+                                                <div className="blg_title"><h4><Link to={`/blog/${post.slug}`}>{post.title}</Link></h4></div>
+                                                <div className="blg_desc"><p>{post.excerpt}</p></div>
                                             </div>
                                             <div className="crs_grid_foot">
                                                 <div className="crs_flex">
@@ -159,8 +177,10 @@ export default function Blog() {
                                                     <div className="crs_fl_last">
                                                         <div className="foot_list_info">
                                                             <ul>
-                                                                <li><div className="elsio_ic"><i className="fa fa-eye text-success"></i></div><div className="elsio_tx">10k Views</div></li>
-                                                                <li><div className="elsio_ic"><i className="fa fa-clock text-warning"></i></div><div className="elsio_tx">10 July 2021</div></li>
+                                                                {post.reading_time_minutes && (
+                                                                    <li><div className="elsio_ic"><i className="fa fa-clock text-success"></i></div><div className="elsio_tx">{post.reading_time_minutes} min</div></li>
+                                                                )}
+                                                                    <li><div className="elsio_ic"><i className="fa fa-calendar text-warning"></i></div><div className="elsio_tx">{formatDate(post.published_date)}</div></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -168,8 +188,17 @@ export default function Blog() {
                                             </div>
                                         </div>
                                     </div>
+                                        ))
+                                        ) : (
+                                            <div className="col-12 text-center py-8">No posts founds.</div>
+                                    )}
                                 </div>
                             </div>
+
+                            {/* Beginning */}
+                           
+
+                            {/* End */}
 
                             <div className="col-lg-4 col-md-12 col-sm-12 col-12">
                         
@@ -191,21 +220,21 @@ export default function Blog() {
                                 <div className="single_widgets widget_category">
                                     <h4 className="title">Categories</h4>
                                     <ul>
-                                        {/* {categoriesLoading ? (
-                                        <li>Loading categories...</li>
-                                        ) : categoriesError ? (
-                                            <li>Error fetching categories...</li>
-                                        ) : (
-                                        <ul>
-                                            {Object.entries(categories).map(([category]) => (
+                                        {categories.map(category => (
                                             <li key={category}>
-                                                <Link to="/">{category} <span>1</span></Link>
+                                                <button
+                                                    className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+                                                    onClick={() => setSelectedCategory(category)}
+                                                    style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: selectedCategory === category ? '#4a90e2' : undefined }}
+                                                >
+                                                    {category}
+                                                </button>
                                             </li>
-                                            ))}
-                                        </ul>
-                                        )} */}
+                                        ))}
                                     </ul>
                                 </div>
+
+                                 
                                 
                                 <div className="single_widgets widget_thumb_post">
                                     <h4 className="title">All Posts</h4>

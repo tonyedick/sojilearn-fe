@@ -14,6 +14,7 @@ import StudyInMalta from './Pages/StudyInMalta';
 import StudyInCanada from './Pages/StudyInCanada';
 import StudyInUSA from './Pages/StudyInUSA';
 import StudyInGermany from './Pages/StudyInGermany';
+import UnderConstruction from './Pages/UnderConstruction';
 // import BlogPost from "./pages/BlogPost";
 // import Auth from "./pages/Auth";
 // import Admin from "./pages/Admin";
@@ -70,13 +71,14 @@ function App() {
                     <Route path="/study-in-usa" element={<StudyInUSA />} />
                     <Route path="/study-in-canada" element={<StudyInCanada />} />
                     <Route path="/study-in-germany" element={<StudyInGermany />} />
-                    <Route path="/blog" element={<Blog />} />
+                    {/* <Route path="/blog" element={<Blog />} /> */}
                     {/* <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/auth" element={<Auth />} />
                     <Route path="/admin" element={<Admin />} />
                     <Route path="/admin/posts/new" element={<AdminPostForm />} />
                     <Route path="/admin/posts/edit/:id" element={<AdminPostForm />} /> */}
                     <Route path="*" element={<Navigate to="/not-found" replace />} />
+                    <Route path="/blog" element={<UnderConstruction />} />
                   </Routes>
                 </Suspense>
               </BrowserRouter>

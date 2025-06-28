@@ -73,7 +73,17 @@ export default function BlogHeader() {
                           </li> */}
 
                           <li className="add-listing theme-bg">
-                              <Link to="/blog" target="_blank" className="text-white btn-login btn btn-theme btn-inverse">Subscribe <i className="fas fa-sign-in-alt pre"></i></Link>
+                              <button
+                                className="btn theme-bg text-white btn-login btn btn-theme btn-inverse"
+                                onClick={() => {
+                                    const section = document.getElementById('newsletter');
+                                    if (section) {
+                                        section.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Subscribe <i className="fas fa-sign-in-alt pre"></i>
+                            </button>
                           </li>
 
                       </ul>
