@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import BlogLayout from '../Components/Layouts/BlogLayout';
+import { supabase } from '../integrations/supabase/client';
 import ConstructionLayout from '../Components/Layouts/ConstructionLayout';
 // import { Mail } from 'lucide-react';
 
@@ -9,24 +9,40 @@ export default function UnderConstruction() {
     const [loading, setLoading] = useState(false);
 
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
+  
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
 
-    setLoading(true);
-    try {
-      // Here you would integrate with your newsletter service
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
-      
-      alert("Successfully subscribed!");
-      setEmail('');
-    } catch (error) {
-      alert("Subscription failed, Please try again later.");
-    } finally {
-      setLoading(false);
-    }
-  };
+        setLoading(true);
+        try {
+        const { error } = await supabase
+            .from('newsletter_subscribers')
+            .insert([
+            {
+                email: email.toLowerCase().trim(),
+                source: 'blog_signup'
+            }
+            ]);
+
+        if (error) {
+            // Check if it's a duplicate email error
+            if (error.code === '23505') {
+            alert("This email is already subscribed to our newsletter.");
+            } else {
+            throw error;
+            }
+        } else {
+            alert("Successful! Thank you for subscribing to our newsletter.");
+            setEmail('');
+        }
+        } catch (error) {
+        console.error('Newsletter subscription error:', error);
+        alert("Subscription failed, Please try again later.");
+        } finally {
+        setLoading(false);
+        }
+    };
 
     return (
     <ConstructionLayout>
