@@ -6,7 +6,7 @@ import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
 import post1 from "../assets/img/b-6.png";
 import BlogLayout from '../Components/Layouts/BlogLayout';
-import { RelatedPosts } from '../Components/Blog/RelatedPosts';
+import { RelatedPosts } from '../Components/RelatedPosts';
 
 export default function BlogDetail() {
     const { slug } = useParams<{ slug: string }>();
