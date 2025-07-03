@@ -5,7 +5,7 @@ import Explore from '../Components/Explore';
 import StudyInUKCom from '../Components/UK/StudyInUkCom';
 import StudyInCanada from '../Components/CA/StudyInCanada';
 import Steps from '../Components/Steps';
-// import News from '../Components/News';
+import News from '../Components/News';
 import CTA from '../Components/CTA';
 import FAQ from '../Components/FAQ';
 import SimplifyAdmit from '../Components/SimplifyAdmit';
@@ -21,7 +21,7 @@ export default function Home() {
         <SimplifyAdmit />
         <StudyInCanada />
         <FAQ />
-        {/* <News /> */}
+        <News />
         <CTA />
         </>
     </AppLayout>
