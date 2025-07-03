@@ -198,8 +198,8 @@ export default function BlogDetail() {
                                 <span className="img"><img className="img-fluid" src={post?.author_avatar_url} alt={post?.author_name} /></span>
                                 <h3 className="pa-name">{post?.author_name}</h3>
                                 <ul className="social-links">
-                                	<li><Link to="https://x.com/dev_dicktonye"><i className="fab fa-twitter"></i></Link></li>
-                                    	<li><Link to="https://linkedin.com/in/dicktonye"><i className="fab fa-linkedin-in"></i></Link></li>
+                                    <li><Link to="https://x.com/dev_dicktonye"><i className="fab fa-twitter"></i></Link></li>
+                                    <li><Link to="https://linkedin.com/in/dicktonye"><i className="fab fa-linkedin-in"></i></Link></li>
                                 </ul>
                                 <p className="pa-text">Mr. Tonye is a Software Engineer and Educational Consultant, using his God-given talent to inspire students in Africa and globally. He is driven by a passion to help students access quality education anywhere in the world. </p>
                             </div>
@@ -258,15 +258,15 @@ export default function BlogDetail() {
                             <h4 className="title">All Posts</h4>
                             <ul>
                             {posts && posts.length > 0 ? (
-                            posts.map((item: any) => (
-                                <li key={item?.id}>
+                            posts.map(post => (
+                                <li key={post?.id}>
                                     <span className="left">
-                                        <img src={item?.featured_image_url} alt="" className="" />
+                                        <img src={post?.featured_image_url} alt="" className="" />
                                     </span>
                                     <span className="right">
-                                        <Link className="feed-title" to={`/blog-detail/${item?.id}`} target="_blank">{item?.title.slice(0, 24)}...</Link> 
+                                        <Link className="feed-title" to={`/blog/${post?.slug}`} target="_blank">{post?.title.slice(0, 24)}...</Link> 
                                         <span className="post-date"><i className="ti-calendar"></i>
-                                            {Moment(item?.created_at).format(dateFormat)}
+                                            {Moment(post?.created_at).format(dateFormat)}
                                         </span>
                                     </span>
                                 </li>
