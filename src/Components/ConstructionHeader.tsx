@@ -52,7 +52,7 @@ export default function ConstructionHeader() {
           <div className="container">
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
-                      <Link className="nav-brand" to="/blog">
+                      <Link className="nav-brand" to="/">
                           <img src={logo} className="logo" alt="" />
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
