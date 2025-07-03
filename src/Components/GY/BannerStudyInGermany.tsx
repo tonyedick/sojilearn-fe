@@ -36,10 +36,10 @@ export default function BannerStudyInCanada() {
               <div className="row align-items-center">
                     <div className="simple-search-wrap">
                         <div className="hero_search-2">
-                            <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px gray"}} 
+                            <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px black"}} 
                             ><span><img src={flag} alt="" height="45" width="60" /></span> Study in Germany<br /></h1>
                             <div className="inline_btn">
-                                <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">Online Form</Link></div>
+                                <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">APPLY NOW</Link></div>
                         </div>
                     </div>
               </div>
@@ -58,6 +58,7 @@ export default function BannerStudyInCanada() {
                                         <div className="dro_142">
                                             <h6>AFTER 12TH / UG</h6>
                                             <p><strong>How to Apply: </strong>Students can apply via the institute's official website.</p>
+                                               <p><strong>Cost Estimate: </strong>€12,100 - €16,450 per year (3 years)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -67,6 +68,7 @@ export default function BannerStudyInCanada() {
                                         <div className="dro_142">
                                             <h6>MASTERS</h6>
                                             <p><strong>How to Apply: </strong>PG applications are directly sent to the universities online.</p>
+                                            <p><strong>Cost Estimate: </strong>€3,100 - €7,100 per semester (3 semesters)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -76,6 +78,7 @@ export default function BannerStudyInCanada() {
                                         <div className="dro_142">
                                             <h6>MBA</h6>
                                             <p><strong>How to Apply: </strong>Applications are submitted directly to the universities online.</p>
+                                            <p><strong>Cost Estimate: </strong>€3,100 - €7,100 per semester (3 semesters)</p>
                                         </div>
                                     </div>
                                 </div>
