@@ -107,7 +107,7 @@ export default function TermsOfUse() {
                             <p>Our services are limited to the Consultation described above. If you have already had a Consultation or otherwise wish to engage Sojilearn to provide any further assistance, such as assisting you to prepare and lodge your visa application, reviewing application forms or checking documents we will provide you with a new Visa Services Agreement which will apply in relation to those services. Information about Fees</p>
                             <br />
                             <h3 className="theme-cl">Information about Fees</h3>
-                            <h4>Fees & Payment</h4>  
+                            <h4>Fees &amp; Payment</h4>  
                             <p>Our fees for the Consultation are $199 for a session up to 30 minutes, inclusive of WAT. These fees are payable via Paystack* when the session is booked.</p>
                             <p>If you engage us to provide further assistance, the fees for that assistance will be set out in a new Visa Services Agreement.</p>
                             <p>The fees for the Consultation will be credited towards the fees charged under the new Visa Services Agreement, provided the new agreement is signed within 2 months of the Consultation. No credit will be given after 2 months from the date of the first Consultation.</p>
