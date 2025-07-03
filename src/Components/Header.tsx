@@ -15,7 +15,11 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setIsNavOpen(false); // Close nav when switching to desktop
+      }
     };
 
     handleResize();
@@ -59,12 +63,12 @@ export default function Header() {
                       <ul className="nav-menu">
                           <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Home</Link></li>
                           <li className={activeLink === '/about' ? 'active' : ''}><Link to="/about">About</Link></li>
-                          <li className={activeLink === '/contact' ? 'active' : ''}><Link to="/contact">Contact Us</Link></li>
                           <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Study in UK</Link></li>
                           <li className={activeLink === '/study-in-canada' ? 'active' : ''}><Link to="/study-in-canada">Study in Canada</Link></li>
                           <li className={activeLink === '/study-in-usa' ? 'active' : ''}><Link to="/study-in-usa">Study in USA</Link></li>
                           <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
                           <li className={activeLink === '/study-in-malta' ? 'active' : ''}><Link to="/study-in-malta">Study in Malta</Link></li>
+                          <li className={activeLink === '/contact' ? 'active' : ''}><Link to="/contact">Contact Us</Link></li>
                       </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
@@ -74,11 +78,35 @@ export default function Header() {
                               </Link>
                           </li> */}
 
-                          <li className="add-listing theme-bg">
+                            <li className="add-listing theme-bg">
                               <Link to="/blog" target="_blank" className="text-white">Visit our Blog</Link>
-                          </li>
-
-                      </ul>
+                            </li>
+                        </ul>
+                    </div>
+                  <div
+                    className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    {isMobile && isNavOpen && (
+                      <button
+                        className="nav-close-btn"
+                        aria-label="Close navigation"
+                        onClick={() => setIsNavOpen(false)}
+                        style={{
+                          position: 'absolute',
+                          top: 20,
+                          right: 20,
+                          background: 'none',
+                          border: 'none',
+                          fontSize: 32,
+                          color: '#333',
+                          cursor: 'pointer',
+                          zIndex: 1001,
+                        }}
+                      >
+                        &times;
+                      </button>
+                    )}
                   </div>
                   <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
               </nav>
