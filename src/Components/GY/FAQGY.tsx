@@ -97,7 +97,7 @@ export default function FAQGY() {
                             </div>
                             <div id="collapseEight" aria-labelledby="headingEight" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>During your tenure at a university, you are permitted to work up to 140 full days or 280 half days per annum, or alternatively, up to 20 hours per week. Additionally, you may engage in part-time student employment for an indefinite duration.</p>
+                                <p>During your tenure at a university, you are permitted to work up to 120 full days or 240 half-days of paid work per annum, or alternatively, up to 20 hours per week. In exceptional circumstances, your local Foreign Office may impose further restrictions.</p>
                             </div>
                             </div>
                         </div>
