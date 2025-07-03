@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BlogLayout from '../Components/Layouts/BlogLayout';
-import { Mail } from 'lucide-react';
+import ConstructionLayout from '../Components/Layouts/ConstructionLayout';
+// import { Mail } from 'lucide-react';
 
 export default function UnderConstruction() {
     const [email, setEmail] = useState('');
@@ -28,7 +29,7 @@ export default function UnderConstruction() {
   };
 
     return (
-    <BlogLayout>
+    <ConstructionLayout>
         <>
         <section className="error-wrap gray">
             <div className="container">
@@ -81,6 +82,6 @@ export default function UnderConstruction() {
         </section>
         </>
        
-    </BlogLayout>
+    </ConstructionLayout>
   )
 }
