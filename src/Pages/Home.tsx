@@ -20,8 +20,8 @@ export default function Home() {
         <StudyInUKCom />
         <SimplifyAdmit />
         <StudyInCanada />
-        <FAQ />
         <News />
+        <FAQ />
         <CTA />
         </>
     </AppLayout>
