@@ -15,6 +15,7 @@ export default function Blog() {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [newsletterLoading, setNewsletterLoading] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
@@ -97,16 +98,6 @@ export default function Blog() {
         day: 'numeric'
         });
     };
-
-    if (loading) {
-        return (
-        <div className="min-h-screen bg-background p-8">
-            <div className="max-w-7xl mx-auto">
-            <div className="text-center">Loading blog posts...</div>
-            </div>
-        </div>
-        );
-    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -229,7 +220,13 @@ export default function Blog() {
                         
                                 <div className="single_widgets widget_search">
                                     <h4 className="title">Search</h4>
-                                    <form action="#" className="sidebar-search-form">
+                                    <form
+                                        className="sidebar-search-form"
+                                        onSubmit={e => {
+                                            e.preventDefault();
+                                            // Optionally trigger search/filter logic here if needed
+                                        }}
+                                    >
                                         <input 
                                             type="search" 
                                             name="search" 
@@ -321,20 +318,20 @@ export default function Blog() {
                                     <h3 className="mb-2 text-dark">Join Our Newsletter</h3>
                                     <p className="mb-4 h6">Get the latest study abroad tips, scholarship opportunities, and visa updates delivered to your inbox.</p>
                                 </div>
-                            <div className="col-12">
-                                <form onSubmit={handleSubmit} className="d-flex justify-content-center" style={{ gap: "8px" }}>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        className="form-control"
-                                        placeholder="Enter your email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                    />
-                                    <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
-                                </form>
-                            </div>
+                                <div className="col-12">
+                                    <form onSubmit={handleSubmit} className="d-flex justify-content-center" style={{ gap: "8px" }}>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            className="form-control"
+                                            placeholder="Enter your email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                        />
+                                        <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
