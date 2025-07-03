@@ -58,7 +58,7 @@ export default function UnderConstruction() {
                             </div>
                             <br/>
                                 <h5>We're building something unique for you. Please check back in 48 hours.</h5>
-                            <Link className="btn theme-bg text-white btn-md" to="../../">Back To Home</Link>
+                            <Link className="btn theme-bg text-white btn-md" to="/">Back To Home</Link>
                         </div>
                     </div>
 
