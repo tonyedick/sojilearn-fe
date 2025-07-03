@@ -40,7 +40,7 @@ export default function News() {
 
      if (featuredPosts.length === 0) {
         return (
-            <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
+            <section style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
@@ -86,7 +86,7 @@ export default function News() {
 
     return (
         <div>
-            <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
+            <section style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
