@@ -1,4 +1,3 @@
-
 export interface BlogPost {
   id: string;
   title: string;
@@ -14,8 +13,10 @@ export interface BlogPost {
   tags?: string[];
   filter_type?: 'Undergraduate' | 'Postgraduate' | 'Visa' | 'SOPs' | 'Scholarships';
   is_published: boolean;
+  featured: boolean;
   reading_time_minutes?: number;
   seo_title?: string;
   seo_description?: string;
   created_at: string;
 }
+
