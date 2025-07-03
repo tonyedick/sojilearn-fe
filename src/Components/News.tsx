@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { BlogPost } from '../types/blog';
 import { Link } from 'react-router-dom';
-import Moment from "moment";
-import { dateFormat } from "../Helpers/types";
 
 export default function News() {
     const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
@@ -41,10 +39,6 @@ export default function News() {
     };
 
      if (featuredPosts.length === 0) {
-        return null;
-    }
-
-    if (loading) {
         return (
             <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
@@ -52,10 +46,11 @@ export default function News() {
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
                                 <h2>Latest News &amp; <span className="theme-cl">Articles</span></h2>
+                                <h4>No Posts at this time</h4>
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
+                     <div className="row justify-content-center">
                         {[1, 2, 3].map(i => (
                             <div className="col-lg-4 col-md-6" key={i}>
                                 <div className="blg_grid_box" style={{ opacity: 0.7 }}>
@@ -86,7 +81,7 @@ export default function News() {
                     </div>
                 </div>
             </section>
-        );
+        )
     }
 
     return (
