@@ -9,7 +9,7 @@ export default function FAQ() {
             <div className="row justify-content-center">
                 <div className="col-lg-7 col-md-8">
                     <div className="sec-heading center">
-                        <h2>Frequently Asked <span className="theme-cl">Questions</span></h2>
+                        <h2>There are no stupid questions, Ask Away, <span className="theme-cl">We're All Ears</span></h2>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Our team will keep you updated on the status of your applications via email and your dashboard.</p>
+                                <p>For smooth communication, our team will keep you updated on the status of your applications via email and WhatsApp.</p>
                             </div>
                             </div>
                         </div>
