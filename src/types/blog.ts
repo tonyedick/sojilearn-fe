@@ -10,7 +10,7 @@ export interface BlogPost {
   author_avatar_url?: string;
   published_date: string;
   updated_date: string;
-  category: 'Canada' | 'UK' | 'USA' | 'France' | 'Germany' | 'Ireland' | 'Malta';
+  category: 'Study Abroad' | 'Scholarships' | 'Success Stories' | 'Visa and Immigration' | 'Scholarships and Grants' | 'SOP';
   tags?: string[];
   filter_type?: 'Undergraduate' | 'Postgraduate' | 'Visa' | 'SOPs' | 'Scholarships';
   is_published: boolean;
