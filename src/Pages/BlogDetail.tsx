@@ -198,11 +198,8 @@ export default function BlogDetail() {
                                 <span className="img"><img className="img-fluid" src={post?.author_avatar_url} alt={post?.author_name} /></span>
                                 <h3 className="pa-name">{post?.author_name}</h3>
                                 <ul className="social-links">
-                                    <li><Link to="/"><i className="fab fa-facebook-f"></i></Link></li>
-                                    <li><Link to="/"><i className="fab fa-twitter"></i></Link></li>
-                                    <li><Link to="/"><i className="fab fa-behance"></i></Link></li>
-                                    <li><Link to="/"><i className="fab fa-youtube"></i></Link></li>
-                                    <li><Link to="/"><i className="fab fa-linkedin-in"></i></Link></li>
+                                	<li><Link to="https://x.com/dev_dicktonye"><i className="fab fa-twitter"></i></Link></li>
+                                    	<li><Link to="https://linkedin.com/in/dicktonye"><i className="fab fa-linkedin-in"></i></Link></li>
                                 </ul>
                                 <p className="pa-text">Mr. Tonye is a Software Engineer and Educational Consultant, using his God-given talent to inspire students in Africa and globally. He is driven by a passion to help students access quality education anywhere in the world. </p>
                             </div>
