@@ -67,7 +67,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Currently, our partner universities are in Malta, Germany, UK, USA, Canada, Ireland and Dubai.</p>
+                                <p>Currently, our partner universities are in Malta, UK, Germany, USA, Canada, Ireland and France.</p>
                             </div>
                             </div>
                         </div>
