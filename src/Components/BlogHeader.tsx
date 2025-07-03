@@ -1,13 +1,25 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import logo from "../assets/img/logo-dark.png";
 // import './nav.css';
+
+const categories = [
+  { name: 'All Posts', slug: 'all' },
+  { name: 'Study Abroad', slug: 'Study Abroad' },
+  { name: 'Scholarships', slug: 'Scholarships' },
+  { name: 'Success Stories', slug: 'Success Stories' },
+  { name: 'Visa and Immigration', slug: 'Visa and Immigration' },
+  { name: 'Scholarships and Grants', slug: 'Scholarships and Grants' },
+  { name: 'SOP', slug: 'SOP' }
+];
 
 export default function BlogHeader() {
   const [activeLink, setActiveLink] = useState('');
   const [isMobile, setIsMobile] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [searchParams] = useSearchParams();
   const location = useLocation();
+  const currentCategory = searchParams.get('category') || 'all';
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -34,14 +46,13 @@ export default function BlogHeader() {
   const navMenusWrapperStyle = {
     transitionProperty: isNavOpen ? 'left' : 'none',
   };
-  
 
   return (
       <div className="header header-light dark-text">
           <div className="container">
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
-                      <Link className="nav-brand" to="/">
+                      <Link className="nav-brand" to="/blog">
                           <img src={logo} className="logo" alt="" />
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
@@ -57,13 +68,25 @@ export default function BlogHeader() {
                   </div>
                   <div className={`nav-menus-wrapper ${isNavOpen ? 'nav-menus-wrapper-open' : ''}`} style={navMenusWrapperStyle}>
                       <ul className="nav-menu">
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Study Abroad</Link></li>
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Scholarships</Link></li>
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Success Stories</Link></li>
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Visa and Immigration</Link></li>
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Scholarships and Grants</Link></li>
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">SOP</Link></li>
-                      </ul>
+                          {categories.map((category) => {
+                            const isActive = currentCategory === category.slug;
+                            const href = category.slug === 'all' ? '/blog' : `/blog?category=${encodeURIComponent(category.slug)}`;
+                            
+                            return (
+                              <li key={category.slug} className={isActive ? 'active' : ''}>
+                                <Link key={category.slug}to={href}>
+                                  {category.name}
+                                </Link>
+                              </li>
+                            );
+                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Study Abroad</Link></li>
+                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Scholarships</Link></li>
+                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Success Stories</Link></li>
+                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Visa and Immigration</Link></li>
+                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Scholarships and Grants</Link></li>
+                        //   <li className={activeLink === '/' ? 'active' : ''}><Link to="/">SOP</Link></li>
+                           })}
+                    </ul>
 
                       <ul className="nav-menu nav-menu-social align-to-right">
                           {/* <li>
