@@ -37,10 +37,10 @@ export default function BannerStudyInUSA() {
               <div className="row align-items-center">
                     <div className="simple-search-wrap">
                         <div className="hero_search-2">
-                            <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px gray"}} 
+                            <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px black"}} 
                             ><span><img src={flag} alt="" height="45" width="60" /></span> Study in USA<br /></h1>
                             <div className="inline_btn">
-                                <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">Online Form</Link>                            </div>
+                                <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">APPLY NOW</Link></div>
                         </div>
                     </div>
               </div>
@@ -58,7 +58,7 @@ export default function BannerStudyInUSA() {
                                         <div className="dro_141 de"><i className="fa fa-journal-whills"></i></div>
                                         <div className="dro_142">
                                             <h6>AFTER 12TH / UG</h6>
-                                            <p><strong>How to Apply: </strong>UG Applications are submitted directly through the websites of each university.</p>
+                                            <p><strong>How to Apply: </strong>UG Applications are submitted directly through our online form.</p>
                                             <p><strong>Cost Estimate: </strong>$24,000- $32,000 per year</p>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@ export default function BannerStudyInUSA() {
                                         <div className="dro_141 de"><i className="fa fa-business-time"></i></div>
                                         <div className="dro_142">
                                             <h6>MASTERS</h6>
-                                            <p><strong>How to Apply: </strong>PG applications are directly sent to the universities via online or offline modes.</p>
+                                            <p><strong>How to Apply: </strong>PG applications are directly sent to the universities online.</p>
                                             <p><strong>Cost Estimate: </strong>$30,000 - $35,000 per year</p>
                                         </div>
                                     </div>
