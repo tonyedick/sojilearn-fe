@@ -1,24 +1,52 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../state/store';
+import { useState, useEffect } from 'react';
+import { supabase } from '../integrations/supabase/client';
+import { BlogPost } from '../types/blog';
 import { Link } from 'react-router-dom';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
-import { fetchFeaturedBlogs } from '../state/featuredblogs/featuredBlog';
 
 export default function News() {
-    const dispatch = useDispatch<AppDispatch>();
-    const { featuredBlogs } = useSelector(
-      (state: RootState) => state.featuredBlogs
-    );
+    const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-      dispatch(fetchFeaturedBlogs());
-    }, [dispatch]);
+        fetchFeaturedPosts();
+    }, []);
 
-    return (
-        <div>
-            <section className="min gray">
+    const fetchFeaturedPosts = async () => {
+        try {
+        const { data, error } = await supabase
+            .from('blog_posts' as any)
+            .select('*')
+            .eq('is_published', true)
+            .eq('featured', true)
+            .order('published_date', { ascending: false })
+            .limit(3);
+
+        if (error) throw error;
+        setFeaturedPosts((data as any[]) || []);
+        } catch (error) {
+        console.error('Error fetching featured posts:', error);
+        } finally {
+        setLoading(false);
+        }
+    };
+
+    const formatDate = (dateString: string) => {
+        return new Date(dateString).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+        });
+    };
+
+     if (featuredPosts.length === 0) {
+        return null;
+    }
+
+    if (loading) {
+        return (
+            <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
@@ -27,46 +55,89 @@ export default function News() {
                             </div>
                         </div>
                     </div>
-
                     <div className="row justify-content-center">
-                        {featuredBlogs && featuredBlogs.length > 0 ? (
-                            featuredBlogs.map((item: any) => (
-                                <div className="col-lg-4 col-md-6" key={item?.id}>
-                                    <div className="blg_grid_box">
-                                        <div className="blg_grid_thumb">
-                                            <Link to={`blog-detail/${item?.id}`}>
-                                                <img src={item?.featuredImage} className="img-fluid" alt="" />
-                                            </Link>
+                        {[1, 2, 3].map(i => (
+                            <div className="col-lg-4 col-md-6" key={i}>
+                                <div className="blg_grid_box" style={{ opacity: 0.7 }}>
+                                    <div className="blg_grid_thumb" style={{ background: "#e0e0e0", height: 180, borderRadius: 8 }} />
+                                    <div className="blg_grid_caption">
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <div style={{ background: "#e0e0e0", height: 20, width: 80, borderRadius: 4, marginBottom: 8 }} />
+                                            </div>
+                                            <div className="col-6" style={{ textAlign: 'end' }}>
+                                                <div style={{ background: "#e0e0e0", height: 20, width: 60, borderRadius: 4, marginBottom: 8, float: 'right' }} />
+                                            </div>
                                         </div>
-                                        <div className="blg_grid_caption">
-                                            <div className="row">
-                                                <div className="col-6">
-                                                    <div className="blg_tag dark"><span>{item?.category}</span> </div>
-                                                </div>
-                                                <div className="col-6" style={{ fontWeight: 'bold', textAlign: 'end' }}>
-                                                    {Moment(item?.created_at).format(dateFormat)}
-                                                </div>
-                                            </div>
-                                            <div className="blg_title">
-                                                <h4>{item?.title}</h4>
-                                            </div>
-                                           <div className="blg_desc">
-                                                <p>{item?.intro.slice(0, 80)}...</p>
-                                            </div>
-                                            <div className="blg_more">
-                                                <Link to={`/blog-detail/${item?.id}`} target="_blank">Read More</Link>
-                                            </div>
+                                        <div className="blg_title">
+                                            <div style={{ background: "#e0e0e0", height: 24, width: "80%", borderRadius: 4, marginBottom: 12 }} />
+                                        </div>
+                                        <div className="blg_desc">
+                                            <div style={{ background: "#e0e0e0", height: 16, width: "100%", borderRadius: 4, marginBottom: 6 }} />
+                                            <div style={{ background: "#e0e0e0", height: 16, width: "70%", borderRadius: 4 }} />
+                                        </div>
+                                        <div className="blg_more">
+                                            <div style={{ background: "#e0e0e0", height: 20, width: 90, borderRadius: 4, marginTop: 10 }} />
                                         </div>
                                     </div>
                                 </div>
-                            ))
-                        ) : (
-                            <div className="col-lg-7 col-md-8">
-                                <div className="sec-heading center">
-                                    <h2>No Articles <span className="theme-cl">Yet</span></h2>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    return (
+        <div>
+            <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-7 col-md-8">
+                            <div className="sec-heading center">
+                                <h2>What is &amp; <span className="theme-cl">Trending</span></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row justify-content-center">
+                        {featuredPosts.map(post => (
+                            <div className="col-lg-4 col-md-6" key={post.id}>
+                                <div className="blg_grid_box">
+                                    {post.featured_image_url && (
+                                        <div className="blg_grid_thumb">
+                                            <Link to={`/blog/${post.slug}`}>
+                                                <img    
+                                                    src={post.featured_image_url}
+                                                    alt={post.title} 
+                                                    className="img-fluid"
+                                                />
+                                            </Link>
+                                        </div>
+                                    )}
+                                    <div className="blg_grid_caption">
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <div className="blg_tag dark"><span>{post.category}</span> </div>
+                                            </div>
+                                            <div className="col-6" style={{ fontWeight: 'bold', textAlign: 'end' }}>
+                                                {formatDate(post.published_date)}
+                                            </div>
+                                        </div>
+                                        <div className="blg_title">
+                                            <h4> {post.title}</h4>
+                                        </div>
+                                        <div className="blg_desc">
+                                            <p>{post.excerpt}...</p>
+                                        </div>
+                                        <div className="blg_more">
+                                            <Link to={`/blog/${post.slug}`} target="_blank">Read More</Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        )}
+                        ))}
                     </div>
                 </div>
             </section>
