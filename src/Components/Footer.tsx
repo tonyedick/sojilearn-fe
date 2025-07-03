@@ -51,7 +51,7 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/blog" target="_blank">Blog</Link></li>
-                                            <li className="font-weight-bold"><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank">Register Now</Link></li>
+                                            <li className="font-weight-bold"><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank">APPLY NOW</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -65,7 +65,25 @@ export default function Footer() {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-12 col-md-12 text-center">
-                            <p className="mb-0">© 2022 - 2025 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn</Link>.</p>
+                            <p className="mb-0">© 2022 - 2025 Sojilearn. All Rights Reserved<Link to="https://sojilearn.com"> Sojilearn Optimum Solutions Ltd</Link>.</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 col-md-12 col-sm-12 text-center">
+                             <ul className="nav-menu">
+                                <li><Link to="/privacy">Privacy Policy</Link></li>
+                                <li><Link to="/terms">Terms of Use</Link></li>
+                                <li><Link to="/data">Disclaimer</Link></li>
+                            </ul>
+                        </div>
+                        <div className="col-lg-6 col-md-12 sol-sm-12 text-center">
+                            <ul className="social-links">
+                                <li><Link to="https://facebook.com/sojilearn"><i className="fab fa-facebook-f"></i></Link></li>
+                                <li><Link to="https://x.com/sojilearn"><i className="fab fa-twitter"></i></Link></li>
+                                <li><Link to="https://instagram.com/sojilearn"><i className="fab fa-instagram"></i></Link></li>
+                                <li><Link to="https://linkedin.com/sojilearn"><i className="fab fa-linkedin-in"></i></Link></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
