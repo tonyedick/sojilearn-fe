@@ -1,56 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../integrations/supabase/client';
-import { useForm } from 'react-hook-form';
 import { Link, useSearchParams, useParams } from 'react-router-dom';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
-import avatar from "../assets/img/dick.jpg";
-import toast from 'react-hot-toast';
-import post1 from "../assets/img/b-6.png";
 import BlogLayout from '../Components/Layouts/BlogLayout';
-import { Search, Calendar, User, Clock } from 'lucide-react';
 import { BlogPost } from '../types/blog';
-
-type FormValues = {
-    blog_id: number;
-    name: string;
-    email: string;
-    comment: string;
-};
-
-interface BlogSidebarProps {
-  currentPost?: BlogPost;
-}
 
 export default function Blog() {
 
     const { id } = useParams<{ id: string }>();
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+    const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedFilter, setSelectedFilter] = useState('all');
+    const [selectedCountry, setSelectedCountry] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
     const postsPerPage = 9;
 
-    const categories = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta'];
+    const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta'];
     const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships'];
 
     useEffect(() => {
         fetchPosts();
-        
-        // Check for category parameter in URL
-        const categoryParam = searchParams.get('category');
-        if (categoryParam && categories.includes(categoryParam)) {
-        setSelectedCategory(categoryParam);
-        }
-    }, [searchParams]);
+    }, []);
 
     useEffect(() => {
         filterPosts();
-    }, [posts, searchTerm, selectedCategory, selectedFilter]);
+    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
 
     const fetchPosts = async () => {
         try {
@@ -72,6 +52,13 @@ export default function Blog() {
     const filterPosts = () => {
         let filtered = posts;
 
+        // Filter by category from URL params
+        const categoryParam = searchParams.get('category');
+        if (categoryParam && categoryParam !== 'all') {
+        filtered = filtered.filter(post => post.category === categoryParam);
+        }
+
+        // Filter by search term
         if (searchTerm) {
         filtered = filtered.filter(post =>
             post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -80,10 +67,14 @@ export default function Blog() {
         );
         }
 
-        if (selectedCategory !== 'all') {
-        filtered = filtered.filter(post => post.category === selectedCategory);
+        // Filter by country (now tags)
+        if (selectedCountry !== 'all') {
+        filtered = filtered.filter(post => 
+            post.tags?.includes(selectedCountry)
+        );
         }
 
+        // Filter by filter type
         if (selectedFilter !== 'all') {
         filtered = filtered.filter(post => post.filter_type === selectedFilter);
         }
@@ -117,6 +108,40 @@ export default function Blog() {
         );
     }
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
+
+        setLoading(true);
+        try {
+        const { error } = await supabase
+            .from('newsletter_subscribers')
+            .insert([
+            {
+                email: email.toLowerCase().trim(),
+                source: 'blog_signup'
+            }
+            ]);
+
+        if (error) {
+            // Check if it's a duplicate email error
+            if (error.code === '23505') {
+            alert("This email is already subscribed to our newsletter.");
+            } else {
+            throw error;
+            }
+        } else {
+            alert("Successful! Thank you for subscribing to our newsletter.");
+            setEmail('');
+        }
+        } catch (error) {
+        console.error('Newsletter subscription error:', error);
+        alert("Subscription failed, Please try again later.");
+        } finally {
+        setLoading(false);
+        }
+    };
+
   return (
         <BlogLayout>
             <>
@@ -125,11 +150,11 @@ export default function Blog() {
                         <div className="row">
                             <div className="col-lg-12 col-md-12">
                                 <div className="breadcrumbs-wrap">
-                                    <h1 className="breadcrumb-title text-light">Study Abroad Blogs</h1>
+                                    <h1 className="breadcrumb-title text-light">Hot Topics</h1>
                                     <nav className="transparent">
                                         <ol className="breadcrumb p-0">
                                             <li className="breadcrumb-item"><a href="/" className="text-light">Home</a></li>
-                                            <li className="breadcrumb-item active theme-cl" aria-current="page">Blogs</li>
+                                            <li className="breadcrumb-item theme-cl" aria-current="page">Blog</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -218,23 +243,30 @@ export default function Blog() {
                                 </div>
 
                                 <div className="single_widgets widget_category">
-                                    <h4 className="title">Categories</h4>
+                                    <h4 className="title">Locations</h4>  
                                     <ul>
-                                        {categories.map(category => (
-                                            <li key={category}>
+                                        <li>
+                                            <button
+                                                className="category-btn"
+                                                onClick={() => setSelectedCountry('all')}
+                                                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer'}}
+                                            >
+                                                All Countries
+                                            </button>
+                                        </li>
+                                        {countries.map(country => (
+                                            <li key={country}>
                                                 <button
-                                                    className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
-                                                    onClick={() => setSelectedCategory(category)}
-                                                    style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: selectedCategory === category ? '#4a90e2' : undefined }}
+                                                    className={`category-btn ${selectedCountry === country ? 'active' : ''}`}
+                                                    onClick={() => setSelectedCountry(country)}
+                                                    style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: selectedCountry === country ? '#4a90e2' : undefined }}
                                                 >
-                                                    {category}
+                                                    {country}
                                                 </button>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-
-                                 
                                 
                                 <div className="single_widgets widget_thumb_post">
                                     <h4 className="title">All Posts</h4>
@@ -243,7 +275,7 @@ export default function Blog() {
                                     posts.map((item: any) => (
                                         <li key={item?.id}>
                                             <span className="left">
-                                                <img src={item?.featuredImage} alt="" className="" />
+                                                <img src={item?.featured_image_url} alt="" className="" />
                                             </span>
                                             <span className="right">
                                                 <Link className="feed-title" to={`/blog-detail/${item?.id}`} target="_blank">{item?.title.slice(0, 24)}...</Link> 
@@ -256,6 +288,9 @@ export default function Blog() {
                                     ) : (
                                         <li>No Posts Available</li>
                                     )}
+
+                                    {/* Start */}
+                                    {/* End */}
                                     </ul>
                                 </div>
                         
@@ -274,19 +309,32 @@ export default function Blog() {
                 </section>
                 <div className="clearfix"></div>
 
-                <section className="theme-bg call_action_wrap-wrap">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-
-                                <div className="call_action_wrap">
-                                    <div className="call_action_wrap-head">
-                                        <h3>Do You Have Questions ?</h3>
-                                        <span>We'll help you to grow your career and growth.</span>
-                                    </div>
-                                    <a href="{{Route('contact')}}" className="btn btn-call_action_wrap">Contact Us Today</a>
+                <section id="newsletter" className="theme-bg call_action_wrap-wrap">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-6">
+                            <div className="call_action_wrap text-center p-4" style={{ background: "#fff", borderRadius: "16px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+                                {/* Icon in round shaded circle */}
+                                <div className="col-12 mb-3">
+                                        <i className="fas fa-envelope fa-2x text-primary"></i>
                                 </div>
-
+                                <div className="col-12 text-dark">
+                                    <h3 className="mb-2 text-dark">Join Our Newsletter</h3>
+                                    <p className="mb-4 h6">Get the latest study abroad tips, scholarship opportunities, and visa updates delivered to your inbox.</p>
+                                </div>
+                            <div className="col-12">
+                                <form onSubmit={handleSubmit} className="d-flex justify-content-center" style={{ gap: "8px" }}>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        className="form-control"
+                                        placeholder="Enter your email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required
+                                    />
+                                    <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
+                                </form>
+                            </div>
                             </div>
                         </div>
                     </div>
