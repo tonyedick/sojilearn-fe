@@ -7,15 +7,15 @@ import toefl from "../../assets/img/toefl.webp";
 import portfolio from "../../assets/img/portfolio.webp";
 import statement from "../../assets/img/statement.webp";
 
-export default function RequirementsCA() {
+export default function RequirementsGY() {
   return (
     <section>
     <div className="container">
         <div className="row justify-content-center">
             <div className="col-lg-12 col-md-8">
                 <div className="sec-heading center">
-                    <h2>Admission Requirements for <span className="theme-cl">Canada</span></h2>
-                    <p className="h6">Here are the major requirements to study in Canada which you need to ensure while applying to a Canadian university:</p>
+                    <h2>Admission Requirements for <span className="theme-cl">Germany</span></h2>
+                    <p className="h6">Here are the major requirements to study in Germany which you need to ensure while applying to a German university:</p>
                 </div>
             </div>
         </div>
@@ -36,14 +36,6 @@ export default function RequirementsCA() {
                                 <img src={gmat} className="img-fluid" alt="" />
                             </div>
                             <h5 className="mb-0 ml-3">ACT/SAT/LSAT for UG programs</h5>
-                        </div>
-                    </div>
-                    <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
-                        <div className="d-flex align-items-center">
-                            <div className="list_crs_img">
-                                <img src={toefl} className="img-fluid" alt="" />
-                            </div>
-                            <h5 className="mb-0 ml-3">TOEFL/IELTS/English Test (optional)</h5>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -70,9 +62,9 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={toefl} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs (optional)</h5>
+                            <h6 className="mb-0 ml-3">TOEFL iBT score 86, IELTS score 6.5, Duolingo or equivalent. <br />Alternatively, a document stating that the medium of instruction for your Bachelor's course was English.</h6>
                         </div>
                     </div>
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
@@ -96,7 +88,7 @@ export default function RequirementsCA() {
                             <div className="list_crs_img">
                                 <img src={statement} className="img-fluid" alt="" />
                             </div>
-                            <h5 className="mb-0 ml-3">Statement of Purpose (SOP)</h5>
+                            <h5 className="mb-0 ml-3">Letter of motivation</h5>
                         </div>
                     </div>
                 </div>
