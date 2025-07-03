@@ -7,6 +7,9 @@ import avatarApp from '../src/assets/img/favicon.png';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import Disclaimer from './Pages/Disclaimer';
+import TermsOfUse from './Pages/TermsOfUse';
 import Blog from './Pages/Blog';
 import ScrollToTop from './Components/ScrollToTop';
 import StudyInUK from './Pages/StudyInUK';
@@ -63,6 +66,9 @@ function App() {
                     <Route path="/page404" element={<NotFound />} />
                     {/* <Route path="/register" element={<Register />} /> */}
                     <Route path="/about" element={<About />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-of-use" element={<TermsOfUse />} />
+                    <Route path="/disclaimer" element={<Disclaimer />} />
                     <Route path="/contact" element={<Contact />} />
                     {/* <Route path="/blog-detail/:id" element={<BlogDetail />} /> */}
                     <Route path="/not-found" element={<NotFound />} />
