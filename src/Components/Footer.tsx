@@ -29,6 +29,7 @@ export default function Footer() {
                                             <li><Link to="/">Home</Link></li>
                                             <li><Link to="/about">About US</Link></li>
                                             <li><Link to="/contact">Contact Page</Link></li>
+                                            <li><Link to="/blog">News & Articles</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -71,18 +72,18 @@ export default function Footer() {
                     <hr />
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12 col-sm-12 text-center">
-                             <ul className="nav-menu">
-                                <li><Link to="/privacy">Privacy Policy</Link></li>
-                                <li><Link to="/terms">Terms of Use</Link></li>
-                                <li><Link to="/data">Disclaimer</Link></li>
+                             <ul className="nav-menu nav-menu-social">
+                                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                                <li><Link to="/terms-of-use">Terms of Use</Link></li>
+                                <li><Link to="/disclaimer">Disclaimer</Link></li>
                             </ul>
                         </div>
                         <div className="col-lg-6 col-md-12 sol-sm-12 text-center">
                             <ul className="social-links">
-                                <li><Link to="https://facebook.com/sojilearn"><i className="fab fa-facebook-f"></i></Link></li>
-                                <li><Link to="https://x.com/sojilearn"><i className="fab fa-twitter"></i></Link></li>
-                                <li><Link to="https://instagram.com/sojilearn"><i className="fab fa-instagram"></i></Link></li>
-                                <li><Link to="https://linkedin.com/sojilearn"><i className="fab fa-linkedin-in"></i></Link></li>
+                                <li><Link to="https://facebook.com/sojilearn" target="_blank"><i className="fab fa-facebook-f"></i></Link></li>
+                                <li><Link to="https://x.com/sojilearn" target="_blank"><i className="fab fa-twitter"></i></Link></li>
+                                <li><Link to="https://instagram.com/sojilearn" target="_blank"><i className="fab fa-instagram"></i></Link></li>
+                                <li><Link to="https://www.linkedin.com/company/sojilearn/" target="_blank"><i className="fab fa-linkedin-in"></i></Link></li>
                             </ul>
                         </div>
                     </div>
