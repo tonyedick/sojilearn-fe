@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function SimplifyAdmit() {
   return (
     <div>
-        <section className="gray">
+        <section style={{backgroundColor: '#DFFFFF'}}>
         <div className="container">
 
             <div className="row align-items-center justify-content-between">
