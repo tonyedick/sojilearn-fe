@@ -1,9 +1,38 @@
 import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import bakimageLarge from "../assets/img/banner_soji2.jpg";
+import bakimageSmall from "../assets/img/banner_soji.jpg"; 
 
 export default function Banner() {
+const [backgroundImage, setBackgroundImage] = useState(
+    window.innerWidth <= 768 ? bakimageSmall : bakimageLarge
+);
+
+useEffect(() => {
+    const handleResize = () => {
+        setBackgroundImage(window.innerWidth <= 768 ? bakimageSmall : bakimageLarge);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
+
   return (
     <>
-        <div className="hero_banner image-cover image_bottom h6_bg pt-0">
+        {/* <div className="hero_banner image-cover image_bottom h6_bg pt-0"> */}
+        <div className="hero_banner image-cover image_bottom h6_bg pt-0" 
+                style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundPosition: "center center",
+                backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+                // backgroundColor: "black",
+                opacity: "unset",
+                minHeight: "600px", 
+                height: "400px",   
+                maxHeight: "50vh",  
+                overflow: "hidden" 
+                }}
+                >
           <div className="container">
               <div className="row align-items-center">
                   <div className="col-lg-6 col-md-6 col-sm-12">
@@ -25,10 +54,10 @@ export default function Banner() {
                       <div className="side_block extream_img">
                           <div className="list_crs_img">
                               <img src="assets/img/ic-1.png" className="img-fluid cirl animate-fl-y" alt="" />
-                              <img src="assets/img/ic-2.png" className="img-fluid arrow animate-fl-x" alt="" />
+                              {/* <img src="assets/img/ic-2.png" className="img-fluid arrow animate-fl-x" alt="" /> */}
                               <img src="assets/img/ic-3.png" className="img-fluid moon animate-fl-x" alt="" />
                           </div>
-                          <img src="assets/img/side-2.png" className="img-fluid" alt="" />
+                          {/* <img src="assets/img/st-3.png" className="img-fluid" alt="" /> */}
                       </div>
                   </div>
               </div>
