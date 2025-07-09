@@ -18,7 +18,7 @@ export default function About() {
                                     <li className="breadcrumb-item active theme-cl" aria-current="page">About Us</li>
                                 </ol>
                             </nav>
-                        </div>
+                        </div> 
 
                     </div>
                 </div>
@@ -34,6 +34,7 @@ export default function About() {
                             <p>We are Sojilearn Optimum Solutions Ltd.
                             <br/>A <span className="theme-cl"><strong>Technology Workforce Development Company </strong></span> and <span className="theme-cl"><strong>Study Abroad Agency</strong></span>
                             <br/>
+                            <br />Sojilearn Optimum Solutions Limited is incorporated in Nigeria (Company Number 8093370) with its registered address at 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State. and registered under MSMED (Micro, Small and Medium Enterprises Development Act, 2006) with number SUIN464189319643. 
                             <br/>At Sojilearn, we help students navigate & assess their educational journey, matching them to personalised mentors, counsels them towards their higher education dream with an employability lens, and makes sure that everyone punched way above their weight to make dreams come alive and truly be able to level up.</p>
                             <p>We take pride in helping students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.
                             </p>
