@@ -12,8 +12,8 @@ export default function Footer() {
                             <div className="footer_widget">
                                 <img src={logo} className="img-footer small mb-2" alt="" />
                                 <p className="mt-2">
-                                    Sojilearn Optimum Solutions Limited is incorporated in Nigeria (Company Number 8093370) with its registered address at 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State. and registered under MSMED (Micro, Small and Medium Enterprises Development Act, 2006) with number SUIN464189319643. 
-                                    Sojilearn helps students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.</p>
+                                    Sojilearn Optimum Solutions Limited is incorporated in Nigeria <em>(Company Number 8093370)</em> with its registered address at 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State. and registered under MSMED (Micro, Small and Medium Enterprises Development Act, 2006) with number <em>SUIN464189319643</em>. 
+                                    <br />Sojilearn helps students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.</p>
                                 <p><strong>Head Office:</strong> 9, Miller Close, off Cecilia Road, Rumuolumeni, <br/>Port Harcourt, Rivers State.</p>
                                 <p><strong>Office:</strong> 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State.</p>
                                 <p><strong>Phone:</strong> +234 813 780 6643</p>
