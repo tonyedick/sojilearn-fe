@@ -1,7 +1,9 @@
 import AppLayout from '../Components/Layouts/AppLayout';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import { Link } from 'react-router-dom'
 
 export default function Disclaimer() {
+      usePageTracking('disclaimer');
   return (
     <AppLayout>
         <>
