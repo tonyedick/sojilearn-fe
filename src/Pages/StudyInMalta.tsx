@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import BannerStudyInMalta from '../Components/Malta/BannerStudyInMalta';
 import AppLayout from '../Components/Layouts/AppLayout';
 import ExploreMalta from '../Components/Malta/ExploreMalta';
@@ -11,6 +12,7 @@ import PartTimeCareersMalta from '../Components/Malta/PartTimeCareersMalta';
 // import CustomScroll from '../Components/CustomScroll';
 
 export default function StudyInMalta() {
+         usePageTracking('study-in-malta');
   return (
     <AppLayout>
         <>
