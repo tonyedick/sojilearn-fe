@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import Hero from '../Components/Banner';
 import AppLayout from '../Components/Layouts/AppLayout';
 import Explore from '../Components/Explore';
@@ -11,6 +12,7 @@ import FAQ from '../Components/FAQ';
 import SimplifyAdmit from '../Components/SimplifyAdmit';
 
 export default function Home() {
+    usePageTracking('home');
   return (
     <AppLayout>
         <>
