@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import BannerStudyInGermany from '../Components/GY/BannerStudyInGermany';
 import AppLayout from '../Components/Layouts/AppLayout';
 import ExploreGermany from '../Components/GY/ExploreGermany';
@@ -10,6 +11,7 @@ import PostUniGY from '../Components/GY/PostUniGY';
 import PartTimeCareersGY from '../Components/GY/PartTimeCareersGY';
 
 export default function StudyInGermany() {
+        usePageTracking('study-in-germany');
   return (
     <AppLayout>
         <>
