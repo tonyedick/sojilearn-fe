@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import BannerStudyInUk from '../Components/UK/BannerStudyInUk';
 import AppLayout from '../Components/Layouts/AppLayout';
 import ExploreUK from '../Components/UK/ExploreUK';
@@ -11,6 +12,7 @@ import PartTimeCareersUK from '../Components/UK/PartTimeCareersUK';
 // import CustomScroll from '../Components/CustomScroll';
 
 export default function StudyInUK() {
+      usePageTracking('study-in-uk');
   return (
     <AppLayout>
         <>
