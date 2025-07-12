@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../integrations/supabase/client';
-import { Link, useSearchParams, useParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import { usePageTracking, useSearchTracking, useConversionTracking } from '../utils/websiteAnalytics';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
 import BlogLayout from '../Components/Layouts/BlogLayout';
 import { BlogPost } from '../types/blog';
 
 export default function Blog() {
-
-    const { id } = useParams<{ id: string }>();
+    // const { id } = useParams<{ id: string }>();
+    usePageTracking('blog_list');
+    const { trackSearch } = useSearchTracking();
+    const { trackConversion } = useConversionTracking();
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [newsletterLoading, setNewsletterLoading] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
@@ -80,6 +81,7 @@ export default function Blog() {
         filtered = filtered.filter(post => post.filter_type === selectedFilter);
         }
 
+        trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
         setCurrentPage(1);
     };
@@ -123,6 +125,7 @@ export default function Blog() {
             }
         } else {
             alert("Successful! Thank you for subscribing to our newsletter.");
+            await trackConversion('newsletter_signup', null, email);
             setEmail('');
         }
         } catch (error) {
@@ -136,7 +139,7 @@ export default function Blog() {
   return (
         <BlogLayout>
             <>
-                <section className="page-title bg-cover" style={{background: "url(assets/img/banner-3.jpg)no-repeat"}} data-overlay="8">
+                <section className="page-title" style={{background: "url(assets/img/banner-3.jpg)no-repeat"}} data-overlay="8">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 col-md-12">
@@ -165,7 +168,7 @@ export default function Blog() {
                                         <div className="blg_grid_box">
                                             <div className="blg_grid_thumb">
                                                 {post.featured_image_url && (
-                                                    <Link to="blog-detail.html">
+                                                    <Link to={`/blog/${post.slug}`}>
                                                         <img 
                                                             src={post.featured_image_url}
                                                             alt={post.title}
@@ -187,7 +190,15 @@ export default function Blog() {
                                                 <div className="crs_flex">
                                                     <div className="crs_fl_first">
                                                         <div className="crs_tutor">
-                                                            <div className="crs_tutor_thumb"><a href="instructor-detail.html"><img src="assets/img/team-5.jpg" className="img-fluid circle" alt=""/></a></div>
+                                                            <div className="crs_tutor_thumb">
+                                                                <Link to={`/blog/${post.slug}`}>
+                                                                    <img 
+                                                                        className="img-fluid circle" 
+                                                                        src={post.author_avatar_url}
+                                                                        alt=""
+                                                                        loading="lazy"
+                                                                    />
+                                                                </Link></div>
                                                         </div>
                                                     </div>
                                                     <div className="crs_fl_last">
@@ -285,9 +296,6 @@ export default function Blog() {
                                     ) : (
                                         <li>No Posts Available</li>
                                     )}
-
-                                    {/* Start */}
-                                    {/* End */}
                                     </ul>
                                 </div>
                         
