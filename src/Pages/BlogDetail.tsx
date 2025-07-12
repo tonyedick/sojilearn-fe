@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../integrations/supabase/client';
+import { usePageTracking, useConversionTracking } from '../utils/websiteAnalytics';
 import { Link, useSearchParams, useParams } from 'react-router-dom';
 import { BlogPost as BlogPostType } from '../types/blog';
 import Moment from "moment";
@@ -20,6 +21,8 @@ export default function BlogDetail() {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
     const postsPerPage = 9;
+
+    const { trackConversion } = useConversionTracking();
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -44,6 +47,7 @@ export default function BlogDetail() {
             fetchPost(slug);
         }
     }, [slug]);
+    usePageTracking(post?.id || slug);
 
     // Filtering logic
     const filterPosts = useCallback(() => {
@@ -175,7 +179,7 @@ export default function BlogDetail() {
                                                 <img className="img-fluid" src={post.featured_image_url} alt={post.title} />
                                             )}
                                         </div>
-                                        
+
                                         {/* Table of Contents */}
                                         <TableOfContents content={post.content} />
                                         
@@ -262,7 +266,7 @@ export default function BlogDetail() {
                                         </div>
                                     </div>
                                 </div> */}
-                                <CommentSection blogPostId={post.id} />
+                                <CommentSection blogPostId={post?.id} trackConversion={trackConversion} />
                             </div>
                             
                             {/* Sidebar */}
