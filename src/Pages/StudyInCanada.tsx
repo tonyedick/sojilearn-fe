@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import BannerStudyInCanada from '../Components/CA/BannerStudyInCanada';
 import AppLayout from '../Components/Layouts/AppLayout';
 import ExploreCanada from '../Components/CA/ExploreCanada';
@@ -9,6 +10,7 @@ import PostUniCA from '../Components/CA/PostUniCA';
 import PartTimeCareersCA from '../Components/CA/PartTimeCareersCA';
 
 export default function StudyInCanada() {
+        usePageTracking('study-in-canada');
   return (
     <AppLayout>
         <>
