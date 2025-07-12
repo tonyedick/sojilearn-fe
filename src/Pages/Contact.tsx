@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePageTracking } from '../utils/websiteAnalytics';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import AppLayout from '../Components/Layouts/AppLayout';
@@ -13,6 +14,7 @@ type FormValues = {
 };
 
 export default function Contact() {
+    usePageTracking('contact');
     const {
         register,
         handleSubmit,
