@@ -7,9 +7,10 @@ import { CommentItem } from './CommentItem';
 
 interface CommentSectionProps {
   blogPostId: string;
+  trackConversion: (eventType: string, blogPostId: string, subscriberEmail?: string | null) => Promise<void>;
 }
 
-export const CommentSection: React.FC<CommentSectionProps> = ({ blogPostId }) => {
+export const CommentSection: React.FC<CommentSectionProps> = ({ blogPostId, trackConversion }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
@@ -77,6 +78,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({ blogPostId }) =>
 
       if (error) throw error;
 
+      await trackConversion('comment_posted', blogPostId);
       // Refresh comments after submission
       await fetchComments();
       return true;
