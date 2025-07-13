@@ -108,6 +108,7 @@ export default function News() {
                                                     alt={post.title} 
                                                     className="img-fluid"
                                                     style={{height: "220px", width: "100%", objectFit: "cover"}}
+                                                    loading="lazy"
                                                 />
                                             </Link>
                                         </div>
