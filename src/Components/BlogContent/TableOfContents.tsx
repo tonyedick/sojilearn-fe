@@ -111,8 +111,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
 
   const styles = {
     container: {
-      position: 'sticky' as const,
-      top: '20px',
+      // position: 'sticky' as const,
+      // top: '20px',
       maxHeight: 'calc(100vh - 120px)',
       overflowY: 'auto' as const,
       backgroundColor: '#fff',
@@ -124,8 +124,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
       transition: 'all 0.3s ease'
     },
     collapsedContainer: {
-      position: 'sticky' as const,
-      top: '60px',
+      // position: 'sticky' as const,
+      // top: '60px',
       backgroundColor: '#fff',
       border: '1px solid #e2e8f0',
       borderRadius: '8px',
