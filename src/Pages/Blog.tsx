@@ -174,11 +174,14 @@ export default function Blog() {
                                                             alt={post.title}
                                                             className="img-fluid"
                                                             loading="lazy"
+                                                            style={{height: "220px", width: "100%", objectFit: "cover"}}
                                                             />
                                                     </Link>
                                                 )}
                                             </div>
-                                            <div className="blg_grid_caption">
+                                            <div className="blg_grid_caption"
+                                                style={{height: "220px", width: "100%"}}    
+                                            >
                                                 <div className="blg_tag"><span>{post.category}</span></div>{" "}
                                                     {post.filter_type && (
                                                         <div className="blg_tag">{post.filter_type}</div>
