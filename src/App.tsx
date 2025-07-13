@@ -11,6 +11,7 @@ import PrivacyPolicy from './Pages/PrivacyPolicy';
 import Disclaimer from './Pages/Disclaimer';
 import TermsOfUse from './Pages/TermsOfUse';
 import Blog from './Pages/Blog';
+import BlogDetail from './Pages/BlogDetail';
 import ScrollToTop from './Components/ScrollToTop';
 import StudyInUK from './Pages/StudyInUK';
 import StudyInMalta from './Pages/StudyInMalta';
@@ -77,14 +78,14 @@ function App() {
                     <Route path="/study-in-usa" element={<StudyInUSA />} />
                     <Route path="/study-in-canada" element={<StudyInCanada />} />
                     <Route path="/study-in-germany" element={<StudyInGermany />} />
-                    {/* <Route path="/blog" element={<Blog />} /> */}
-                    {/* <Route path="/blog/:slug" element={<BlogPost />} />
-                    <Route path="/auth" element={<Auth />} />
+                    <Route path="/blog" element={<Blog />} /> 
+                    <Route path="/blog/:slug" element={<BlogDetail />} />
+                    {/* <Route path="/auth" element={<Auth />} />
                     <Route path="/admin" element={<Admin />} />
                     <Route path="/admin/posts/new" element={<AdminPostForm />} />
                     <Route path="/admin/posts/edit/:id" element={<AdminPostForm />} /> */}
                     <Route path="*" element={<Navigate to="/not-found" replace />} />
-                    <Route path="/blog" element={<UnderConstruction />} />
+{/*                     <Route path="/blog" element={<UnderConstruction />} /> */}
                   </Routes>
                 </Suspense>
               </BrowserRouter>
