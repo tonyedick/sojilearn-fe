@@ -40,7 +40,7 @@ export default function News() {
 
      if (featuredPosts.length === 0) {
         return (
-            <section style={{backgroundColor: '#DFFFFF'}}>
+            <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
@@ -50,7 +50,7 @@ export default function News() {
                             </div>
                         </div>
                     </div>
-                     <div className="row justify-content-center">
+                    <div className="row justify-content-center">
                         {[1, 2, 3].map(i => (
                             <div className="col-lg-4 col-md-6" key={i}>
                                 <div className="blg_grid_box" style={{ opacity: 0.7 }}>
@@ -101,17 +101,20 @@ export default function News() {
                             <div className="col-lg-4 col-md-6" key={post.id}>
                                 <div className="blg_grid_box">
                                     {post.featured_image_url && (
-                                        <div className="blg_grid_thumb" style={{ height: "180"}}>
+                                        <div className="blg_grid_thumb">
                                             <Link to={`/blog/${post.slug}`}>
                                                 <img    
                                                     src={post.featured_image_url}
                                                     alt={post.title} 
                                                     className="img-fluid"
+                                                    style={{height: "220px", width: "100%", objectFit: "cover"}}
                                                 />
                                             </Link>
                                         </div>
                                     )}
-                                    <div className="blg_grid_caption">
+                                    <div className="blg_grid_caption"
+                                        style={{height: "220px", width: "100%"}}
+                                    >
                                         <div className="row">
                                             <div className="col-6">
                                                 <div className="blg_tag dark"><span>{post.category}</span> </div>
