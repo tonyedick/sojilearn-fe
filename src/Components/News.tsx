@@ -91,7 +91,7 @@ export default function News() {
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
-                                <h2>What is &amp; <span className="theme-cl">Trending</span></h2>
+                                <h2>Latest News &amp; <span className="theme-cl">Articles</span></h2>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ export default function News() {
                             <div className="col-lg-4 col-md-6" key={post.id}>
                                 <div className="blg_grid_box">
                                     {post.featured_image_url && (
-                                        <div className="blg_grid_thumb">
+                                        <div className="blg_grid_thumb" style={{ height: "180"}}>
                                             <Link to={`/blog/${post.slug}`}>
                                                 <img    
                                                     src={post.featured_image_url}
