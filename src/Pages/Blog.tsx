@@ -286,7 +286,7 @@ export default function Blog() {
                                                 <img src={item?.featured_image_url} alt="" className="" />
                                             </span>
                                             <span className="right">
-                                                <Link className="feed-title" to={`/blog-detail/${item?.id}`} target="_blank">{item?.title.slice(0, 24)}...</Link> 
+                                                <Link className="feed-title" to={`/blog/${item?.slug}`} target="_blank">{item?.title.slice(0, 24)}...</Link> 
                                                 <span className="post-date"><i className="ti-calendar"></i>
                                                     {Moment(item?.created_at).format(dateFormat)}
                                                 </span>
