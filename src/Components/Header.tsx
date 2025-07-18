@@ -69,19 +69,20 @@ export default function Header() {
                           <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
                           <li className={activeLink === '/study-in-malta' ? 'active' : ''}><Link to="/study-in-malta">Study in Malta</Link></li>
                           <li className={activeLink === '/contact' ? 'active' : ''}><Link to="/contact">Contact Us</Link></li>
+                          <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/blog">Visit our Blog</Link></li>
                       </ul>
 
-                      <ul className="nav-menu nav-menu-social align-to-right">
+{/*                       <ul className="nav-menu nav-menu-social align-to-right"> */}
                           {/* <li>
                               <Link to="https://portal.sojilearn.com" className="alio_green" >
                                   <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
                               </Link>
                           </li> */}
 
-                            <li className="add-listing theme-bg">
+{/*                             <li className="add-listing theme-bg">
                               <Link to="/blog" target="_blank" className="text-white">Visit our Blog</Link>
-                            </li>
-                        </ul>
+                            </li> */}
+{/*                         </ul> */}
                     </div>
                   <div
                     className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`}
