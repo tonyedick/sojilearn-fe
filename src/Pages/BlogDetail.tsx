@@ -173,6 +173,77 @@ export default function BlogDetail() {
                                             </ul>
                                         </div>
 
+                                         <div className="article_top_info mb-4">
+                                            <ul
+                                                className="article_middle_info"
+                                                style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '1rem',
+                                                    listStyle: 'none',
+                                                    paddingLeft: 0,
+                                                    flexWrap: 'wrap', // allow wrapping on small screens
+                                                }}
+                                            >
+                                                <li style={{ fontWeight: 500 }}>
+                                                    <i className="fa fa-share-alt" aria-hidden="true"></i> Share:
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-secondary btn-sm"
+                                                        style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}
+                                                        onClick={() => {
+                                                            const url = encodeURIComponent(window.location.href);
+                                                            const text = encodeURIComponent(post?.title || '');
+                                                            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'noopener,noreferrer');
+                                                        }}
+                                                    >
+                                                        <i className="fab fa-twitter" aria-hidden="true"></i>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-secondary btn-sm"
+                                                        style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}
+                                                        onClick={() => {
+                                                            const url = encodeURIComponent(window.location.href);
+                                                            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,noreferrer');
+                                                        }}
+                                                    >
+                                                        <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-secondary btn-sm"
+                                                        style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}
+                                                        onClick={() => {
+                                                            const url = encodeURIComponent(window.location.href);
+                                                            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
+                                                        }}
+                                                    >
+                                                        <i className="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <style>
+                                                {`
+                                                    @media (max-width: 600px) {
+                                                        .article_middle_info {
+                                                            gap: 0.5rem !important;
+                                                            font-size: 0.95rem;
+                                                        }
+                                                        .article_middle_info li {
+                                                            margin-bottom: 0.25rem;
+                                                        }
+                                                    }
+                                                `}
+                                            </style>
+                                        </div>
+
                                         {/* Featured Image */}
                                         <div className="article_featured_image">
                                             {post && post.featured_image_url && (
