@@ -165,10 +165,10 @@ export default function BlogDetail() {
 
                                         <div className="article_top_info mb-4">
                                             <ul className="article_middle_info">
-                                                <li><i className="fa fa-user-circle text-primary"></i>{" "}{post?.author_name}</li>
-                                                <li><i className="fa fa-calendar text-primary"></i>{" "}{formatDate(post?.published_date)}</li>
+                                                <li><i className="fa fa-user-circle text-secondary"></i>{" "}{post?.author_name}</li>
+                                                <li><i className="fa fa-calendar text-secondary"></i>{" "}{formatDate(post?.published_date)}</li>
                                                 {post?.reading_time_minutes && (
-                                                    <li><i className="fa fa-clock text-primary"></i>{" "}{post?.reading_time_minutes} min</li>
+                                                    <li><i className="fa fa-clock text-secondary"></i>{" "}{post?.reading_time_minutes} min</li>
                                                 )}
                                             </ul>
                                         </div>
