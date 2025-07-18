@@ -88,29 +88,23 @@ export default function BlogHeader() {
                            })}
                     </ul>
 
+                     {location.pathname.startsWith('/blog/') ? null : (
                       <ul className="nav-menu nav-menu-social align-to-right">
-                          {/* <li>
-                              <Link to="https://portal.sojilearn.com" className="alio_green" >
-                                  <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
-                              </Link>
-                          </li> */}
-
-                          <li className="add-listing theme-bg">
-                              <button
-                                className="btn theme-bg text-white btn-login btn btn-theme btn-inverse"
-                                onClick={() => {
-                                    const section = document.getElementById('newsletter');
-                                    if (section) {
-                                        section.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}
-                            >
-                                Subscribe <i className="fas fa-sign-in-alt pre"></i>
-                            </button>
-                          </li>
-
+                        <li className="add-listing theme-bg">
+                          <button
+                            className="btn theme-bg text-white btn-login btn btn-theme btn-inverse"
+                            onClick={() => {
+                              const section = document.getElementById('newsletter');
+                              if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                              }
+                            }}
+                          >
+                            Subscribe <i className="fas fa-sign-in-alt pre"></i>
+                          </button>
+                        </li>
                       </ul>
-                  </div>
+                    )}
                   <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
               </nav>
           </div>
