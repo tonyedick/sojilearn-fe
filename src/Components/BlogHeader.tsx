@@ -105,6 +105,7 @@ export default function BlogHeader() {
                         </li>
                       </ul>
                     )}
+                  </div>
                   <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
               </nav>
           </div>
