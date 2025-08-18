@@ -115,7 +115,7 @@ export default function FAQUK() {
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div className="lmp_thumb">
-                        <img src="../assets/img/side-1.png" className="img-fluid" alt=""/>
+                        <img src="../assets/img/side-1.png" className="img-fluid" alt="UK faq" loading="lazy"/>
                     </div>
                 </div>
             </div>

@@ -53,9 +53,9 @@ useEffect(() => {
                   <div className="col-lg-6 col-md-6 col-sm-12">
                       <div className="side_block extream_img">
                           <div className="list_crs_img">
-                              <img src="assets/img/ic-1.png" className="img-fluid cirl animate-fl-y" alt="animation for hero banner" loading="lazy"/>
+                              <img src="assets/img/ic-1.png" className="img-fluid cirl animate-fl-y" alt="animation for hero banner"/>
                               {/* <img src="assets/img/ic-2.png" className="img-fluid arrow animate-fl-x" alt="" /> */}
-                              <img src="assets/img/ic-3.png" className="img-fluid moon animate-fl-x" alt="animation for hero banner" loading="lazy" />
+                              <img src="assets/img/ic-3.png" className="img-fluid moon animate-fl-x" alt="animation for hero banner"/>
                           </div>
                           {/* <img src="assets/img/st-3.png" className="img-fluid" alt="" /> */}
                       </div>

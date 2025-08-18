@@ -97,7 +97,7 @@ export default function Contact() {
                                     <div className="row">
                                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                             <div className="lmp_thumb">
-                                                <img src="../assets/img/cr-6.jpg" className="img-fluid" alt=""/>
+                                                <img src="../assets/img/cr-6.jpg" className="img-fluid" alt="sojilearn contact us graphics"/>
                                             </div>
                                         </div>
                                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-4">

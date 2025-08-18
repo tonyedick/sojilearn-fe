@@ -54,7 +54,7 @@ export default function UnderConstruction() {
                     <div className="col-lg-6 col-md-10">
                         <div className="text-center">
                             <div>
-                                <img src="../assets/img/under.png" className="img-fluid" alt="construction warning" />
+                                <img src="../assets/img/under.png" className="img-fluid" alt="construction warning" loading="lazy"/>
                             </div>
                             <br/>
                                 <h5>We're building something unique for you. Please check back in 48 hours.</h5>

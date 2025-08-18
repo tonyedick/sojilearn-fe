@@ -28,7 +28,7 @@ export default function PartTimeCareersGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={arts} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={arts} height="50" width="50" className="img-fluid" alt="Germany arts and humanities courses" loading='lazy'/>
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Arts and Humanities</strong></p>
                                 </div>
@@ -36,7 +36,7 @@ export default function PartTimeCareersGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6 mt-1">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={socialsciences} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={socialsciences} height="50" width="50" className="img-fluid" alt="Germany arts and humanities courses" loading='lazy' />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Social Sciences</strong></p>
                                 </div>

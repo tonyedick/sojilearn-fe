@@ -38,7 +38,7 @@ export default function BannerStudyInUSA() {
                     <div className="simple-search-wrap">
                         <div className="hero_search-2">
                             <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px black"}} 
-                            ><span><img src={flag} alt="" height="45" width="60" /></span> Study in USA<br /></h1>
+                            ><span><img src={flag} alt="Study in USA banner" height="45" width="60" /></span> Study in USA<br /></h1>
                             <div className="inline_btn">
                                 <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">APPLY NOW</Link></div>
                         </div>

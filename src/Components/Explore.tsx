@@ -20,7 +20,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-1">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/content.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/content.png" className="img-fluid" alt="explore engineering courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Engineering</Link></h4>
@@ -34,7 +34,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-2">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/briefcase.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/briefcase.png" className="img-fluid" alt="explore health science courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Health Sciences</Link></h4>
@@ -48,7 +48,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-3">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/career.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/career.png" className="img-fluid" alt="explore accounting courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Accounting</Link></h4>
@@ -62,7 +62,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-4">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/python.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/python.png" className="img-fluid" alt="explore computer science and IT courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">IT &amp; Computer Science</Link></h4>
@@ -76,7 +76,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-10">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/designer.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/designer.png" className="img-fluid" alt="explore arts and design courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Arts &amp; Design</Link></h4>
@@ -90,7 +90,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-6">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/speaker.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/speaker.png" className="img-fluid" alt="explore business and marketing courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Business & Marketing</Link></h4>
@@ -104,7 +104,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-7">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/photo.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/photo.png" className="img-fluid" alt="explore law courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Law</Link></h4>
@@ -118,7 +118,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-8">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/yoga.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/yoga.png" className="img-fluid" alt="explore psysiotherapy courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Physiotherapy</Link></h4>
@@ -132,7 +132,7 @@ export default function Explore() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-9">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src="assets/img/health.png" className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src="assets/img/health.png" className="img-fluid" alt="explore counseling courses" /></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Counseling</Link></h4>

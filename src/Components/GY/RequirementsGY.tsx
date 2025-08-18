@@ -25,7 +25,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={copy} className="img-fluid" alt="" />
+                                <img src={copy} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Copy of a valid passport</h5>
                         </div>
@@ -33,7 +33,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">ACT/SAT/LSAT for UG programs</h5>
                         </div>
@@ -41,7 +41,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={cv} className="img-fluid" alt="" />
+                                <img src={cv} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">CV/ Resume/ Essays</h5>
                         </div>
@@ -49,7 +49,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={portfolio} className="img-fluid" alt="" />
+                                <img src={portfolio} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Evidence of funds (POF)</h5>
                         </div>
@@ -62,7 +62,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={toefl} className="img-fluid" alt="" />
+                                <img src={toefl} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h6 className="mb-0 ml-3">TOEFL iBT score 86, IELTS score 6.5, Duolingo or equivalent. <br />Alternatively, a document stating that the medium of instruction for your Bachelor's course was English.</h6>
                         </div>
@@ -70,7 +70,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Academic Transcripts (Student copy needed to start the process)</h5>
                         </div>
@@ -78,7 +78,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={lor} className="img-fluid" alt="" />
+                                <img src={lor} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Letters of Recommendations (LORs)</h5>
                         </div>
@@ -86,7 +86,7 @@ export default function RequirementsGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={statement} className="img-fluid" alt="" />
+                                <img src={statement} className="img-fluid" alt="Admission requirements in Germany" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Letter of motivation</h5>
                         </div>

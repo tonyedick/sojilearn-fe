@@ -53,7 +53,7 @@ export default function BlogHeader() {
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
                       <Link className="nav-brand" to="/blog">
-                          <img src={logo} className="logo" alt="" />
+                          <img src={logo} className="logo" alt="Sojilearn blog header" />
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
                       {/* <div className="mobile_nav">

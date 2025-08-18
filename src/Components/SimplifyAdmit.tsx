@@ -22,7 +22,7 @@ export default function SimplifyAdmit() {
                 </div>
                 <div className="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                     <div className="lmp_thumb">
-                        <img src="assets/img/news.png" className="img-fluid" alt="" />
+                        <img src="assets/img/news.png" className="img-fluid" alt="canada simplify admission" loading="lazy"/>
                     </div>
                 </div>
             </div>

@@ -59,6 +59,7 @@ export const CommentItem: React.FC<CommentItemProps> = ({
                       objectFit: 'cover',
                       marginRight: 12,
                     }}
+                    loading='lazy'
                   />
                   <div className="d-flex flex-column">
                     <span className="font-medium">

@@ -28,7 +28,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={arts} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={arts} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Arts and Humanities</strong></p>
                                 </div>
@@ -36,7 +36,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6 mt-1">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={socialsciences} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={socialsciences} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Social Sciences</strong></p>
                                 </div>
@@ -46,7 +46,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={law} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={law} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Law and Legal Studies</strong></p>
                                 </div>
@@ -54,7 +54,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6 mt-1">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={engineering} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={engineering} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Engineering and Technology</strong></p>
                                 </div>
@@ -64,7 +64,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={architecture} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={architecture} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Architecture</strong></p>
                                 </div>
@@ -72,7 +72,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6 mt-1">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={design} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={design} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Design</strong></p>
                                 </div>
@@ -82,7 +82,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={medicine} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={medicine} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Medicine and Life Sciences</strong></p>
                                 </div>
@@ -90,7 +90,7 @@ export default function PartTimeCareersUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6 mt-1">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={naturalsciences} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={naturalsciences} height="50" width="50" className="img-fluid" alt="USA post graduate courses" />
                                     </div>
                                     <p className="mt-3 ml-4"><strong>Natural Sciences</strong></p>
                                 </div>

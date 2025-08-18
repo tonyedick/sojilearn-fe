@@ -94,7 +94,7 @@ export default function About() {
 
                     <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                         <div className="lmp_thumb">
-                            <img src="../assets/img/lmp-2.png" className="img-fluid" alt=""/>
+                            <img src="../assets/img/lmp-2.png" className="img-fluid" alt="Sojilearn- about us"/>
                         </div>
                     </div>
                 </div>

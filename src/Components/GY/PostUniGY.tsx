@@ -23,7 +23,7 @@ export default function PostUniGY() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={cost} className="img-fluid" alt="" />
+                                <img src={cost} className="img-fluid" alt="Cost of living in Germany" loading="lazy"/>
                                 <p>Low 
                                     <span className="needle mediumLeft" 
                                         style={{
@@ -54,7 +54,7 @@ export default function PostUniGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={rent} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={rent} height="50" width="50" className="img-fluid" alt="House rent in Germany" loading="lazy"/>
                                         <h4 className="mt-3">Rent</h4>
                                         <p>€ 240 - € 300</p>
                                     </div>
@@ -63,7 +63,7 @@ export default function PostUniGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={food} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={food} height="50" width="50" className="img-fluid" alt="Cost of feeding in Germany" loading="lazy"/>
                                         <h4 className="mt-3">Food</h4>
                                         <p>€ 140 - € 170</p>
                                     </div>
@@ -74,7 +74,7 @@ export default function PostUniGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={transport} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={transport} height="50" width="50" className="img-fluid" alt="Cost of transport in Germany" loading="lazy"/>
                                         <h4 className="mt-3">Transport</h4>
                                         <p>€ 50 - € 60</p>
                                     </div>
@@ -83,7 +83,7 @@ export default function PostUniGY() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={misc} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={misc} height="50" width="50" className="img-fluid" alt="Cost of living in Germany" loading="lazy"/>
                                         <h4 className="mt-3">Miscellaneous</h4>
                                         <p>€ 120 - € 150</p>
                                     </div>

@@ -16,7 +16,7 @@ export default function StudyInUkCom() {
             <div className="row align-items-center justify-content-between mt-5">
                 <div className="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                     <div className="side_block extream_img">
-                        <img src="assets/img/uk.jpg" className="img-fluid rounded" alt="" />
+                        <img src="assets/img/uk.jpg" className="img-fluid rounded" alt="Study in UK" loading="lazy"/>
                     </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-3">

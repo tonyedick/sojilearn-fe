@@ -26,7 +26,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-1">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={capital} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={capital} className="img-fluid" alt="Germany capital city"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Capital</Link></h4>
@@ -40,7 +40,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-2">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={population} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={population} className="img-fluid" alt="Germany population"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Population</Link></h4>
@@ -54,7 +54,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-3">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={language} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={language} className="img-fluid" alt="Germany language of communication"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Language</Link></h4>
@@ -68,7 +68,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-4">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={students} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={students} className="img-fluid" alt="Germany number of international students"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">International Students</Link></h4>
@@ -82,7 +82,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-10">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={gdp} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={gdp} className="img-fluid" alt="Germany gdp"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">GDP</Link></h4>
@@ -96,7 +96,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-4 col-md-4 col-sm-6">
                         <div className="edu_cat_2 cat-6">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={dialing} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={dialing} className="img-fluid" alt="Germany dialing code"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Dialing Code</Link></h4>
@@ -110,7 +110,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="edu_cat_2 cat-8">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={currency} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={currency} className="img-fluid" alt="Germany currency"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Currency</Link></h4>
@@ -124,7 +124,7 @@ export default function StudyInGermany() {
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="edu_cat_2 cat-9">
                             <div className="edu_cat_icons">
-                                <Link className="pic-main" to="/"><img src={students} className="img-fluid" alt="" /></Link>
+                                <Link className="pic-main" to="/"><img src={students} className="img-fluid" alt="Germany number of universities and colleges"/></Link>
                             </div>
                             <div className="edu_cat_data">
                                 <h4 className="title"><Link to="/">Universities and Colleges</Link></h4>

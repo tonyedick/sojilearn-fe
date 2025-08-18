@@ -13,7 +13,7 @@ export default function NotFound() {
                     <div className="col-lg-6 col-md-10">
                         <div className="text-center">
 
-                            <img src="../../../../../assets/img/404.png" className="img-fluid" alt="" />
+                            <img src="../../../../../assets/img/404.png" className="img-fluid" alt="not found page graphics" />
                             <p>Sorry! The page you requested could not be found.</p>
                             <Link className="btn theme-bg text-white btn-md" to="../../">Back To Home</Link>
 

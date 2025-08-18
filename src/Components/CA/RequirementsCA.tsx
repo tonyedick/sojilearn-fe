@@ -25,7 +25,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={copy} className="img-fluid" alt="" />
+                                <img src={copy} className="img-fluid" alt="Canada valid passport" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">Copy of a valid passport</h5>
                         </div>
@@ -33,7 +33,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="Canada ACT/SAT/LSAT for UG programs" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">ACT/SAT/LSAT for UG programs</h5>
                         </div>
@@ -41,7 +41,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={toefl} className="img-fluid" alt="" />
+                                <img src={toefl} className="img-fluid" alt="Canada courses requirement" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">TOEFL/IELTS/English Test (optional)</h5>
                         </div>
@@ -49,7 +49,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={cv} className="img-fluid" alt="" />
+                                <img src={cv} className="img-fluid" alt="Canada courses requirement cv" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">CV/ Resume/ Essays</h5>
                         </div>
@@ -57,7 +57,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={portfolio} className="img-fluid" alt="" />
+                                <img src={portfolio} className="img-fluid" alt="Canada courses requirement proof of funds" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">Evidence of funds (POF)</h5>
                         </div>
@@ -70,7 +70,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="Canada courses requirement GRE for pg programs" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">GMAT/GRE scores for PG programs (optional)</h5>
                         </div>
@@ -78,7 +78,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="Canada transcripts requirement" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">Academic Transcripts (Student copy needed to start the process)</h5>
                         </div>
@@ -86,7 +86,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={lor} className="img-fluid" alt="" />
+                                <img src={lor} className="img-fluid" alt="Canada recommendation letters requirement" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">Letters of Recommendations (LORs)</h5>
                         </div>
@@ -94,7 +94,7 @@ export default function RequirementsCA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={statement} className="img-fluid" alt="" />
+                                <img src={statement} className="img-fluid" alt="Canada statement of purpose requirement" loading='lazy'/>
                             </div>
                             <h5 className="mb-0 ml-3">Statement of Purpose (SOP)</h5>
                         </div>

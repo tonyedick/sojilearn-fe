@@ -223,6 +223,7 @@ const BlogContentRenderer: React.FC<BlogContentRendererProps> = ({ content, clas
               src={block.content.url}
               alt={block.content.alt || ''}
               style={styles.image}
+              loading="lazy"
             />
             {block.content.caption && (
               <figcaption style={styles.figcaption}>

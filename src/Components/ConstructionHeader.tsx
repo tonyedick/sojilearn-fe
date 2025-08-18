@@ -53,7 +53,7 @@ export default function ConstructionHeader() {
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">
                       <Link className="nav-brand" to="/">
-                          <img src={logo} className="logo" alt="Sojilearn main website logo" loading="lazy"/>
+                          <img src={logo} className="logo" alt="Sojilearn under construction logo"/>
                       </Link>
                       <div className="nav-toggle" onClick={toggleNav}></div>
                       {/* <div className="mobile_nav">

@@ -16,11 +16,11 @@ export default function Steps() {
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div className="side_block extream_img">
                         <div className="list_crs_img">
-                            <img src="assets/img/img-1.png" className="img-fluid elsio cirl animate-fl-y" alt="" />
-							<img src="assets/img/img-3.png" className="img-fluid elsio arrow animate-fl-x" alt="" />
-							<img src="assets/img/img-2.png" className="img-fluid elsio moon animate-fl-x" alt="" />
+                            <img src="assets/img/img-1.png" className="img-fluid elsio cirl animate-fl-y" alt="Sojilearn hero icons"/>
+							<img src="assets/img/img-3.png" className="img-fluid elsio arrow animate-fl-x" alt="Sojilearn hero icons"/>
+							<img src="assets/img/img-2.png" className="img-fluid elsio moon animate-fl-x" alt="Sojilearn hero icons"/>
                         </div>
-                        <img src="assets/img/st-3.png" className="img-fluid" alt="" />
+                        <img src="assets/img/st-3.png" className="img-fluid" alt="sojilearn processing steps" loading="lazy" />
                     </div>
                 </div>
                 <div className="col-xl-5 col-lg-5 col-md-6 col-sm-12">

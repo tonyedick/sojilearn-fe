@@ -41,7 +41,7 @@ export default function Reviews() {
                                   <div className="_testimonial_flex">
                                     <div className="_testimonial_flex_first">
                                       <div className="_tsl_flex_thumb">
-                                        <img src={review.imgSrc} className="img-fluid" alt=""/>
+                                        <img src={review.imgSrc} className="img-fluid" alt="Reviews from blog users"/>
                                       </div>
                                       <div className="_tsl_flex_capst">
                                         <h5>{review.user}</h5>

@@ -23,7 +23,7 @@ export default function PostUniUSA() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={cost} className="img-fluid" alt="" />
+                                <img src={cost} className="img-fluid" alt="USA cost of living" />
                                 <p>Low 
                                     <span className="needle mediumLeft" 
                                         style={{
@@ -54,7 +54,7 @@ export default function PostUniUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={rent} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={rent} height="50" width="50" className="img-fluid" alt="USA cost of rent" />
                                         <h4 className="mt-3">Rent</h4>
                                         <p>$ 600 - $ 1000</p>
                                     </div>
@@ -63,7 +63,7 @@ export default function PostUniUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={food} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={food} height="50" width="50" className="img-fluid" alt="USA cost of feeding" />
                                         <h4 className="mt-3">Food</h4>
                                         <p>$ 350 - $ 500</p>
                                     </div>
@@ -74,7 +74,7 @@ export default function PostUniUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={transport} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={transport} height="50" width="50" className="img-fluid" alt="USA cost of transport" />
                                         <h4 className="mt-3">Transport</h4>
                                         <p>$ 500 - $ 1000</p>
                                     </div>
@@ -83,7 +83,7 @@ export default function PostUniUSA() {
                             <div className="col-lg-6 col-mg-6 col-sm-6">
                                 <div className="d-flex align-items-center">
                                     <div className="list_crs_img">
-                                        <img src={misc} height="50" width="50" className="img-fluid" alt="" />
+                                        <img src={misc} height="50" width="50" className="img-fluid" alt="USA cost of living" />
                                         <h4 className="mt-3">Miscellaneous</h4>
                                         <p>$ 500 - $ 1000</p>
                                     </div>

@@ -10,7 +10,7 @@ export default function Footer() {
         
                         <div className="col-lg-5 col-md-5">
                             <div className="footer_widget">
-                                <img src={logo} className="img-footer small mb-2" alt="" />
+                                <img src={logo} className="img-footer small mb-2" alt="sojilearn logo" />
                                 <p className="mt-2">
                                     Sojilearn Optimum Solutions Limited is incorporated in Nigeria <strong>(Company Number 8093370)</strong> with its registered address at 21 Agbaje Akio Street, Okeafo GRA, Iwo, Osun State. and registered under MSMED (Micro, Small and Medium Enterprises Development Act, 2006) with number <strong>SUIN464189319643</strong>. 
                                     <br />Sojilearn helps students figure what they should do and where they should be at - wherever that be in the world - to realise their full potential.</p>

@@ -205,7 +205,7 @@ export default function Blog() {
                                                                     <img 
                                                                         className="img-fluid circle" 
                                                                         src={post.author_avatar_url}
-                                                                        alt=""
+                                                                        alt={post.author_name}
                                                                         loading="lazy"
                                                                     />
                                                                 </Link></div>
@@ -293,7 +293,7 @@ export default function Blog() {
                                     posts.map((item: any) => (
                                         <li key={item?.id}>
                                             <span className="left">
-                                                <img src={item?.featured_image_url} alt="" className="" />
+                                                <img src={item?.featured_image_url} alt="blog content featured" className="" />
                                             </span>
                                             <span className="right">
                                                 <Link className="feed-title" to={`/blog/${item?.slug}`} target="_blank">{item?.title.slice(0, 24)}...</Link> 

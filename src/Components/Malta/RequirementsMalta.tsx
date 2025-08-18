@@ -25,7 +25,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={copy} className="img-fluid" alt="" />
+                                <img src={copy} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Copy of a valid passport</h5>
                         </div>
@@ -33,7 +33,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Duolingo - 105 (optional)</h5>
                         </div>
@@ -41,7 +41,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={lor} className="img-fluid" alt="" />
+                                <img src={lor} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Letter of Recommendations (LORs)</h5>
                         </div>
@@ -49,7 +49,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={cv} className="img-fluid" alt="" />
+                                <img src={cv} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">A CV (compulsory)</h5>
                         </div>
@@ -62,7 +62,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={toefl} className="img-fluid" alt="" />
+                                <img src={toefl} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">IELTS - 6.0 (optional)</h5>
                         </div>
@@ -70,7 +70,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={gmat} className="img-fluid" alt="" />
+                                <img src={gmat} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Academic Transcripts (student copy to start the process)</h5>
                         </div>
@@ -78,7 +78,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={portfolio} className="img-fluid" alt="" />
+                                <img src={portfolio} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Portfolio (for specific courses)</h5>
                         </div>
@@ -86,7 +86,7 @@ export default function RequirementsMalta() {
                     <div className="mb-4 mt-4 ml-lg-0 mr-lg-4">
                         <div className="d-flex align-items-center">
                             <div className="list_crs_img">
-                                <img src={statement} className="img-fluid" alt="" />
+                                <img src={statement} className="img-fluid" alt="admission requirements in Malta" loading="lazy"/>
                             </div>
                             <h5 className="mb-0 ml-3">Statement of Purpose (SOP)</h5>
                         </div>
