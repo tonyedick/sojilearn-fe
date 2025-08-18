@@ -16,7 +16,7 @@ export default function StudyInUkFull() {
             <div className="row align-items-center justify-content-between">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3">
                     <div className="lmp_caption">
-                        <h1 className="mb-3">Why Study in United Kingdom?</h1>
+                        <h2 className="mb-3">Why Study in United Kingdom?</h2>
                         {showFullText ? (
                             <>
                                 <p>The United Kingdom is home to the world's most esteemed universities and is among the popular destinations for studying abroad. Ranked as the best education systems in the world, the British Education System provides a plethora of courses in various subjects including Business, Engineering, Medicine, Arts, and Design delivered through exceptional teaching styles.</p>

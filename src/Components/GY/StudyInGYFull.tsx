@@ -16,7 +16,7 @@ export default function StudyInGYFull() {
             <div className="row align-items-center justify-content-between">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3">
                     <div className="lmp_caption">
-                        <h1 className="mb-3">Why Study in Germany?</h1>
+                        <h2 className="mb-3">Why Study in Germany?</h2>
                         {showFullText ? (
                             <>
                                 <p>With over 2 million+ job openings, Germany boasts a robust economy and offers substantial career opportunities post-graduation. As the fourth largest economy in the world, Germany offers a stable environment for both education and work. The universities here are known for their high-quality education that focuses on preparing students to thrive in the global job market. Furthermore, students can benefit from competitive minimum salary packages starting from €43,808.28, enhancing the appeal of working in Germany. Plus, when you study in Germany, you receive a Schengen Visa, giving you access to travel and explore over 26+ European countries.</p>

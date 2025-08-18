@@ -16,7 +16,7 @@ export default function StudyInCAFull() {
             <div className="row align-items-center justify-content-between">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3">
                     <div className="lmp_caption">
-                        <h1 className="mb-3">Why Study in Canada?</h1>
+                        <h2 className="mb-3">Why Study in Canada?</h2>
                         {showFullText ? (
                             <>
                                 <p>Canada is one of the leading study abroad destinations for Nigerian students. The country offers top-notch education at affordable costs which makes it an ideal choice for international students. Offering a dynamic student life, many of the Canadian institutions are ranked among the top 10 global universities. The Canadian Ministry of Education highly encourages foreign students and has also provided various financial aids and facilities to ease their stay.</p>

@@ -16,7 +16,7 @@ export default function StudyInMaltaFull() {
             <div className="row align-items-center justify-content-between">
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-3">
                     <div className="lmp_caption">
-                        <h1 className="mb-3">Why Study in Malta?</h1>
+                        <h2 className="mb-3">Why Study in Malta?</h2>
                         {showFullText ? (
                             <>
                                 <p>Discover a hidden gem in the heart of the Mediterranean that offers high 

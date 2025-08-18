@@ -13,7 +13,7 @@ export default function CTA() {
 
                         <div className="call_action_wrap">
                             <div className="call_action_wrap-head">
-                                <h3>Make Your Dream To Study in UK</h3>
+                                <h2>Make Your Dream To Study in UK</h2>
                                 <h3 style={{textShadow: "8px 8px 8px gray"}}>A Reality With Our Experts!</h3>
                             </div>
                             <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-call_action_wrap">Get Started Today</Link>
