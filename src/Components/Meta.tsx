@@ -9,9 +9,9 @@ type MetaProps = {
 };
 
 export default function Meta({ title, description, canonical, image }: MetaProps) {
-  const siteName = "SojiLearn";
+  const siteName = "Sojilearn";
   const pageTitle = title ? `${title} | ${siteName}` : siteName;
-  const desc = description || "Study abroad services (UK, USA, Canada, Malta): SOP writing, applications, visa, flights, accommodation, student loans.";
+  const desc = description || "Learn and explore study opportunities in Malta, UK, USA, Canada, Germany, and Ireland.";
 
   return (
     <HelmetProvider>
