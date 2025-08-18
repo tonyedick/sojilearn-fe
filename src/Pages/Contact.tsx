@@ -154,9 +154,6 @@ export default function Contact() {
                 </section>
 
                 <div className="clearfix"></div>
-                <section className="p-0">
-                    <iframe src="https://www.google.com/maps/embed?pb=" className="full-width" style={{ border: "0", height: "450" }} allowFullScreen loading="lazy"></iframe>
-                </section>
                 <section className="theme-bg call_action_wrap-wrap">
                     <div className="container">
                         <div className="row">
