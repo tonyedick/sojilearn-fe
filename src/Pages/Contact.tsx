@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import AppLayout from '../Components/Layouts/AppLayout';
 import { Link } from 'react-router-dom';
+import Meta from "../Components/Meta";
 
 type FormValues = {
     name: string;
@@ -51,6 +52,12 @@ export default function Contact() {
     return (
         <AppLayout>
             <>
+                <Meta
+                    title="Sojilearn - Contact Us"
+                    description="Get in touch with Sojilearn for inquiries about studying abroad, courses, and more."
+                    canonical="https://www.sojilearn.com/contact"
+                    image="https://www.sojilearn.com/logo.png"
+                />
                 <section className="page-title gray">
                     <div className="container">
                         <div className="row">

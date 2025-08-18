@@ -1,12 +1,19 @@
 import AppLayout from '../Components/Layouts/AppLayout';
 import { usePageTracking } from '../utils/websiteAnalytics';
 import { Link } from 'react-router-dom'
+import Meta from "../Components/Meta";
 
 export default function Disclaimer() {
       usePageTracking('disclaimer');
   return (
     <AppLayout>
         <>
+        <Meta
+        title="Sojilearn - Disclaimer"
+        description="Disclaimer for Sojilearn regarding the accuracy and use of information on the website."
+        canonical="https://www.sojilearn.com/disclaimer"
+        image="https://www.sojilearn.com/logo.png"
+        />
         <section>
             <div className="container">
                 <div className="row align-items-center justify-content-between">

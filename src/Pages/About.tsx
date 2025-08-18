@@ -1,12 +1,19 @@
 import { usePageTracking } from '../utils/websiteAnalytics';
 import AppLayout from '../Components/Layouts/AppLayout';
 import { Link } from 'react-router-dom'
+import Meta from "../Components/Meta";
 
 export default function About() {
       usePageTracking('about');
   return (
     <AppLayout>
         <>
+        <Meta
+            title="Sojilearn - About Us"
+            description="Sojilearn is a study abroad agency, helping students navigate their educational journey and achieve their dreams."
+            canonical="https://www.sojilearn.com/about"
+            image="https://www.sojilearn.com/logo.png"
+        />
         <section className="page-title gray">
             <div className="container">
                 <div className="row">

@@ -6,6 +6,7 @@ import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
 import BlogLayout from '../Components/Layouts/BlogLayout';
 import { BlogPost } from '../types/blog';
+import Meta from "../Components/Meta";
 
 export default function Blog() {
     // const { id } = useParams<{ id: string }>();
@@ -139,6 +140,12 @@ export default function Blog() {
   return (
         <BlogLayout>
             <>
+              <Meta
+                        title="Sojilearn - Blog"
+                        description="Explore our blog for the latest updates, tips, and insights on studying abroad, scholarships, and more."
+                        canonical="https://www.sojilearn.com/blog"
+                        image="https://www.sojilearn.com/logo.png"
+                    />
                 <section className="page-title" style={{background: "url(assets/img/banner-3.jpg)no-repeat"}} data-overlay="8">
                     <div className="container">
                         <div className="row">

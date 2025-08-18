@@ -1,12 +1,19 @@
 import { usePageTracking } from '../utils/websiteAnalytics';
 import AppLayout from '../Components/Layouts/AppLayout';
 import { Link } from 'react-router-dom'
+import Meta from "../Components/Meta";
 
 export default function TermsOfUse() {
       usePageTracking('terms-of-use');
   return (
     <AppLayout>
         <>
+        <Meta
+            title="Sojilearn - Terms of Use"
+            description="Read the terms of use for Sojilearn's website. Understand your rights and responsibilities when using our services."
+            canonical="https://www.sojilearn.com/terms-of-use"
+            image="https://www.sojilearn.com/logo.png"
+        />
         <section>
             <div className="container">
                 <div className="row align-items-center justify-content-between">

@@ -9,12 +9,19 @@ import FAQGY from '../Components/GY/FAQGY';
 import RequirementsGY from '../Components/GY/RequirementsGY';
 import PostUniGY from '../Components/GY/PostUniGY';
 import PartTimeCareersGY from '../Components/GY/PartTimeCareersGY';
+import Meta from "../Components/Meta";
 
 export default function StudyInGermany() {
         usePageTracking('study-in-germany');
   return (
     <AppLayout>
         <>
+        <Meta
+            title="Sojilearn - Study in Germany"
+            description="Explore the opportunities of studying in Germany with Sojilearn. Discover universities, courses, and career prospects in Germany."
+            canonical="https://www.sojilearn.com/study-in-germany"
+            image="https://www.sojilearn.com/logo.png"
+        />
         <BannerStudyInGermany />
         <ExploreGermany />
         <StudyInGYFull />

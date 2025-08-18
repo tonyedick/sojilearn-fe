@@ -1,12 +1,19 @@
 import AppLayout from '../Components/Layouts/AppLayout';
 import { usePageTracking } from '../utils/websiteAnalytics';
 import { Link } from 'react-router-dom'
+import Meta from "../Components/Meta";
 
 export default function PrivacyPolicy() {
       usePageTracking('privacy-policy');
   return (
     <AppLayout>
         <>
+        <Meta
+            title="Sojilearn - Privacy Policy"
+            description="At Sojilearn, we are committed to protecting your privacy and personal information. This Privacy Policy outlines how we collect, use, and safeguard your data."
+            canonical="https://www.sojilearn.com/privacy-policy"
+            image="https://www.sojilearn.com/logo.png"
+        />
         <section>
             <div className="container">
                 <div className="row align-items-center justify-content-between">
