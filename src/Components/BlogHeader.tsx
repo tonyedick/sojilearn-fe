@@ -79,12 +79,6 @@ export default function BlogHeader() {
                                 </Link>
                               </li>
                             );
-                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Study Abroad</Link></li>
-                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Scholarships</Link></li>
-                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Success Stories</Link></li>
-                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Visa and Immigration</Link></li>
-                        //   <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/">Scholarships and Grants</Link></li>
-                        //   <li className={activeLink === '/' ? 'active' : ''}><Link to="/">SOP</Link></li>
                            })}
                     </ul>
 
