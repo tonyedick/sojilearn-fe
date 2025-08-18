@@ -45,7 +45,7 @@ useEffect(() => {
                                 style={{textShadow: "8px 8px 8px gray"}}
                               >The Most Comprehensive & Personalised Study Abroad Plan. <br />Obsessed with Student Success.</p>
                               <div className="inline_btn">
-                                  <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white">APPLY NOW</Link>
+                                  <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white" rel="noopener noreferrer">APPLY NOW</Link>
                               </div>
                           </div>
                       </div>

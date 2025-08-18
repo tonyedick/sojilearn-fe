@@ -88,7 +88,7 @@ export default function About() {
                                 <h6 className="mb-0 ml-3">And a lot more</h6>
                                 </div>
                             </div>
-                            <div className="text-left mt-4"><Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-md text-light theme-bg">APPLY NOW</Link></div>
+                            <div className="text-left mt-4"><Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-md text-light theme-bg" rel="noopener noreferrer">APPLY NOW</Link></div>
                         </div>
                     </div>
 

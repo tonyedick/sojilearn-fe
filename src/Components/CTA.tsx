@@ -16,7 +16,7 @@ export default function CTA() {
                                 <h3>Do You Have Questions ?</h3>
                                 <span>We help you to grow your career and empower your dreams.</span>
                             </div>
-                            <Link to="mailto:sojilearn@gmail.com" className="btn btn-call_action_wrap">Contact Us Today</Link>
+                            <Link to="mailto:sojilearn@gmail.com" className="btn btn-call_action_wrap" rel="noopener noreferrer">Contact Us Today</Link>
                         </div>
                     </div>
                 </div>
