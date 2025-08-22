@@ -188,6 +188,176 @@ export type Database = {
         }
         Relationships: []
       }
+        study_abroad_applications: {
+        Row: {
+          id: string
+          user_id: string | null
+          // Step 1 – Basics
+          email: string
+          budget: string | null
+          interested_countries: string[] | null
+          preferred_university: string | null
+          previously_applied_university: boolean | null
+          knows_visa_payment: boolean | null
+          knows_accommodation_payment: boolean | null
+          // Step 2 – UK & Marketing
+          interested_in_uk: boolean | null
+          how_heard_about_us: string | null
+          referral_friend_name: string | null
+          // Step 3 – Academics
+          degree_applying_for: string | null
+          first_choice_study: string | null
+          second_choice_study: string | null
+          waec_neco_year: string | null
+          most_recent_qualification: string | null
+          // Status & progress
+          status: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          current_step: number | null
+          // Metadata
+          form_data: Json | null
+          admin_notes: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id?: string | null
+          email: string
+          budget?: string | null
+          interested_countries?: string[] | null
+          preferred_university?: string | null
+          previously_applied_university?: boolean | null
+          knows_visa_payment?: boolean | null
+          knows_accommodation_payment?: boolean | null
+          interested_in_uk?: boolean | null
+          how_heard_about_us?: string | null
+          referral_friend_name?: string | null
+          degree_applying_for?: string | null
+          first_choice_study?: string | null
+          second_choice_study?: string | null
+          waec_neco_year?: string | null
+          most_recent_qualification?: string | null
+          status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          current_step?: number | null
+          form_data?: Json | null
+          admin_notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string | null
+          email?: string
+          budget?: string | null
+          interested_countries?: string[] | null
+          preferred_university?: string | null
+          previously_applied_university?: boolean | null
+          knows_visa_payment?: boolean | null
+          knows_accommodation_payment?: boolean | null
+          interested_in_uk?: boolean | null
+          how_heard_about_us?: string | null
+          referral_friend_name?: string | null
+          degree_applying_for?: string | null
+          first_choice_study?: string | null
+          second_choice_study?: string | null
+          waec_neco_year?: string | null
+          most_recent_qualification?: string | null
+          status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          current_step?: number | null
+          form_data?: Json | null
+          admin_notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "study_abroad_applications_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      application_documents: {
+        Row: {
+          id: string
+          application_id: string
+          document_type: string
+          file_name: string
+          file_path: string
+          file_size: number
+          mime_type: string
+          upload_status: "uploaded" | "processing" | "verified" | "rejected"
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          application_id: string
+          document_type: string
+          file_name: string
+          file_path: string
+          file_size: number
+          mime_type: string
+          upload_status?: "uploaded" | "processing" | "verified" | "rejected"
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          application_id?: string
+          document_type?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          mime_type?: string
+          upload_status?: "uploaded" | "processing" | "verified" | "rejected"
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_documents_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "study_abroad_applications"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      application_referrals: {
+        Row: {
+          id: string
+          application_id: string
+          referrer_name: string
+          referrer_contact: string | null
+          status: "pending" | "contacted" | "converted"
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          application_id: string
+          referrer_name: string
+          referrer_contact?: string | null
+          status?: "pending" | "contacted" | "converted"
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          application_id?: string
+          referrer_name?: string
+          referrer_contact?: string | null
+          status?: "pending" | "contacted" | "converted"
+          created_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_referrals_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "study_abroad_applications"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Views: {
       [_ in never]: never

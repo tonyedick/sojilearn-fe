@@ -44,7 +44,7 @@ export default function Header() {
       <div className="header header-light dark-text">
           <div className="container">
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
-                  <div className="nav-header">
+                  <div className="nav-header sticky">
                       <Link className="nav-brand" to="/">
                           <img src={logo} className="logo" alt="Sojilearn logo" />
                       </Link>

@@ -17,7 +17,22 @@ import type { Database } from './types';
 const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL! as string;
 const SUPABASE_PUBLISHABLE_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY! as string;
 
-// Import the supabase client like this:
-// import { supabase } from "@/integrations/supabase/client";
-
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+// if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+//   throw new Error('Missing Supabase environment variables');
+// }
+
+// Create client with additional options for better error handling
+// export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+//   auth: {
+//     persistSession: true,
+//     autoRefreshToken: true,
+//     detectSessionInUrl: true
+//   },
+//   global: {
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   }
+// });
