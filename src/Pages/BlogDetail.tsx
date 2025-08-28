@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { usePageTracking, useConversionTracking } from '../utils/websiteAnalytics';
-import { Link, useSearchParams, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { BlogPost as BlogPostType } from '../types/blog';
 import Moment from "moment";
 import { dateFormat } from "../Helpers/types";
@@ -14,13 +14,6 @@ export default function BlogDetail() {
     const { slug } = useParams();
     const [post, setPost] = useState<BlogPostType | null>(null);
     const [posts, setPosts] = useState<BlogPostType[]>([]);
-    const [filteredPosts, setFilteredPosts] = useState<BlogPostType[]>([]);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedFilter] = useState('all');
-    const [selectedCountry, setSelectedCountry] = useState('all');
-    const [currentPage, setCurrentPage] = useState(1);
-    const [searchParams] = useSearchParams();
-    const postsPerPage = 9;
 
     const { trackConversion } = useConversionTracking();
 
@@ -48,45 +41,6 @@ export default function BlogDetail() {
         }
     }, [slug]);
     usePageTracking(post?.id || slug);
-
-    // Filtering logic
-    const filterPosts = useCallback(() => {
-        let filtered = [...posts];
-
-        // Filter by category from URL params
-        const categoryParam = searchParams.get('category');
-        if (categoryParam && categoryParam !== 'all') {
-            filtered = filtered.filter((post: BlogPostType) => post.category === categoryParam);
-        }
-
-        // Filter by search term
-        if (searchTerm) {
-            filtered = filtered.filter((post: BlogPostType) =>
-                post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                post.tags?.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-            );
-        }
-
-        // Filter by country (now tags)
-        if (selectedCountry !== 'all') {
-            filtered = filtered.filter((post: BlogPostType) =>
-                post.tags?.includes(selectedCountry)
-            );
-        }
-
-        // Filter by filter type
-        if (selectedFilter !== 'all') {
-            filtered = filtered.filter((post: BlogPostType) => post.filter_type === selectedFilter);
-        }
-
-        setFilteredPosts(filtered);
-        setCurrentPage(1);
-    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
-
-    useEffect(() => {
-        filterPosts();
-    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams, filterPosts]);
 
     // Fetch single post
     const fetchPost = async (postSlug: string) => {

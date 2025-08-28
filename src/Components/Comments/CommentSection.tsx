@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../../integrations/supabase/client';
 import { useAuth } from '../../hooks/useAuth';
 import { Comment, CommentFormData } from '../../types/comment';
@@ -15,11 +15,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({ blogPostId, trac
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
 
-  useEffect(() => {
-    fetchComments();
-  }, [blogPostId]);
-
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     try {
       const { data, error } = await supabase
       // @ts-ignore
@@ -59,7 +55,11 @@ export const CommentSection: React.FC<CommentSectionProps> = ({ blogPostId, trac
     } finally {
       setLoading(false);
     }
-  };
+  }, [blogPostId]);
+
+  useEffect(() => {
+    fetchComments();
+  }, [fetchComments]);
 
   const handleCommentSubmit = async (formData: CommentFormData) => {
     try {
