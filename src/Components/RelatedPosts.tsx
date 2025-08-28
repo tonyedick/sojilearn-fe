@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { supabase } from '../integrations/supabase/client';
@@ -13,11 +13,7 @@ export const RelatedPosts = ({ currentPost }: RelatedPostsProps) => {
   const [loading, setLoading] = useState(true);
 
 
-  useEffect(() => {
-    fetchRelatedPosts();
-  }, [currentPost]);
-
-    const fetchRelatedPosts = async () => {
+  const fetchRelatedPosts = useCallback(async () => {
     try {
       // Fetch posts with same category or filter_type, excluding current post
       const { data, error } = await supabase
@@ -36,16 +32,12 @@ export const RelatedPosts = ({ currentPost }: RelatedPostsProps) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPost]);
 
+  useEffect(() => {
+    fetchRelatedPosts();
+  }, [fetchRelatedPosts]);
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
-  };
   if (loading || relatedPosts.length === 0) {
     return null;
   }

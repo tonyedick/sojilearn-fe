@@ -17,10 +17,8 @@ type FormValues = {
 export default function Contact() {
     usePageTracking('contact');
     const {
-        register,
         handleSubmit,
         reset,
-        formState: { errors },
     } = useForm<FormValues>();
 
     const submit = async (data: FormValues) => {

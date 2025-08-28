@@ -14,16 +14,11 @@ const categories = [
 ];
 
 export default function BlogHeader() {
-  const [activeLink, setActiveLink] = useState('');
   const [isMobile, setIsMobile] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const currentCategory = searchParams.get('category') || 'all';
-
-  useEffect(() => {
-    setActiveLink(location.pathname);
-  }, [location.pathname]);
 
   useEffect(() => {
     const handleResize = () => {

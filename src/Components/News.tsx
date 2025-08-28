@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 export default function News() {
     const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchFeaturedPosts();
@@ -25,8 +24,6 @@ export default function News() {
         setFeaturedPosts((data as any[]) || []);
         } catch (error) {
         console.error('Error fetching featured posts:', error);
-        } finally {
-        setLoading(false);
         }
     };
 
