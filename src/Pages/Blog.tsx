@@ -9,7 +9,6 @@ import { BlogPost } from '../types/blog';
 import Meta from "../Components/Meta";
 
 export default function Blog() {
-    // const { id } = useParams<{ id: string }>();
     usePageTracking('blog_list');
     const { trackSearch } = useSearchTracking();
     const { trackConversion } = useConversionTracking();
@@ -227,7 +226,7 @@ export default function Blog() {
                                     </div>
                                         ))
                                         ) : (
-                                            <div className="col-12 text-center py-8">No posts founds.</div>
+                                            <div className="col-12 text-center py-8">Loading...</div>
                                     )}
                                 </div>
                             </div>

@@ -18,7 +18,7 @@ type SupabaseInsertPayload = Record<string, any>;
 const getSessionId = (): string => {
   let sessionId = sessionStorage.getItem('analytics_session_id');
   if (!sessionId) {
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
     sessionStorage.setItem('analytics_session_id', sessionId);
   }
   return sessionId;

@@ -113,6 +113,7 @@ const BlogContentRenderer: React.FC<BlogContentRendererProps> = ({ content, clas
       },
       paragraph: {
         marginBottom: '1rem',
+        fontSize: '1.125rem',
         lineHeight: '1.7'
       },
       image: {
