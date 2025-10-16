@@ -23,7 +23,6 @@ export const CommentForm: React.FC<CommentFormProps> = ({
     parent_id: parentId,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const { user, profile } = useAuth();
 
   React.useEffect(() => {
@@ -39,16 +38,19 @@ export const CommentForm: React.FC<CommentFormProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setMessage(null);
 
     if (!formData.content.trim()) {
-      setMessage({ type: 'error', text: 'Please enter a comment.' });
+      toast.error('Please enter a comment.', {
+        duration: 5000,
+      });
       setIsSubmitting(false);
       return;
     }
 
     if (!formData.author_name.trim() || !formData.author_email.trim()) {
-      setMessage({ type: 'error', text: 'Please enter your name and email.' });
+      toast.error('Please enter your name and email.', {
+        duration: 5000,
+      });
       setIsSubmitting(false);
       return;
     }
@@ -56,7 +58,6 @@ export const CommentForm: React.FC<CommentFormProps> = ({
     const success = await onSubmit(formData);
     
     if (success) {
-      setMessage({ type: 'success', text: 'Comment submitted successfully! It will appear after approval.' });
       toast.success('Comment submitted successfully! It will appear after approval.', {
 				duration: 5000,
 			});
@@ -68,7 +69,6 @@ export const CommentForm: React.FC<CommentFormProps> = ({
       });
       if (onCancel) onCancel();
     } else {
-      setMessage({ type: 'error', text: 'Failed to submit comment. Please try again.' });
       toast.error('Failed to submit comment. Please try again.', {
 				duration: 5000,
 			});
