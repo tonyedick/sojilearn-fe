@@ -81,8 +81,8 @@ export default function BlogHeader() {
                             );
                            })}
                     </ul>
-
-                     {location.pathname.startsWith('/blog/') ? null : (
+ 
+                    {/* {location.pathname.startsWith('/blog/') ? null : (
                       <ul className="nav-menu nav-menu-social align-to-right">
                         <li className="add-listing theme-bg">
                           <button
@@ -98,7 +98,7 @@ export default function BlogHeader() {
                           </button>
                         </li>
                       </ul>
-                    )}
+                    )} */}
                   </div>
                   <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
               </nav>
