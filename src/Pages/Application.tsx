@@ -26,7 +26,7 @@ export default function Application() {
             />
             <Hero onGetStarted={scrollToForm} />
 
-            <div className="tw-bg-white tw-py-16">
+            <div className="tw-bg-white tw-py-8">
                 <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
                     <div className="tw-text-center">
                         <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-4">
@@ -157,7 +157,7 @@ export default function Application() {
                 </div>
             </div>
 
-            <div ref={formRef} className="tw-bg-white tw-py-16">
+            <div ref={formRef} className="tw-bg-white">
                 <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-text-center tw-mb-2">
                     <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900">
                         Ready to Start Your Study Abroad Journey?

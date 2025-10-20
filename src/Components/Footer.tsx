@@ -54,7 +54,7 @@ export default function Footer() {
                                         <h4 className="widget_title">Company</h4>
                                         <ul className="footer-menu">
                                             <li><Link to="/blog" target="_blank">Blog</Link></li>
-                                            <li className="font-weight-bold"><Link to="https://forms.gle/Lu3kEE3SsxdkVbrU7" target="_blank" rel="noopener noreferrer">APPLY NOW</Link></li>
+                                            <li className="font-weight-bold"><Link to="/apply" rel="noopener noreferrer">START NOW</Link></li>
                                         </ul>
                                     </div>
                                 </div>
