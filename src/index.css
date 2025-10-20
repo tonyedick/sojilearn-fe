@@ -2280,6 +2280,24 @@ nav a {
         transform: translate3d(0, 0, 0)
     }
 }
+
+@keyframes pulseZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-zoom {
+  animation: pulseZoom 1.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
 .nav-menu.nav-menu-social>li.add-listing {
     border-radius:4px;
     top: 14px;

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 export default function Steps() {
   return (
@@ -17,7 +18,7 @@ export default function Steps() {
                         <div className="side_block extream_img">
                             <div className="list_crs_img">
                                 <img src="assets/img/img-1.png" className="img-fluid elsio cirl animate-fl-y" alt="Sojilearn hero icons"/>
-                                <img src="assets/img/img-3.png" className="img-fluid elsio arrow animate-fl-x" alt="Sojilearn hero icons"/>
+                                {/* <img src="assets/img/img-3.png" className="img-fluid elsio arrow animate-fl-x" alt="Sojilearn hero icons"/> */}
                                 <img src="assets/img/img-2.png" className="img-fluid elsio moon animate-fl-x" alt="Sojilearn hero icons"/>
                             </div>
                             <img src="assets/img/st-3.png" className="img-fluid" alt="sojilearn processing steps" loading="lazy" />
@@ -83,6 +84,9 @@ export default function Steps() {
                                     </div>
                                 </li>
                             </ol>
+                        </div>
+                        <div className="inline_btn">
+                            <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white font-medium pulse-zoom" rel="noopener noreferrer">START NOW</Link>
                         </div>
                     </div>
                 </div>

@@ -15,7 +15,9 @@ export default function SimplifyAdmit() {
                         <p>We help students navigate & assess their journey thus far, matching them to personalised mentors, counsels them towards their higher education dream with an employability lens, and makes sure that everyone punched way above their weight to make dreams come alive and truly be able to level up.</p>
                         <div className="foot-news-last mt-4">
                             <div className="inline_btn">
-								<Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn theme-bg text-white" rel="noopener noreferrer">Get Started</Link>
+								<Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" 
+                                className="btn theme-bg text-white font-medium pulse-zoom" 
+                                rel="noopener noreferrer">START NOW</Link>
 							</div>
                         </div>
                     </div>
