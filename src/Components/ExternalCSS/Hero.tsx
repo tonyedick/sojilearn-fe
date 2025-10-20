@@ -38,7 +38,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
   }, []);
 
   return (
-    <div className="tw-relative tw-bg-gradient-to-br tw-from-blue-900 tw-via-blue-800 tw-to-blue-900 tw-text-white tw-overflow-hidden">
+    <div className="tw-relative theme-bg tw-text-white tw-overflow-hidden">
       {/* Background Pattern */}
       <div className="tw-absolute tw-inset-0 tw-bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] tw-opacity-20"></div>
       
@@ -60,8 +60,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
             {/* Why It Matters */}
             <div className="tw-bg-blue-800/50 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-blue-700/50">
               <p className="tw-text-lg tw-text-blue-100 tw-leading-relaxed">
-                For students fresh out of senior secondary school, recent graduates looking for the next level, 
-                or parents eager to give their child the best start. Complete the form below to get started today.
+                We understand that you want better oppurtunities to excel abroad through study.
+                This is why, we now offer guidance to secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-text-2xl lg:tw-text-2xl tw-font-bold">PAID FOR</span>.
               </p>
             </div>
 
@@ -69,15 +69,15 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-grid sm:tw-grid-cols-3 tw-gap-4">
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Students don't lose momentum after school</span>
+                <span className="tw-text-sm tw-font-medium">You don't lose momentum after school</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Parents avoid confusing paperwork stress</span>
+                <span className="tw-text-sm tw-font-medium">You avoid confusing paperwork stress</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Peace of mind with quick progress</span>
+                <span className="tw-text-sm tw-font-medium">You have peace of mind with quick progress</span>
               </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
           {/* Right Column - Visual Elements */}
           <div className="tw-relative">
              {/* Countdown Timer for Urgency */}
-            <div className="tw-bg-gradient-to-r tw-from-orange-500/20 tw-to-red-500/20 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-orange-400/30 tw-mb-4">
+            <div className="tw-bg-gradient-to-r tw-from-orange-500/10 tw-to-red-500/10 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-orange-400/30 tw-mb-4">
               <div className="tw-text-center">
                 <h3 className="tw-text-lg tw-font-bold tw-text-orange-300 tw-mb-2">
                   ⚡ January, May, September 2026 Intake Available

@@ -42,7 +42,7 @@ export default function Application() {
                         <div className="tw-grid md:tw-grid-cols-2 tw-gap-8">
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-blue-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     R
                                     </div>
                                     <div className="tw-ml-4">
@@ -56,7 +56,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-green-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     J
                                     </div>
                                     <div className="tw-ml-4">
@@ -70,7 +70,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-blue-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     L
                                     </div>
                                     <div className="tw-ml-4">
@@ -84,7 +84,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-green-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     C
                                     </div>
                                     <div className="tw-ml-4">
@@ -98,7 +98,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-orange-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     B
                                     </div>
                                     <div className="tw-ml-4">
@@ -112,7 +112,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-red-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     C
                                     </div>
                                     <div className="tw-ml-4">
@@ -126,7 +126,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-purple-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     I
                                     </div>
                                     <div className="tw-ml-4">
@@ -140,7 +140,7 @@ export default function Application() {
                             </div>
                             <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                                 <div className="tw-flex tw-items-center tw-mb-4">
-                                    <div className="tw-w-12 tw-h-12 tw-bg-violet-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
+                                    <div className="tw-w-12 tw-h-12 theme-bg tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
                                     T
                                     </div>
                                     <div className="tw-ml-4">

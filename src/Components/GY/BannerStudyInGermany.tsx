@@ -39,7 +39,7 @@ export default function BannerStudyInCanada() {
                             <h1 className="banner_title mb-4 text-white" style={{textShadow: "8px 8px 8px black"}} 
                             ><span><img src={flag} alt="study in germany banner" height="45" width="60"/></span> Study in Germany<br /></h1>
                             <div className="inline_btn">
-                                <Link to="/apply" target="_blank" className="btn theme-bg text-white font-medium pulse-zoom" rel="noopener noreferrer">START NOW</Link></div>
+                                <Link to="/apply" className="btn theme-bg text-white font-medium pulse-zoom" rel="noopener noreferrer">START NOW</Link></div>
                         </div>
                     </div>
               </div>
