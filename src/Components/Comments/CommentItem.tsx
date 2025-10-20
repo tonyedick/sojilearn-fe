@@ -26,15 +26,6 @@ export const CommentItem: React.FC<CommentItemProps> = ({
     });
   };
 
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map(part => part.charAt(0))
-      .join('')
-      .toUpperCase()
-      .slice(0, 2);
-  };
-
   const handleReplySubmit = async (data: CommentFormData) => {
     const success = await onReply({ ...data, parent_id: comment.id });
     if (success) {

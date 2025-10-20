@@ -7,6 +7,12 @@ interface Profile {
   email: string;
   full_name: string;
   role: string;
+  academic_background?: string;
+  preferred_countries?: string[];
+  degree_level?: string;
+  interests?: string[];
+  created_at?: string;
+  updated_at?: string;
 }
 
 interface AuthContextType {
