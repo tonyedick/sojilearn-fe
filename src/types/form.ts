@@ -14,7 +14,7 @@ export interface FormData {
   // Step 3: Study Preferences
   preferredProgram: string;
   fieldOfStudy: string;
-  preferredUniversities: string;
+  preferredUniversity: string;
   intendedStartDate: string;
 
   // Step 4: Additional Information

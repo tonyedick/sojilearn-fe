@@ -213,11 +213,11 @@ export type Database = {
           previous_application: boolean | null
           budget_range: string | null
           additional_questions: string | null
-          status: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
           // current_step: number | null
           // Metadata
-          form_data: Json | null
-          admin_notes: string | null
+          form_data?: Json | null
+          admin_notes?: string | null
           created_at: string
           updated_at: string
         }
@@ -241,7 +241,7 @@ export type Database = {
           previous_application: boolean | null
           budget_range: string | null
           additional_questions: string | null
-          status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
           form_data?: Json | null
           admin_notes?: string | null
           created_at?: string
@@ -267,7 +267,7 @@ export type Database = {
           previous_application: boolean | null
           budget_range: string | null
           additional_questions: string | null
-          status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
+          stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
           form_data?: Json | null
           admin_notes?: string | null
           created_at?: string

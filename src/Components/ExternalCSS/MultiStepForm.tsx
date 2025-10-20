@@ -15,7 +15,7 @@ const initialFormData: FormData = {
   preferredCountry: '',
   preferredProgram: '',
   fieldOfStudy: '',
-  preferredUniversities: '',
+  preferredUniversity: '',
   intendedStartDate: '',
   hasPassport: false,
   hasDegree: false,
@@ -125,7 +125,7 @@ export default function MultiStepForm() {
           preferred_country: formData.preferredCountry,
           preferred_program: formData.preferredProgram,
           field_of_study: formData.fieldOfStudy,
-          preferred_universitiy: formData.preferredUniversities || null,
+          preferred_universitiy: formData.preferredUniversity || null,
           intended_start_date: formData.intendedStartDate,
           has_passport: formData.hasPassport,
           has_degree: formData.hasDegree,
@@ -438,8 +438,8 @@ export default function MultiStepForm() {
                   Preferred Universities (Optional)
                 </label>
                 <textarea
-                  value={formData.preferredUniversities}
-                  onChange={(e) => handleInputChange('preferredUniversities', e.target.value)}
+                  value={formData.preferredUniversity}
+                  onChange={(e) => handleInputChange('preferredUniversity', e.target.value)}
                   className="tw-w-full tw-px-4 tw-py-3 tw-border tw-border-gray-300 tw-rounded-xl tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-transparent tw-transition-all"
                   rows={3}
                   placeholder="List any specific universities you're interested in"
