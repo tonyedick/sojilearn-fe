@@ -86,7 +86,7 @@ export default function Steps() {
                             </ol>
                         </div>
                         <div className="inline_btn">
-                            <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" target="_blank" className="btn theme-bg text-white font-medium pulse-zoom" rel="noopener noreferrer">START NOW</Link>
+                            <Link to="/apply" target="_blank" className="btn theme-bg text-white font-medium pulse-zoom" rel="noopener noreferrer">START NOW</Link>
                         </div>
                     </div>
                 </div>

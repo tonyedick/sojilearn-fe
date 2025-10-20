@@ -49,8 +49,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
             {/* Hook */}
             <div className="tw-space-y-4">
               <h1 className="tw-text-4xl lg:tw-text-6xl tw-font-bold text-white tw-leading-tight">
-                Studying abroad for{' '}
-                <span className="tw-text-orange-400">FREE</span>
+                Planning to study{' '}
+                <span className="tw-text-orange-400">ABROAD?</span>
               </h1>
               <p className="tw-text-xl lg:tw-text-2xl tw-text-blue-100">
                 With Sojilearn, it's faster (and simpler) than you think.
@@ -60,9 +60,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
             {/* Why It Matters */}
             <div className="tw-bg-blue-800/50 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-blue-700/50">
               <p className="tw-text-lg tw-text-blue-100 tw-leading-relaxed">
-                For students fresh out of senior secondary school 2025, undergraduates chasing that next level, 
-                or parents eager to give their child the best start. <br />Waiting months in confusion, 
-                chasing documents, and endless back-and-forth can be draining.
+                For students fresh out of senior secondary school, recent graduates looking for the next level, 
+                or parents eager to give their child the best start. Complete the form below to get started today.
               </p>
             </div>
 
@@ -86,7 +85,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-space-y-4">
               <button
                 onClick={onGetStarted}
-                className="tw-group tw-bg-orange-500 tw-hover:bg-orange-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-xl tw-font-semibold tw-text-lg tw-transition-all tw-duration-300 tw-transform tw-hover:scale-105 tw-hover:shadow-xl tw-flex tw-items-center tw-space-x-3"
+                className="tw-group tw-bg-orange-500 tw-hover:bg-orange-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-xl tw-font-semibold tw-text-lg tw-transition-all tw-duration-300 tw-transform tw-hover:scale-105 tw-hover:shadow-xl tw-flex tw-items-center tw-space-x-3 pulse-zoom"
               >
                 <span>Start Your Study Abroad Journey Today</span>
                 <ArrowRight className="tw-w-5 tw-h-5 tw-group-hover:translate-x-1 tw-transition-transform" />
@@ -137,7 +136,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-bg-white/10 tw-backdrop-blur-sm tw-rounded-3xl tw-p-8 tw-border tw-border-white/20">
               <div className="tw-space-y-6">
                 <div className="tw-text-center">
-                  <h3 className="tw-text-2xl tw-font-bold tw-mb-4">The Sojilearn Process</h3>
+                  <h3 className="tw-text-2xl tw-font-bold tw-mb-4 text-white">The Sojilearn Process</h3>
                   <p className="tw-text-blue-100">Clear path from application → admission → visa → travel</p>
                 </div>
                 

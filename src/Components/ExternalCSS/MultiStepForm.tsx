@@ -221,45 +221,6 @@ export default function MultiStepForm() {
 
         {/* Form Content */}
         <div className="tw-p-8">
-          {/* Test Data Generator - Only show in development */}
-          {/* {import.meta.env.DEV && (
-            <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-              <h4 className="text-sm font-semibold text-yellow-800 mb-2">🧪 Test Data Generator (Dev Only)</h4>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => fillTestData()}
-                  className="px-3 py-1 bg-yellow-200 hover:bg-yellow-300 text-yellow-800 text-xs rounded-lg transition-colors"
-                >
-                  Random Test Data
-                </button>
-                <button
-                  onClick={() => fillTestData('waec_graduate')}
-                  className="px-3 py-1 bg-blue-200 hover:bg-blue-300 text-blue-800 text-xs rounded-lg transition-colors"
-                >
-                  WAEC Graduate
-                </button>
-                <button
-                  onClick={() => fillTestData('undergraduate')}
-                  className="px-3 py-1 bg-green-200 hover:bg-green-300 text-green-800 text-xs rounded-lg transition-colors"
-                >
-                  Undergraduate
-                </button>
-                <button
-                  onClick={() => fillTestData('graduate')}
-                  className="px-3 py-1 bg-purple-200 hover:bg-purple-300 text-purple-800 text-xs rounded-lg transition-colors"
-                >
-                  Graduate
-                </button>
-                <button
-                  onClick={() => fillTestData('working_professional')}
-                  className="px-3 py-1 bg-orange-200 hover:bg-orange-300 text-orange-800 text-xs rounded-lg transition-colors"
-                >
-                  Professional
-                </button>
-              </div>
-            </div>
-          )} */}
-
           {/* Step 1: Personal Information */}
           {currentStep === 1 && (
             <div className="tw-space-y-6">
@@ -315,7 +276,7 @@ export default function MultiStepForm() {
                   }`}
                   placeholder="Enter your email address"
                 />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                {errors.email && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.email}</p>}
               </div>
 
               <div>

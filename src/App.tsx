@@ -18,7 +18,6 @@ import StudyInMalta from './Pages/StudyInMalta';
 import StudyInCanada from './Pages/StudyInCanada';
 import StudyInUSA from './Pages/StudyInUSA';
 import StudyInGermany from './Pages/StudyInGermany';
-// import UnderConstruction from './Pages/UnderConstruction';
 
 const NotFound = React.lazy(() => import('./Pages/NotFound'))
 
@@ -74,7 +73,6 @@ function App() {
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="*" element={<Navigate to="/not-found" replace />} />
             <Route path="/not-found" element={<NotFound />} />
-            {/*<Route path="/blog" element={<UnderConstruction />} /> */}
           </Routes>
         </Suspense>
       </BrowserRouter>

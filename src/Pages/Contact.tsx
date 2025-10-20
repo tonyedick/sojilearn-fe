@@ -101,7 +101,7 @@ export default function Contact() {
                                             </div>
                                         </div>
                                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-4">
-                                            <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="link text-uppercase" rel="noopener noreferrer">Get Started</Link>
+                                            <Link to="/apply" className="link text-uppercase" rel="noopener noreferrer">Get Started</Link>
                                         </div>
                                     </div>
                                 </form>
