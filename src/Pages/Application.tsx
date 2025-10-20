@@ -1,37 +1,34 @@
 
 import { usePageTracking } from '../utils/websiteAnalytics';
-import AppLayout from '../Components/Layouts/AppLayout';
 import React, { useRef } from 'react';
 import Meta from "../Components/Meta";
 import Hero from '../Components/ExternalCSS/Hero';
+import AppLayout from '../Components/Layouts/AppLayout';
+import MultiStepForm from '../Components/ExternalCSS/MultiStepForm';
 import '../Components/ExternalCSS/main.css';
-
-interface HeroProps {
-  onGetStarted: () => void;
-}
 
 export default function Application() {
     const formRef = useRef<HTMLDivElement>(null);
     usePageTracking('application');
+    
     const scrollToForm = () => {
         formRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
   return (
     <AppLayout>
-        <>
-        <Meta
-            title="Sojilearn - Apply now to study abroad"
-            description="Sojilearn is a study abroad agency, helping students navigate their educational journey and achieve their dreams."
-            canonical="https://www.sojilearn.com/apply"
-            image="https://www.sojilearn.com/logo.png"
-        />
-        <section className="page-title gray">
+         <div className="tw-min-h-screen tw-bg-gray-50">
+            <Meta
+                title="Sojilearn - Apply now to study abroad"
+                description="Sojilearn is a study abroad agency, helping students navigate their educational journey and achieve their dreams."
+                canonical="https://www.sojilearn.com/apply"
+                image="https://www.sojilearn.com/logo.png"
+            />
             <Hero onGetStarted={scrollToForm} />
 
             <div className="tw-bg-white tw-py-16">
-                <div className="tw-max-w-7xl tw-mx-auto tw-px-4 tw-sm:px-6 tw-lg:px-8">
-                    <div className="tw-text-center tw-mb-12">
+                <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+                    <div className="tw-text-center">
                         <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-4">
                         Join 500+ Students Who've Made It Abroad in 2025
                         </h2>
@@ -42,7 +39,7 @@ export default function Application() {
 
                     {/* Testimonials */}
                     <section id="tw-success-stories">
-                        <div className="tw-grid tw-md:grid-cols-2 tw-gap-8">
+                        <div className="tw-grid md:tw-grid-cols-2 tw-gap-8">
                         <div className="tw-bg-gray-50 tw-rounded-2xl tw-p-6">
                         <div className="tw-flex tw-items-center tw-mb-4">
                             <div className="tw-w-12 tw-h-12 tw-bg-blue-500 tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-white tw-font-bold">
@@ -105,7 +102,7 @@ export default function Application() {
                             I
                             </div>
                             <div className="tw-ml-4">
-                            <h4 className="tw-font-semibold tw-text-gray-900">Igbanam Y.</h4>
+                            <h4 className="tw-font-semibold tw-text-gray-900">Igbanam Y. (MSc. Public Health)</h4>
                             <p className="tw-text-sm tw-text-gray-600">Preparing for study in January 2026</p>
                             </div>
                         </div>
@@ -119,7 +116,7 @@ export default function Application() {
                             T
                             </div>
                             <div className="tw-ml-4">
-                            <h4 className="tw-font-semibold tw-text-gray-900">Temitayo O.</h4>
+                            <h4 className="tw-font-semibold tw-text-gray-900">Temitayo O. (MSc. Estate Management)</h4>
                             <p className="tw-text-sm tw-text-gray-600">My expectations were exceeded</p>
                             </div>
                         </div>
@@ -131,8 +128,19 @@ export default function Application() {
                     </section>
                 </div>
             </div>
-        </section>
-        </>
+
+            <div ref={formRef} className="tw-bg-white tw-py-16">
+                <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-text-center tw-mb-2">
+                <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900">
+                    Ready to Start Your UK Journey?
+                </h2>
+                <p className="tw-text-lg tw-text-gray-600">
+                    Fill out our quick form and get personalized guidance within 24 hours
+                </p>
+                </div>
+                <MultiStepForm />
+            </div>
+        </div>
     </AppLayout>
   )
 }

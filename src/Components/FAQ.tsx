@@ -23,7 +23,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Sojilearn charges a one-time fee of $199 to process undergraduate or post graduate admission in Canada, while for the UK, Germany, Malta, Ireland, we charge a one-time fee of $70.</p>
+                                <p>Sojilearn charges a one-time fee of $199 to process undergraduate or post graduate admission in USA and Canada, while for the UK, Germany, Malta, Ireland, we charge a one-time fee of $70.</p>
                             </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Yes, when we submit your application, we apply to at least 5 universities for you.</p>
+                                <p>Yes, when we submit your application, we apply to multiple universities for you.</p>
                             </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Yes, when you refer a student to Sojilearn to stand a chance of earning from $20 to $200.</p>
+                                <p>Yes, when you refer a student to Sojilearn to stand a chance of earning from $150 to $300.</p>
                             </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Currently, our partner universities are in Malta, UK, Germany, USA, Canada, Ireland and France.</p>
+                                <p>Currently, our partner universities are in Malta, UK, Germany, USA, Canada and Ireland.</p>
                             </div>
                             </div>
                         </div>

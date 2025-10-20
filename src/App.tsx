@@ -58,22 +58,22 @@ function App() {
         <Suspense fallback={loading}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/apply" element={<Application />} />
-            <Route path="/page404" element={<NotFound />} />
             <Route path="/about" element={<About />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-use" element={<TermsOfUse />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/not-found" element={<NotFound />} />
             <Route path="/study-in-uk" element={<StudyInUK />} />
             <Route path="/study-in-malta" element={<StudyInMalta />} />
             <Route path="/study-in-usa" element={<StudyInUSA />} />
             <Route path="/study-in-canada" element={<StudyInCanada />} />
             <Route path="/study-in-germany" element={<StudyInGermany />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/page404" element={<NotFound />} />
+            <Route path="/apply" element={<Application />} />
             <Route path="/blog" element={<Blog />} /> 
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="*" element={<Navigate to="/not-found" replace />} />
+            <Route path="/not-found" element={<NotFound />} />
             {/*<Route path="/blog" element={<UnderConstruction />} /> */}
           </Routes>
         </Suspense>

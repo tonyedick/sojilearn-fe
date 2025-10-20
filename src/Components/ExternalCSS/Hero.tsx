@@ -42,18 +42,17 @@ export default function Hero({ onGetStarted }: HeroProps) {
       {/* Background Pattern */}
       <div className="tw-absolute tw-inset-0 tw-bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] tw-opacity-20"></div>
       
-      <div className="tw-relative tw-max-w-7xl tw-mx-auto tw-px-4 tw-sm:px-6 tw-lg:px-8 tw-py-16 tw-lg:py-24">
-        <div className="tw-grid tw-lg:grid-cols-2 tw-gap-12 tw-items-center">
+      <div className="tw-relative tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-py-16 lg:tw-py-24">
+        <div className="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center">
           {/* Left Column - Main Content */}
           <div className="tw-space-y-8">
-
             {/* Hook */}
             <div className="tw-space-y-4">
-              <h1 className="tw-text-4xl tw-lg:text-6xl tw-font-bold tw-leading-tight">
-                Studying abroad doesn't have to take{' '}
-                <span className="tw-text-orange-400">FOREVER</span>
+              <h1 className="tw-text-4xl lg:tw-text-6xl tw-font-bold text-white tw-leading-tight">
+                Studying abroad for{' '}
+                <span className="tw-text-orange-400">FREE</span>
               </h1>
-              <p className="tw-text-xl tw-lg:text-2xl tw-text-blue-100">
+              <p className="tw-text-xl lg:tw-text-2xl tw-text-blue-100">
                 With Sojilearn, it's faster (and simpler) than you think.
               </p>
             </div>
@@ -68,7 +67,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             </div>
 
             {/* Benefits */}
-            <div className="tw-grid tw-sm:grid-cols-3 tw-gap-4">
+            <div className="tw-grid sm:tw-grid-cols-3 tw-gap-4">
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
                 <span className="tw-text-sm tw-font-medium">Students don't lose momentum after school</span>

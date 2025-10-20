@@ -268,7 +268,7 @@ export default function MultiStepForm() {
                 <p className="tw-text-gray-600">Let's start with your basic details</p>
               </div>
               
-              <div className="tw-grid tw-md:grid-cols-2 tw-gap-6">
+              <div className="tw-grid md:tw-grid-cols-2 tw-gap-6">
                 <div>
                   <label className="tw-block tw-text-sm tw-font-medium tw-text-gray-700 tw-mb-2">
                     First Name *
@@ -633,7 +633,7 @@ export default function MultiStepForm() {
             {currentStep < 4 ? (
               <button
                 onClick={handleNext}
-                className="tw-flex tw-items-center tw-space-x-2 tw-bg-blue-600 tw-hover:bg-blue-700 tw-text-white tw-px-6 tw-py-3 tw-rounded-xl tw-font-medium tw-transition-all"
+                className="tw-flex tw-items-center tw-space-x-2 theme-bg tw-hover:bg-blue-700 tw-text-white tw-px-6 tw-py-3 tw-rounded-xl tw-font-medium tw-transition-all"
               >
                 <span>Next</span>
                 <ChevronRight className="tw-w-5 tw-h-5" />
