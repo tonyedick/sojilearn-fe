@@ -27,10 +27,6 @@ export default function Blog() {
     const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships'];
 
     useEffect(() => {
-        fetchPosts();
-    }, []);
-
-    useEffect(() => {
         filterPosts();
     }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
 
@@ -80,7 +76,6 @@ export default function Blog() {
         if (selectedFilter !== 'all') {
         filtered = filtered.filter(post => post.filter_type === selectedFilter);
         }
-
         trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
         setCurrentPage(1);
@@ -140,11 +135,11 @@ export default function Blog() {
         <BlogLayout>
             <>
               <Meta
-                        title="Sojilearn - Blog"
-                        description="Explore our blog for the latest updates, tips, and insights on studying abroad, scholarships, and more."
-                        canonical="https://www.sojilearn.com/blog"
-                        image="https://www.sojilearn.com/logo.png"
-                    />
+                    title="Sojilearn - Blog"
+                    description="Explore our blog for the latest updates, tips, and insights on studying abroad, scholarships, and more."
+                    canonical="https://www.sojilearn.com/blog"
+                    image="https://www.sojilearn.com/logo.png"
+                />
                 <section className="page-title" style={{background: "url(assets/img/banner-3.jpg)no-repeat"}} data-overlay="8">
                     <div className="container">
                         <div className="row">
@@ -226,7 +221,7 @@ export default function Blog() {
                                     </div>
                                         ))
                                         ) : (
-                                            <div className="col-12 text-center py-8">Loading...</div>
+                                        <div className="col-12 text-center py-8">Loading...</div>
                                     )}
                                 </div>
                             </div>
