@@ -13,7 +13,7 @@ export default function CTAUSA() {
 
                         <div className="call_action_wrap">
                             <div className="call_action_wrap-head">
-                                <h2>Make Your Dream To Study in USA</h2>
+                                <h2 className="text-white">Make Your Dream To Study in USA</h2>
                                 <h3 style={{textShadow: "8px 8px 8px gray"}}>A Reality With Our Experts!</h3>
                             </div>
                             <Link to="https://forms.gle/wCbcYWJ9PPzfxCZR8" className="btn btn-call_action_wrap pulse-zoom" rel="noopener noreferrer">START NOW</Link>
