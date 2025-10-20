@@ -188,31 +188,33 @@ export type Database = {
         }
         Relationships: []
       }
-        study_abroad_applications: {
+      study_abroad_applications: {
         Row: {
           id: string
-          user_id: string | null
           // Step 1 – Basics
+          first_name: string
+          last_name: string
           email: string
-          budget: string | null
-          interested_countries: string[] | null
-          preferred_university: string | null
-          previously_applied_university: boolean | null
-          knows_visa_payment: boolean | null
-          knows_accommodation_payment: boolean | null
+          phone: string
           // Step 2 – UK & Marketing
-          interested_in_uk: boolean | null
-          how_heard_about_us: string | null
-          referral_friend_name: string | null
+          current_level: string | null
+          institution: string | null
+          graduation_year: number | null
+          preferred_country: string | null
           // Step 3 – Academics
-          degree_applying_for: string | null
-          first_choice_study: string | null
-          second_choice_study: string | null
-          waec_neco_year: string | null
-          most_recent_qualification: string | null
-          // Status & progress
+          preferred_program: string | null
+          field_of_study: string | null
+          preferred_university: string | null
+          intended_start_date: string | null
+          // Step 4 - Final Details
+          has_passport: boolean | null
+          has_degree: boolean | null
+          has_transcript: boolean | null
+          previous_application: boolean | null
+          budget_range: string | null
+          additional_questions: string | null
           status: "draft" | "submitted" | "under_review" | "approved" | "rejected"
-          current_step: number | null
+          // current_step: number | null
           // Metadata
           form_data: Json | null
           admin_notes: string | null
@@ -221,24 +223,25 @@ export type Database = {
         }
         Insert: {
           id?: string
-          user_id?: string | null
+          first_name: string
+          last_name: string
           email: string
-          budget?: string | null
-          interested_countries?: string[] | null
+          phone: string
+          current_level: string | null
+          institution: string | null
+          graduation_year: string | null
+          preferred_country: string | null
+          preferred_program: string | null
+          field_of_study: string | null
           preferred_university?: string | null
-          previously_applied_university?: boolean | null
-          knows_visa_payment?: boolean | null
-          knows_accommodation_payment?: boolean | null
-          interested_in_uk?: boolean | null
-          how_heard_about_us?: string | null
-          referral_friend_name?: string | null
-          degree_applying_for?: string | null
-          first_choice_study?: string | null
-          second_choice_study?: string | null
-          waec_neco_year?: string | null
-          most_recent_qualification?: string | null
+          intended_start_date: string | null
+          has_passport: boolean | null
+          has_degree: boolean | null
+          has_transcript: boolean | null
+          previous_application: boolean | null
+          budget_range: string | null
+          additional_questions: string | null
           status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
-          current_step?: number | null
           form_data?: Json | null
           admin_notes?: string | null
           created_at?: string
@@ -246,24 +249,25 @@ export type Database = {
         }
         Update: {
           id?: string
-          user_id?: string | null
-          email?: string
-          budget?: string | null
-          interested_countries?: string[] | null
+          first_name: string
+          last_name: string
+          email: string
+          phone: string
+          current_level: string | null
+          institution: string | null
+          graduation_year: string | null
+          preferred_country: string | null
+          preferred_program: string | null
+          field_of_study: string | null
           preferred_university?: string | null
-          previously_applied_university?: boolean | null
-          knows_visa_payment?: boolean | null
-          knows_accommodation_payment?: boolean | null
-          interested_in_uk?: boolean | null
-          how_heard_about_us?: string | null
-          referral_friend_name?: string | null
-          degree_applying_for?: string | null
-          first_choice_study?: string | null
-          second_choice_study?: string | null
-          waec_neco_year?: string | null
-          most_recent_qualification?: string | null
+          intended_start_date: string | null
+          has_passport: boolean | null
+          has_degree: boolean | null
+          has_transcript: boolean | null
+          previous_application: boolean | null
+          budget_range: string | null
+          additional_questions: string | null
           status?: "draft" | "submitted" | "under_review" | "approved" | "rejected"
-          current_step?: number | null
           form_data?: Json | null
           admin_notes?: string | null
           created_at?: string

@@ -6,6 +6,7 @@ import avatarApp from '../src/assets/img/favicon.png';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
+import Application from './Pages/Application';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import Disclaimer from './Pages/Disclaimer';
 import TermsOfUse from './Pages/TermsOfUse';
@@ -57,6 +58,7 @@ function App() {
         <Suspense fallback={loading}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/apply" element={<Application />} />
             <Route path="/page404" element={<NotFound />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
