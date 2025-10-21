@@ -60,7 +60,7 @@ export default function BlogHeader() {
                 <Link
                   key={category.slug}
                   to={href}
-                  className={`tw-relative tw-px-2 tw-py-2 tw-text-md tw-font-medium tw-transition-all tw-duration-200 tw-whitespace-nowrap ${
+                  className={`tw-relative tw-px-2 tw-py-2 tw-text-md tw-font-semibold tw-transition-all tw-duration-200 tw-whitespace-nowrap ${
                     isActive(category.slug)
                       ? "active tw-font-semibold"
                       : "tw-text-gray-600 hover:theme-bg"

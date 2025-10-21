@@ -51,7 +51,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`tw-px-2 tw-py-2 tw-text-md tw-font-medium tw-transition-all tw-duration-200 tw-whitespace-nowrap ${
+                className={`tw-px-2 tw-py-2 tw-text-md tw-font-semibold tw-transition-all tw-duration-200 tw-whitespace-nowrap ${
                   isActive(item.href)
                     ? 'active tw-font-semibold'
                     : 'tw-text-gray-600 hover:theme-bg'
