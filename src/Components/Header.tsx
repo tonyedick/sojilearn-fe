@@ -17,7 +17,7 @@ const Header = () => {
     { name: 'Study in USA', href: '/study-in-usa' },
     { name: 'Study in Germany', href: '/study-in-germany' },
     { name: 'Study in Malta', href: '/study-in-malta' },
-    { name: 'Visit our Blog', href: '/blog' },
+    { name: 'Visit our Blog', href: '/blog' }
   ]
 
   const isActive = (path: string) => location.pathname === path
@@ -73,7 +73,7 @@ const Header = () => {
           <div className="tw-hidden md:tw-flex">
             <Link
               to="/apply"
-              className="tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl theme-bg tw-text-white hover:tw-bg-primary/100 tw-transition-colors"
+              className="tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl theme-bg tw-text-white hover:theme-bg/100 tw-transition-colors"
             >
               Apply
             </Link>
