@@ -154,7 +154,8 @@ const BlogContentRenderer: React.FC<BlogContentRendererProps> = ({ content, clas
       },
       list: {
         margin: '1rem 0',
-        paddingLeft: '1.5rem'
+        paddingLeft: '1.5rem',
+        listStyleType: 'disc',
       },
       listItem: {
         marginBottom: '0.5rem',
@@ -259,9 +260,15 @@ const BlogContentRenderer: React.FC<BlogContentRendererProps> = ({ content, clas
         );
 
       case 'list':
-        const ListTag = block.content.type === 'ordered' ? 'ol' : 'ul';
+        const isOrdered = block.content.type === 'ordered';
+        const ListTag = isOrdered ? 'ol' : 'ul';
         return (
-          <ListTag key={block.id} style={styles.list}>
+          <ListTag key={block.id} 
+            style={{
+              ...styles.list,
+              listStyleType: isOrdered ? 'decimal' : 'disc'
+            }}
+          >
             {block.content.items.map((item: string, itemIndex: number) => (
               <li key={itemIndex} style={styles.listItem}>
                 {item}
