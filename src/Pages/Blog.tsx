@@ -16,7 +16,6 @@ export default function Blog() {
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(true);
-    const [isLoading, setIsLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
@@ -102,7 +101,6 @@ export default function Blog() {
         e.preventDefault();
         if (!email) return;
 
-        setIsLoading(true);
         try {
         const { error } = await supabase
             .from('newsletter_subscribers')
@@ -129,7 +127,7 @@ export default function Blog() {
         console.error('Newsletter subscription error:', error);
         alert("Subscription failed, Please try again later.");
         } finally {
-        setIsLoading(false);
+        setLoading(false);
         }
     };
 

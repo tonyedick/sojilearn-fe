@@ -61,7 +61,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-bg-blue-800/50 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-blue-700/50">
               <p className="tw-text-lg tw-text-blue-100 tw-leading-relaxed">
                 We understand that you want better opportunities to excel abroad through study.
-                This is why, we now offer guidance to secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-text-2xl lg:tw-text-2xl tw-font-bold">PAID FOR</span>.
+                This is why, we now offer guidance to secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-font-bold">PAID FOR</span>.
               </p>
             </div>
 
