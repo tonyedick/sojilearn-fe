@@ -285,12 +285,19 @@ export default function MultiStepForm() {
                 </label>
                 <input
                   type="tel"
+                  inputMode="numeric"
+                  pattern="[0-9+\-\s()]*"
                   value={formData.phone}
+                  onInput={(e) => {
+                    const input = e.target as HTMLInputElement;
+                    input.value = input.value.replace(/[^\d+()\s-]/g, '');
+                    handleInputChange('phone', input.value);
+                  }}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className={`tw-w-full tw-px-4 tw-py-3 tw-border tw-rounded-xl tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-transparent tw-transition-all ${
                     errors.phone ? 'tw-border-red-500' : 'tw-border-gray-300'
                   }`}
-                  placeholder="Enter your phone number"
+                  placeholder="+2345551234567"
                 />
                 {errors.phone && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.phone}</p>}
               </div>
