@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`tw-font-poppins tw-bg-white tw-text-gray-900 tw-sticky tw-top-0 tw-z-50 ${
+      className={`text-dark tw-font-medium tw-bg-white tw-sticky tw-top-0 tw-z-50 ${
         scrolled ? 'tw-shadow-md' : ''
       }`}
     >
@@ -71,9 +71,21 @@ const Header = () => {
 
           {/* Desktop Apply Button */}
           <div className="tw-hidden md:tw-flex">
-            <Link
+            {/* <Link
               to="/apply"
               className="tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl theme-bg tw-text-white hover:theme-bg/100 tw-transition-colors"
+            > */}
+            <Link
+              to="/apply"
+              onClick={(e) => {
+                if (isActive("/apply")) e.preventDefault(); 
+              }}
+              className={`tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-transition-colors ${
+                isActive("/apply")
+                  ? "tw-bg-gray-200 tw-text-gray-500 tw-cursor-not-allowed"
+                  : "theme-bg tw-text-white hover:tw-bg-primary/100"
+              }`}
+              aria-disabled={isActive("/apply")}
             >
               Apply
             </Link>
@@ -138,7 +150,20 @@ const Header = () => {
                 <div className="tw-pt-3 tw-flex tw-flex-col tw-gap-2">
                   <Link
                     to="/apply"
-                    className="tw-w-full tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-text-white tw-bg-primary/90 hover:tw-bg-primary/100 tw-transition-colors"
+                    onClick={(e) => {
+                      if (isActive("/apply")) e.preventDefault(); 
+                    }}
+                    aria-disabled={isActive("/apply")}
+                    // className={`tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-transition-colors ${
+                    //   isActive("/apply")
+                    //     ? "tw-bg-gray-200 tw-text-gray-500 tw-cursor-not-allowed"
+                    //     : "theme-bg tw-text-white hover:tw-bg-primary/100"
+                    // }`}
+                    className={`tw-w-full tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-transition-colors ${
+                      isActive("/apply")
+                        ? "tw-bg-gray-200 tw-text-gray-500 tw-cursor-not-allowed"
+                        : "theme-bg tw-text-white hover:tw-bg-primary/100"
+                    }`}
                   >
                     Apply
                   </Link>
