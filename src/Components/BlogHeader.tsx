@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import logo from "../assets/img/logo-dark.png";
-// import './nav.css';
+import '../Components/ExternalCSS/main.css';
 
 const categories = [
   { name: 'All Posts', slug: 'all' },
@@ -48,7 +48,7 @@ export default function BlogHeader() {
   };
 
   return (
-      <div className="header header-light dark-text">
+      <div className="header header-light dark-text tw-sticky tw-top-0 tw-z-50">
           <div className="container">
               <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
                   <div className="nav-header">

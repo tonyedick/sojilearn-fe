@@ -1,118 +1,193 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
 import logo from "../assets/img/logo-dark.png";
-// import './nav.css';
+import '../Components/ExternalCSS/main.css';
 
-export default function Header() {
-  const [activeLink, setActiveLink] = useState('');
-  const [isMobile, setIsMobile] = useState(false);
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const location = useLocation();
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  const navItems = [
+    { name: 'About', href: '/about' },
+    { name: 'Study in UK', href: '/study-in-uk' },
+    { name: 'Study in Canada', href: '/study-in-canada' },
+    { name: 'Study in USA', href: '/study-in-usa' },
+    { name: 'Study in Germany', href: '/study-in-germany' },
+    { name: 'Study in Malta', href: '/study-in-malta' },
+    { name: 'Visit our Blog', href: '/blog' },
+  ]
+
+  const isActive = (path: string) => location.pathname === path
 
   useEffect(() => {
-    setActiveLink(location.pathname);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
-      if (!mobile) {
-        setIsNavOpen(false); // Close nav when switching to desktop
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
-  const navMenusWrapperStyle = {
-    transitionProperty: isNavOpen ? 'left' : 'none',
-  };
-  
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-      <div className="header header-light dark-text">
-          <div className="container">
-              <nav id="navigation" className={`navigation ${isMobile ? 'navigation-portrait' : 'navigation-landscape'}`}>
-                  <div className="nav-header sticky">
-                      <Link className="nav-brand" to="/">
-                          <img src={logo} className="logo" alt="Sojilearn logo" />
-                      </Link>
-                      <div className="nav-toggle" onClick={toggleNav}></div>
-                      {/* <div className="mobile_nav">
-                          <ul>
-                              <li>
-                                  <Link to="https://portal.sojilearn.com" data-toggle="modal" data-target="#login" className="crs_yuo12">
-                                      <span className="embos_45"><i className="fas fa-sign-in-alt"></i></span>
-                                  </Link>
-                              </li>
-                          </ul>
-                      </div> */}
-                  </div>
-                  <div className={`nav-menus-wrapper ${isNavOpen ? 'nav-menus-wrapper-open' : ''}`} style={navMenusWrapperStyle}>
-                      <ul className="nav-menu">
-                          <li className={activeLink === '/' ? 'active' : ''}><Link to="/">Home</Link></li>
-                          <li className={activeLink === '/about' ? 'active' : ''}><Link to="/about">About</Link></li>
-                          <li className={activeLink === '/study-in-uk' ? 'active' : ''}><Link to="/study-in-uk">Study in UK</Link></li>
-                          <li className={activeLink === '/study-in-canada' ? 'active' : ''}><Link to="/study-in-canada">Study in Canada</Link></li>
-                          <li className={activeLink === '/study-in-usa' ? 'active' : ''}><Link to="/study-in-usa">Study in USA</Link></li>
-                          <li className={activeLink === '/study-in-germany' ? 'active' : ''}><Link to="/study-in-germany">Study in Germany</Link></li>
-                          <li className={activeLink === '/study-in-malta' ? 'active' : ''}><Link to="/study-in-malta">Study in Malta</Link></li>
-                          <li className={activeLink === '/contact' ? 'active' : ''}><Link to="/contact">Contact Us</Link></li>
-                          <li className={activeLink === '/blog' ? 'active' : ''}><Link to="/blog">Visit our Blog</Link></li>
-                      </ul>
+    <nav
+      className={`tw-font-poppins tw-bg-white tw-text-gray-900 tw-sticky tw-top-0 tw-z-50 ${
+        scrolled ? 'tw-shadow-md' : ''
+      }`}
+    >
+      <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
+        <div className="tw-flex tw-items-center tw-justify-between tw-h-16">
+          {/* Logo */}
+          <Link to="/" className="tw-flex tw-items-center tw-space-x-2">
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <img src={logo} alt="Sojilearn logo" className="tw-h-8 tw-w-auto" />
+            </motion.div>
+          </Link>
 
-{/*                       <ul className="nav-menu nav-menu-social align-to-right"> */}
-                          {/* <li>
-                              <Link to="https://portal.sojilearn.com" className="alio_green" >
-                                  <i className="fas fa-sign-in-alt mr-1"></i><span className="dn-lg">Sign In</span>
-                              </Link>
-                          </li> */}
-
-{/*                             <li className="add-listing theme-bg">
-                              <Link to="/blog" target="_blank" className="text-white">Visit our Blog</Link>
-                            </li> */}
-{/*                         </ul> */}
-                    </div>
-                  <div
-                    className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`}
-                    onClick={() => setIsNavOpen(false)}
-                  >
-                    {isMobile && isNavOpen && (
-                      <button
-                        className="nav-close-btn"
-                        aria-label="Close navigation"
-                        onClick={() => setIsNavOpen(false)}
-                        style={{
-                          position: 'absolute',
-                          top: 20,
-                          right: 20,
-                          background: 'none',
-                          border: 'none',
-                          fontSize: 32,
-                          color: '#333',
-                          cursor: 'pointer',
-                          zIndex: 1001,
-                        }}
-                      >
-                        &times;
-                      </button>
-                    )}
-                  </div>
-                  <div className={`nav-overlay-panel ${isNavOpen ? 'nav-overlay-panel-visible' : ''}`} />
-              </nav>
+          {/* Desktop Nav */}
+          <div className="tw-hidden md:tw-flex tw-items-center tw-space-x-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`tw-px-2 tw-py-2 tw-text-md tw-font-medium tw-transition-all tw-duration-200 tw-whitespace-nowrap ${
+                  isActive(item.href)
+                    ? 'active tw-font-semibold'
+                    : 'tw-text-gray-600 hover:theme-bg'
+                }`}
+              >
+                {item.name}
+                {isActive(item.href) && (
+                  <motion.div
+                    className="tw-absolute tw-bottom-0 tw-left-0 tw-right-0 tw-h-0.5 theme-bg"
+                    layoutId="activeNav"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            ))}
           </div>
-      </div>
 
-  );
+          {/* Desktop Apply Button */}
+          <div className="tw-hidden md:tw-flex">
+            <Link
+              to="/apply"
+              className="tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl theme-bg tw-text-white hover:tw-bg-primary/100 tw-transition-colors"
+            >
+              Apply
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:tw-hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="tw-p-2 tw-rounded-md tw-text-muted-foreground hover:tw-text-foreground tw-transition-colors"
+            >
+            <span className="tw-sr-only">Open main menu</span>
+              {isMenuOpen ? (
+                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-primary/10 tw-rounded-xl">
+                  <X className="tw-w-6 tw-h-6" />
+                </div>
+              ) : (
+                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-primary/10 tw-rounded-xl">
+                  <Menu className="tw-w-6 tw-h-6" />
+                </div>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.25 }}
+              className="md:tw-hidden"
+            >
+              <div className="tw-px-2 tw-pt-2 tw-pb-3 tw-space-y-1 sm:tw-px-3 tw-bg-card tw-rounded-lg tw-mt-2 tw-border tw-border-border">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`tw-block tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
+                      isActive(item.href)
+                        ? "tw-text-primary tw-bg-primary/10"
+                        : "tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`tw-block tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
+                      isActive('/contact')
+                        ? "tw-text-primary tw-bg-primary/10"
+                        : "tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted"
+                    }`}
+                  >
+                    Contact Us
+                  </Link>
+                <div className="tw-pt-3 tw-flex tw-flex-col tw-gap-2">
+                  <Link
+                    to="/apply"
+                    className="tw-w-full tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-text-white tw-bg-primary/90 hover:tw-bg-primary/100 tw-transition-colors"
+                  >
+                    Apply
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="tw-w-full tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-text-gray-700 tw-hover:bg-primary/5 tw-transition-colors"
+                  >
+                    Visit our Blog
+                  </Link>
+                </div>
+
+                {/* Footer Links on Mobile */}
+                <div className="tw-border-t tw-border-border tw-pt-3 tw-grid tw-grid-cols-3 tw-gap-2">
+                  <Link
+                    to='/privacy-policy'
+                    className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
+                      isActive('/privacy-policy')
+                        ? 'tw-text-primary tw-bg-primary/10'
+                        : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
+                    }`}
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link to="/terms-of-use" 
+                     className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
+                      isActive('/terms-of-use')
+                        ? 'tw-text-primary tw-bg-primary/10'
+                        : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
+                    }`}
+                  >
+                    Terms of Use
+                  </Link>
+                  <Link to="/disclaimer" 
+                    className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
+                      isActive('/disclaimer')
+                        ? 'tw-text-primary tw-bg-primary/10'
+                        : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
+                    }`}
+                  >
+                    Disclaimer
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </nav>
+  )
 }
+
+export default Header
