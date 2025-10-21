@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-// Supabase configuration - update these with your actual values
-const SUPABASE_URL = 'https://ndypurygmnkxxgiozldm.supabase.co';
-const SUPABASE_ANON_KEY =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5keXB1cnlnbW5reHhnaW96bGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4NTU2MDQsImV4cCI6MjA2NjQzMTYwNH0.eLWlPsQgWaQjiALJF5dpf3wsJgav-FSY5QWnlzMnlvQ';
+const SUPABASE_URL =  process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 type VisitorInfo = {
   userAgent: string;
