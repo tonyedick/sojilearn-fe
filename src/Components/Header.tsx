@@ -154,11 +154,6 @@ const Header = () => {
                       if (isActive("/apply")) e.preventDefault(); 
                     }}
                     aria-disabled={isActive("/apply")}
-                    // className={`tw-inline-flex tw-items-center tw-justify-center tw-px-6 tw-py-2.5 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-transition-colors ${
-                    //   isActive("/apply")
-                    //     ? "tw-bg-gray-200 tw-text-gray-500 tw-cursor-not-allowed"
-                    //     : "theme-bg tw-text-white hover:tw-bg-primary/100"
-                    // }`}
                     className={`tw-w-full tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-text-base tw-font-medium tw-rounded-xl tw-transition-colors ${
                       isActive("/apply")
                         ? "tw-bg-gray-200 tw-text-gray-500 tw-cursor-not-allowed"
@@ -185,7 +180,7 @@ const Header = () => {
                         : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
                     }`}
                   >
-                    Privacy Policy
+                    Privacy
                   </Link>
                   <Link to="/terms-of-use" 
                      className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
