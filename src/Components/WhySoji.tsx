@@ -3,7 +3,7 @@ import '../Components/ExternalCSS/main.css';
 
 export default function WhySoji() {
   return (
-    <div className="tw-bg-gray-100 tw-py-16">
+    <div className="gray tw-py-16">
       <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8">
         <div className="tw-text-center tw-mb-12">
           <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900 tw-mb-4">
