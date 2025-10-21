@@ -324,11 +324,11 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select your current level</option>
-                  <option value="waec_graduate">Secondary School Certificate Holder</option>
-                  <option value="undergraduate">Current Undergraduate</option>
-                  <option value="graduate">Graduate</option>
-                  <option value="postgraduate">Postgraduate</option>
-                  <option value="working_professional">Working Professional</option>
+                  <option value="Waec_graduate">Secondary School Certificate Holder</option>
+                  <option value="Undergraduate">Current Undergraduate</option>
+                  <option value="Graduate">Graduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="Working_professional">Working Professional</option>
                 </select>
                 {errors.currentLevel && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.currentLevel}</p>}
               </div>
@@ -358,13 +358,14 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select graduation year</option>
+                  <option value="2026">2026</option>
                   <option value="2025">2025</option>
                   <option value="2024">2024</option>
                   <option value="2023">2023</option>
                   <option value="2022">2022</option>
                   <option value="2021">2021</option>
                   <option value="2020">2020</option>
-                  <option value="before_2020">Before 2020</option>
+                  <option value="Before_2020">Before 2020</option>
                 </select>
                 {errors.graduationYear && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.graduationYear}</p>}
               </div>
@@ -382,11 +383,11 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select your preferred country</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
-                  <option value="uk">UK</option>
-                  <option value="germany">Germany</option>
-                  <option value="malta">Malta</option>
+                  <option value="Canada">Canada</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Malta">Malta</option>
                 </select>
                 {errors.preferredCountry && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.preferredCountry}</p>}
               </div>
@@ -413,13 +414,13 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select program level</option>
-                  <option value="alevels">A Levels</option>
-                  <option value="foundation">Foundation Course</option>
-                  <option value="undergraduate">Undergraduate (Bachelor's)</option>
-                  <option value="postgraduate">Postgraduate (Master's)</option>
-                  <option value="mres">MRes (Master by Research)</option>
-                  <option value="phd">PhD</option>
-                  <option value="professional">Professional Course</option>
+                  <option value="Alevels">A Levels</option>
+                  <option value="Foundation">Foundation Course</option>
+                  <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+                  <option value="MSC">Postgraduate (Master's)</option>
+                  <option value="MRES">MRes (Master by Research)</option>
+                  <option value="PHD">PhD</option>
+                  <option value="Professional">Professional Course</option>
                 </select>
                 {errors.preferredProgram && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.preferredProgram}</p>}
               </div>
@@ -465,12 +466,13 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select start date</option>
-                  <option value="september_2025">September 2025</option>
-                  <option value="january_2026">January 2026</option>
-                  <option value="march_2026">March 2026</option>
-                  <option value="may_2026">May 2026</option>
-                  <option value="september_2026">September 2026</option>
-                  <option value="flexible">Flexible</option>
+                  <option value="January_2026">January 2026</option>
+                  <option value="February_2026">February 2026</option>
+                  <option value="March_2026">March 2026</option>
+                  <option value="May_2026">May 2026</option>
+                  <option value="September_2026">September 2026</option>
+                  <option value="November_2026">November 2026</option>
+                  <option value="Flexible">Flexible</option>
                 </select>
                 {errors.intendedStartDate && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.intendedStartDate}</p>}
               </div>
@@ -551,12 +553,12 @@ export default function MultiStepForm() {
                   }`}
                 >
                   <option value="">Select budget range</option>
-                  <option value="under_20k">Under £20,000</option>
-                  <option value="20k_30k">£20,000 - £30,000</option>
-                  <option value="30k_40k">£30,000 - £40,000</option>
-                  <option value="40k_50k">£40,000 - £50,000</option>
-                  <option value="over_50k">Over £50,000</option>
-                  <option value="need_guidance">Need guidance on budgeting</option>
+                  <option value="Under_$20k">Under $20,000</option>
+                  <option value="20k_$30k">$20,000 - $30,000</option>
+                  <option value="30k_$40k">$30,000 - $40,000</option>
+                  <option value="40k_$50k">$40,000 - $50,000</option>
+                  <option value="Over_$50k">Over $50,000</option>
+                  <option value="Need_guidance">Need guidance on budgeting</option>
                 </select>
                 {errors.budgetRange && <p className="tw-text-red-500 tw-text-sm tw-mt-1">{errors.budgetRange}</p>}
               </div>
