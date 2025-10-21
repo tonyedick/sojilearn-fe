@@ -6,6 +6,7 @@ import Hero from '../Components/ExternalCSS/Hero';
 import AppLayout from '../Components/Layouts/AppLayout';
 import MultiStepForm from '../Components/ExternalCSS/MultiStepForm';
 import '../Components/ExternalCSS/main.css';
+import Testimonials from '../Components/ExternalCSS/Testimonials';
 
 export default function Application() {
     const formRef = useRef<HTMLDivElement>(null);
@@ -60,7 +61,7 @@ export default function Application() {
                                     J
                                     </div>
                                     <div className="tw-ml-4">
-                                    <h4 className="tw-font-semibold tw-text-gray-900">Julius D. (MSc. Artificial Intelligence), USA</h4>
+                                    <h4 className="tw-font-semibold tw-text-gray-900">Justice N. (MSc. Artificial Intelligence), USA</h4>
                                     <p className="tw-text-sm tw-text-gray-600">Support with Student loan</p>
                                     </div>
                                 </div>
@@ -167,6 +168,10 @@ export default function Application() {
                     </p>
                 </div>
                 <MultiStepForm />
+            </div>
+
+            <div className="tw-bg-gray">
+                <Testimonials />
             </div>
         </div>
     </AppLayout>

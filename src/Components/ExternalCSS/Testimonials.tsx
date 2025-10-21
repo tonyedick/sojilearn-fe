@@ -11,35 +11,35 @@ import './main.css';
 
 const testimonials = [
   {
-    content: "The counsellors at Leverage Edu were extremely polite and reassuring, making the application process smooth and hassle-free.",
-    name: "Pallavi Jha",
-    university: "University of Essex",
+    content: "The counsellors at Sojilearn were extremely polite and reassuring, making the application process smooth and hassle-free.",
+    name: "Becky Tonlagha",
+    university: "Coventry University, UK",
     country: "🇬🇧",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    content: "I decided to pursue an MS, and got recommended Leverage Edu by a friend. The course curriculum in the UK is very compact and focused. I knew from the start that I wanted to get back into a job ASAP, and spend as less time as possible in the confines of a classroom.",
-    name: "Shrey Talan",
-    university: "University of Glasgow",
-    country: "🇬🇧",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-  },
-  {
-    content: "Leverage Edu held my hand like a friend and very patiently guided me throughout the process.",
-    name: "Bushra Ansari",
-    university: "Coast Mountain College",
+    content: "I decided to pursue an MS, and got recommended Sojilearn by a friend. They assisted with admission and helped me secure funding for tuition and living expenses.",
+    name: "Rufai Taofik",
+    university: "Northeastern University, Toronto, Canada",
     country: "🇨🇦",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    content: "The personalized approach and AI recommendations helped me find the perfect scholarship match. I couldn't be happier with the results!",
-    name: "David Kim",
-    university: "Stanford University",
+    content: "Sojilearn helped me secure student loan to cover tuition and living expenses in the US.",
+    name: "Justice Nnaemeka",
+    university: "Khoury College of Sciences, Boston, USA",
     country: "🇺🇸",
-    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    content: "The personalized approach and professional guide helped me find the perfect school. I couldn't be happier with the results!",
+    name: "Leonard Atedo",
+    university: "Coventry University, UK",
+    country: "🇬🇧",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
     video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
   }
 ];
@@ -65,15 +65,15 @@ const Testimonials = () => {
           >
             <h2 className="tw-text-2xl tw-text-gray-600 tw-mb-2">Success Stories</h2>
             <h2 className="tw-text-3xl tw-font-bold tw-mb-4">
-              Ready <span className="tw-text-primary">Dreamers</span> to <span className="tw-text-primary">Achievers</span>
+              Ready <span className="theme-cl">Dreamers</span> to <span className="theme-cl">Achievers</span>
             </h2>
           </motion.div>
           <div className="tw-flex tw-gap-4">
-            <button className="tw-swiper-button-prev !tw-static !tw-w-12 !tw-h-8 !tw-bg-white tw-rounded-full tw-shadow-lg !tw-m-0 after:!tw-hidden hover:!tw-bg-primary/40 tw-group">
-              <ChevronLeft className="tw-h-4 tw-w-4 tw-text-primary group-hover:tw-text-white" />
+            <button className="swiper-button-prev !tw-static !tw-w-12 !tw-h-8 !tw-bg-white tw-rounded-full tw-shadow-lg !tw-m-0 after:!tw-hidden hover:!tw-bg-blue-800 tw-group">
+              <ChevronLeft className="tw-h-4 tw-w-4 tw-theme-cl group-hover:tw-text-white" />
             </button>
-            <button className="tw-swiper-button-next !tw-static !tw-w-12 !tw-h-8 !tw-bg-white tw-rounded-full tw-shadow-lg !tw-m-0 after:!tw-hidden hover:!tw-bg-primary/40 tw-group">
-              <ChevronRight className="tw-h-4 tw-w-4 tw-text-primary group-hover:tw-text-white" />
+            <button className="swiper-button-next !tw-static !tw-w-12 !tw-h-8 !tw-bg-white tw-rounded-full tw-shadow-lg !tw-m-0 after:!tw-hidden hover:!tw-bg-blue-800 tw-group">
+              <ChevronRight className="tw-h-4 tw-w-4 tw-theme-cl group-hover:tw-text-white" />
             </button>
           </div>
         </div>
@@ -82,8 +82,8 @@ const Testimonials = () => {
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={{
-              prevEl: '.tw-swiper-button-prev',
-              nextEl: '.tw-swiper-button-next',
+              prevEl: '.swiper-button-prev',
+              nextEl: '.swiper-button-next',
             }}
             pagination={{ clickable: true }}
             spaceBetween={24}
@@ -113,12 +113,12 @@ const Testimonials = () => {
                       alt={testimonial.name}
                       className="tw-w-full tw-h-full tw-object-cover"
                     />
-                    <div className="tw-absolute tw-inset-0 tw-g-black/60">
+                    <div className="tw-absolute tw-inset-0 tw-bg-black/40">
                       <div className="tw-p-4 tw-h-full tw-flex tw-flex-col">
                         <p className="tw-text-slate-100 tw-text-md tw-leading-relaxed tw-mb-auto tw-line-clamp-6 tw-max-w-[80%]">"{testimonial.content}"</p>
                         <button
                           onClick={() => openVideoModal(testimonial.video)}
-                          className="tw-group tw-flex tw-items-center tw-gap-3 tw-mt-2 tw-bg-black/30 tw-rounded-full tw-pr-6 hover:tw-bg-white/20 tw-transition-all tw-duration-300"
+                          className="tw-group tw-flex tw-items-center tw-gap-3 tw-mt-2 tw-bg-black/60 tw-rounded-full tw-pr-6 hover:tw-bg-white/20 tw-transition-all tw-duration-300"
                         >
                           <div className="tw-w-10 tw-h-10 tw-bg-white tw-rounded-full tw-flex tw-items-center tw-justify-center">
                             <Play className="tw-h-4 tw-w-4 tw-text-black tw-ml-1" />
@@ -130,7 +130,7 @@ const Testimonials = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="tw-p-3 tw-bg-white">
+                  <div className="tw-p-3 tw-bg-white mt-3">
                     <div className="tw-flex tw-items-center tw-gap-2">
                       <img
                         src={testimonial.image}
@@ -138,7 +138,7 @@ const Testimonials = () => {
                         className="tw-w-8 tw-h-8 tw-rounded-full tw-object-cover"
                       />
                       <div>
-                        <p className="tw-font-medium tw-text-gray-900 tw-text-sm">{testimonial.name}</p>
+                        <p className="tw-font-medium tw-text-gray-900 tw-text-sm" style={{marginBottom: "1px"}}>{testimonial.name}</p>
                         <p className="tw-text-xs tw-text-gray-600">
                           {testimonial.university} {testimonial.country}
                         </p>
