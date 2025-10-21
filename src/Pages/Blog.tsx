@@ -341,8 +341,8 @@ export default function Blog() {
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
                                         />
-                                        {/* <button className="btn theme-bg text-white btn-md" type="submit" disabled={isLoading}> {isLoading ? 'Subscribing...' : 'Subscribe'}</button> */}
-                                        <button className="btn theme-bg text-white btn-md" type="submit">Subscribe</button>
+                                        <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
+                                        {/* <button className="btn theme-bg text-white btn-md" type="submit">Subscribe</button> */}
                                     </form>
                                 </div>
                             </div>
