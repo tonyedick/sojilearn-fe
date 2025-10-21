@@ -56,7 +56,7 @@ export default function FAQ() {
                             </div>
                             <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" className="collapse">
                             <div className="card-body pl-3 pr-3 pt-0">
-                                <p>Yes, when you refer a student to Sojilearn to stand a chance of earning from $150 to $300.</p>
+                                <p>Yes, when you refer a student to Sojilearn, you stand a chance to earn from $150 to $300.</p>
                             </div>
                             </div>
                         </div>
