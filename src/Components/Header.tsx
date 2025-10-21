@@ -99,11 +99,11 @@ const Header = () => {
             >
             <span className="tw-sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-primary/10 tw-rounded-xl">
+                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-blue-200 tw-rounded-xl">
                   <X className="tw-w-6 tw-h-6" />
                 </div>
               ) : (
-                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-primary/10 tw-rounded-xl">
+                <div className="tw-px-2 tw-py-2 tw-border-4 tw-border-blue-200 tw-rounded-xl">
                   <Menu className="tw-w-6 tw-h-6" />
                 </div>
               )}
@@ -129,7 +129,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`tw-block tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                       isActive(item.href)
-                        ? "tw-text-primary tw-bg-primary/10"
+                        ? "theme-cl theme-bg-light"
                         : "tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted"
                     }`}
                   >
@@ -141,7 +141,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`tw-block tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                       isActive('/contact')
-                        ? "tw-text-primary tw-bg-primary/10"
+                        ? "theme-cl theme-bg-light"
                         : "tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted"
                     }`}
                   >
@@ -176,7 +176,7 @@ const Header = () => {
                     to='/privacy-policy'
                     className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                       isActive('/privacy-policy')
-                        ? 'tw-text-primary tw-bg-primary/10'
+                        ? 'theme-cl theme-bg-light'
                         : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
                     }`}
                   >
@@ -185,7 +185,7 @@ const Header = () => {
                   <Link to="/terms-of-use" 
                      className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                       isActive('/terms-of-use')
-                        ? 'tw-text-primary tw-bg-primary/10'
+                        ? 'theme-cl theme-bg-light'
                         : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
                     }`}
                   >
@@ -194,7 +194,7 @@ const Header = () => {
                   <Link to="/disclaimer" 
                     className={`tw-block tw-text-center tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                       isActive('/disclaimer')
-                        ? 'tw-text-primary tw-bg-primary/10'
+                        ? 'theme-cl theme-bg-light'
                         : 'tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted'
                     }`}
                   >

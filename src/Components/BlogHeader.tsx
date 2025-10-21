@@ -122,7 +122,7 @@ export default function BlogHeader() {
                       onClick={() => setIsMenuOpen(false)}
                       className={`tw-block tw-px-3 tw-py-2 tw-rounded-md tw-text-base tw-font-medium tw-transition-colors ${
                         isActive(category.slug)
-                          ? "tw-text-primary tw-bg-primary/10"
+                          ? "theme-cl theme-bg-light"
                           : "tw-text-muted-foreground hover:tw-text-foreground hover:tw-bg-muted"
                       }`}
                     >
