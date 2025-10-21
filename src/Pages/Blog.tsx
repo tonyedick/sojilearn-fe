@@ -31,7 +31,6 @@ export default function Blog() {
     }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
 
     const fetchPosts = async () => {
-        setLoading(true);
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
@@ -101,6 +100,7 @@ export default function Blog() {
         e.preventDefault();
         if (!email) return;
 
+        setLoading(true);
         try {
         const { error } = await supabase
             .from('newsletter_subscribers')
@@ -342,7 +342,6 @@ export default function Blog() {
                                             required
                                         />
                                         <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
-                                        {/* <button className="btn theme-bg text-white btn-md" type="submit">Subscribe</button> */}
                                     </form>
                                 </div>
                             </div>
