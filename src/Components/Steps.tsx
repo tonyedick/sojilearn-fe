@@ -45,7 +45,7 @@ export default function Steps() {
                                     <div className="ml-3 ml-md-4">
                                         <h4>Fill the Online Form</h4>
                                         <p>
-                                            Click to fill this <strong><i>🔗</i> <a href="/apply" rel="noopener noreferrer">ONLINE FORM</a></strong> where we get all necessary details about your interest.
+                                            Click to fill this <strong><i>🔗</i> <a href="/apply" rel="noopener noreferrer">ONLINE FORM</a></strong> where we get basic details about your interest.
                                         </p>
                                     </div>
                                 </li>
