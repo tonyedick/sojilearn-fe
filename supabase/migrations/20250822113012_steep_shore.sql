@@ -13,7 +13,7 @@
   - Add policy for anonymous form submissions
 */
 
-CREATE TABLE IF NOT EXISTS study_abroad_applications (
+CREATE TABLE IF NOT EXISTS public.study_abroad_applications (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   first_name text NOT NULL,
   last_name text NOT NULL,
@@ -35,21 +35,23 @@ CREATE TABLE IF NOT EXISTS study_abroad_applications (
   additional_questions text,
   stage text DEFAULT 'draft',
   source text DEFAULT 'landing_page',
-  created_at timestamptz DEFAULT now()
+  admin_notes text,
+  created_at timestamptz DEFAULT now(),
+  updated_at timestamptz DEFAULT now()
 );
 
-ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.study_abroad_applications ENABLE ROW LEVEL SECURITY;
 
 -- Allow anonymous inserts (for the contact form)
 CREATE POLICY "Allow anonymous form submissions"
-  ON leads
+  ON public.study_abroad_applications
   FOR INSERT
   TO anon
   WITH CHECK (true);
 
 -- Optional: Allow reading own submissions if you implement user auth later
 CREATE POLICY "Users can read own submissions"
-  ON leads
+  ON public.study_abroad_applications
   FOR SELECT
   TO authenticated
   USING (auth.uid()::text = id::text);

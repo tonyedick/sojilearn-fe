@@ -125,7 +125,7 @@ export default function MultiStepForm() {
           preferred_country: formData.preferredCountry,
           preferred_program: formData.preferredProgram,
           field_of_study: formData.fieldOfStudy,
-          preferred_universitiy: formData.preferredUniversity || null,
+          preferred_university: formData.preferredUniversity || null,
           intended_start_date: formData.intendedStartDate,
           has_passport: formData.hasPassport,
           has_degree: formData.hasDegree,

@@ -199,10 +199,10 @@ export type Database = {
           // Step 2 – UK & Marketing
           current_level: string | null
           institution: string | null
-          graduation_year: number | null
-          preferred_country: string | null
+          graduation_year: string | null
+          preferred_country: string
           // Step 3 – Academics
-          preferred_program: string | null
+          preferred_program: string
           field_of_study: string | null
           preferred_university: string | null
           intended_start_date: string | null
@@ -216,7 +216,6 @@ export type Database = {
           stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
           // current_step: number | null
           // Metadata
-          form_data?: Json | null
           admin_notes?: string | null
           created_at: string
           updated_at: string
@@ -230,8 +229,8 @@ export type Database = {
           current_level: string | null
           institution: string | null
           graduation_year: string | null
-          preferred_country: string | null
-          preferred_program: string | null
+          preferred_country: string
+          preferred_program: string
           field_of_study: string | null
           preferred_university?: string | null
           intended_start_date: string | null
@@ -242,7 +241,6 @@ export type Database = {
           budget_range: string | null
           additional_questions: string | null
           stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
-          form_data?: Json | null
           admin_notes?: string | null
           created_at?: string
           updated_at?: string
@@ -256,8 +254,8 @@ export type Database = {
           current_level: string | null
           institution: string | null
           graduation_year: string | null
-          preferred_country: string | null
-          preferred_program: string | null
+          preferred_country: string
+          preferred_program: string
           field_of_study: string | null
           preferred_university?: string | null
           intended_start_date: string | null
@@ -268,20 +266,11 @@ export type Database = {
           budget_range: string | null
           additional_questions: string | null
           stage?: "draft" | "under_review" | "submitted" | "rejected" | "approved" | "student loan" | "tuition deposit"
-          form_data?: Json | null
           admin_notes?: string | null
           created_at?: string
           updated_at?: string
         }
-        Relationships: [
-          {
-            foreignKeyName: "study_abroad_applications_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          }
-        ]
+        Relationships: []
       }
       application_documents: {
         Row: {
