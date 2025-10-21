@@ -16,6 +16,7 @@ export default function Blog() {
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
@@ -25,6 +26,10 @@ export default function Blog() {
 
     const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta'];
     const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships'];
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
 
     useEffect(() => {
         filterPosts();
@@ -100,7 +105,7 @@ export default function Blog() {
         e.preventDefault();
         if (!email) return;
 
-        setLoading(true);
+        setIsLoading(true);
         try {
         const { error } = await supabase
             .from('newsletter_subscribers')
@@ -127,7 +132,7 @@ export default function Blog() {
         console.error('Newsletter subscription error:', error);
         alert("Subscription failed, Please try again later.");
         } finally {
-        setLoading(false);
+        setIsLoading(false);
         }
     };
 
@@ -341,7 +346,7 @@ export default function Blog() {
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
                                         />
-                                        <button className="btn theme-bg text-white btn-md" type="submit" disabled={loading}> {loading ? 'Subscribing...' : 'Subscribe'}</button>
+                                        <button className="btn theme-bg text-white btn-md" type="submit" disabled={isLoading}> {isLoading ? 'Subscribing...' : 'Subscribe'}</button>
                                     </form>
                                 </div>
                             </div>
