@@ -52,20 +52,22 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 Planning to study{' '}
                 <span className="tw-text-orange-400">ABROAD?</span>
               </h1>
-              <p className="tw-text-xl lg:tw-text-2xl tw-text-blue-100">
-                With Sojilearn, it's faster (and simpler) than you think.
-              </p>
             </div>
 
             {/* Why It Matters */}
             <div className="tw-bg-blue-800/50 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-blue-700/50">
-              <p className="tw-text-lg tw-text-blue-100 tw-leading-relaxed">
-                We understand that you want better opportunities to excel abroad through study.
-                This is why, we now offer guidance to secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-font-bold">PAID FOR</span>.
+              <p className="tw-text-xl lg:tw-text-2xl tw-text-blue-100 tw-leading-relaxed">
+                With Sojilearn, it is a straight forward process. <br />
+                <br />Do you need financial support? <br /><br />We can help you secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-font-semibold">PAID FOR</span>.
               </p>
             </div>
 
             {/* Benefits */}
+            <div className="tw-space-y-4">
+               <p className="tw-text-sm tw-text-blue-200">
+                📌 Why you should start the simple process now.
+              </p>
+            </div>
             <div className="tw-grid sm:tw-grid-cols-3 tw-gap-4">
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
@@ -90,9 +92,9 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 <span>Start Your Study Abroad Journey Today</span>
                 <ArrowRight className="tw-w-5 tw-h-5 tw-group-hover:translate-x-1 tw-transition-transform" />
               </button>
-              <p className="tw-text-sm tw-text-blue-200">
+              {/* <p className="tw-text-sm tw-text-blue-200">
                 📌 Don't wait. Start the simple process now.
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -159,12 +161,12 @@ export default function Hero({ onGetStarted }: HeroProps) {
                   </div>
                 </div>
 
-                <div className="tw-text-center tw-pt-4">
+                {/* <div className="tw-text-center tw-pt-4">
                   <div className="tw-flex tw-items-center tw-justify-center tw-space-x-2 tw-text-green-400">
                     <Clock className="tw-w-5 tw-h-5" />
                     <span className="tw-font-semibold">Super-fast, stress-free process</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
