@@ -32,7 +32,7 @@ export default function BlogHeader() {
 
   return (
     <nav
-      className={`text-dark tw-bg-white tw-text-gray-900 tw-sticky tw-top-0 tw-z-50 ${
+      className={`text-dark tw-bg-white tw-text-gray-900 tw-sticky tw-top-0 tw-z-[9999] ${
         scrolled ? "tw-shadow-md" : ""
       }`}
     >
