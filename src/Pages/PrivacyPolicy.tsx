@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
                             <h4>International Education Information, Advice and Counselling</h4>
                             <p>The services we offer to help you study overseas include counselling, application assistance, visa assistance, student exhibitions and seminars.</p>
                             <p>If you register on our websites (www.sojilearn.com), app or register to participate in an event we will collect personal information such as your name, email address, contact details, country of residence, nationality, preferred study destination, and when you intend to study.</p>
-                            <p>If you enquire about study opportunities directly with an Sojilearn counsellor, use our Offer in Principle service, or we assist you with your application to study, we may also request additional information such as education qualifications, employment history, occupation, areas of interest and professional memberships, copies of documents as proof of identity - e.g. copies of passport, proof of citizenship or photographs, marital status and how you will fund your studies. We may also request sensitive information about you such as racial or ethnic origin (from information on your country of origin), and/or your health or medical information (e.g. from a medical examination required for your visa application for an your student visa).</p>
+                            <p>If you enquire about study opportunities directly with a Sojilearn counsellor, use our Offer in Principle service, or we assist you with your application to study, we may also request additional information such as education qualifications, employment history, occupation, areas of interest and professional memberships, copies of documents as proof of identity - e.g. copies of passport, proof of citizenship or photographs, marital status and how you will fund your studies. We may also request sensitive information about you such as racial or ethnic origin (from information on your country of origin), and/or your health or medical information (e.g. from a medical examination required for your visa application for an your student visa).</p>
                             <p>Collecting your personal information allows us to:</p>
                             <div className="mb-3 mr-4 ml-lg-0 mr-lg-4">
                                 <div className="d-flex align-items-center">
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
                             <h4>Retention</h4>
                             <p>Sojilearn's vision is to build a global community of connected students from classroom to career. This means we would like to stay in touch for as long as you would like to hear from us, but we will only retain your information as long as is necessary for the purpose it was given to us.</p>
                             <p>As a guide we will keep your personal information for up to 7 years after commencing your studies or your last activity with us so that we can continue to support you through your journey, unless required to retain it for legal or regulatory purposes</p>
-                            <p>In your dealings with Sojilearn Hotcourses for studying overseas</p>
+                            <p>In your dealings with Sojilearn for studying overseas</p>
                             <p></p>
                         </div>
                     </div>

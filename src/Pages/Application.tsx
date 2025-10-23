@@ -170,7 +170,7 @@ export default function Application() {
                 <MultiStepForm />
             </div>
 
-            {/* <div className="tw-bg-gray">
+            {/* <div className="tw-bg-gray">`
                 <Testimonials />
             </div> */}
         </div>
