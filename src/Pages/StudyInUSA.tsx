@@ -10,6 +10,7 @@ import RequirementsUSA from '../Components/USA/RequirementsUSA';
 import PostUniUSA from '../Components/USA/PostUniUSA';
 import PartTimeCareersUSA from '../Components/USA/PartTimeCareersUSA';
 import Meta from "../Components/Meta";
+import USANews from '../Components/USA/USANews';
 
 export default function StudyInUSA() {
   usePageTracking('study-in-usa');
@@ -28,6 +29,7 @@ export default function StudyInUSA() {
         <RequirementsUSA />
         <PostUniUSA />
         <PartTimeCareersUSA />
+        <USANews />
         <FAQUSA />
         <CTAUSA />
         </>

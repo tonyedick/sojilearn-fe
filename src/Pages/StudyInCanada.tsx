@@ -9,6 +9,7 @@ import RequirementsCA from '../Components/CA/RequirementsCA';
 import PostUniCA from '../Components/CA/PostUniCA';
 import PartTimeCareersCA from '../Components/CA/PartTimeCareersCA';
 import Meta from "../Components/Meta";
+import CANews from '../Components/CA/CANews';
 
 export default function StudyInCanada() {
         usePageTracking('study-in-canada');
@@ -27,6 +28,7 @@ export default function StudyInCanada() {
         <RequirementsCA />
         <PostUniCA />
         <PartTimeCareersCA />
+        <CANews />
         <CTACA />
         </>
     </AppLayout>

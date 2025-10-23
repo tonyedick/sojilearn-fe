@@ -11,6 +11,7 @@ import PostUniUK from '../Components/UK/PostUniUK';
 import PartTimeCareersUK from '../Components/UK/PartTimeCareersUK';
 // import CustomScroll from '../Components/CustomScroll';
 import Meta from "../Components/Meta";
+import UKNews from '../Components/UK/UKNews';
 
 export default function StudyInUK() {
       usePageTracking('study-in-uk');
@@ -30,6 +31,7 @@ export default function StudyInUK() {
         <PostUniUK />
         <PartTimeCareersUK />
         {/* <CustomScroll /> */}
+        <UKNews />
         <FAQUK />
         <CTAUK />
         </>

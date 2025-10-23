@@ -10,6 +10,7 @@ import RequirementsGY from '../Components/GY/RequirementsGY';
 import PostUniGY from '../Components/GY/PostUniGY';
 import PartTimeCareersGY from '../Components/GY/PartTimeCareersGY';
 import Meta from "../Components/Meta";
+import GYNews from '../Components/GY/GYNews';
 
 export default function StudyInGermany() {
         usePageTracking('study-in-germany');
@@ -28,6 +29,7 @@ export default function StudyInGermany() {
         <RequirementsGY />
         <PostUniGY />
         <PartTimeCareersGY />
+        <GYNews />
         <FAQGY />
         <CTAGY />
         </>

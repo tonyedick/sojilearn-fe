@@ -11,6 +11,7 @@ import PostUniMalta from '../Components/Malta/PostUniMalta';
 import PartTimeCareersMalta from '../Components/Malta/PartTimeCareersMalta';
 // import CustomScroll from '../Components/CustomScroll';
 import Meta from "../Components/Meta";
+import MaltaNews from '../Components/Malta/MaltaNews';
 
 export default function StudyInMalta() {
          usePageTracking('study-in-malta');
@@ -30,6 +31,7 @@ export default function StudyInMalta() {
         <PostUniMalta />
         <PartTimeCareersMalta />
         {/* <CustomScroll /> */}
+        <MaltaNews />
         <FAQMalta />
         <CTAMalta />
         </>
