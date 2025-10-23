@@ -4,26 +4,25 @@ import { BlogPost } from '../../types/blog';
 import { Link } from 'react-router-dom';
 
 export default function MaltaNews() {
-    const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
+    const [maltaPosts, setMaltaPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchMaltaPosts('Malta');
+        fetchMaltaPosts();
     }, []);
 
-    const fetchMaltaPosts = async (country: string) => {
+    const fetchMaltaPosts = async () => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', [country]) 
-            .eq('featured', true)
+            .contains('tags', ['Malta']) 
             .order('published_date', { ascending: false })
             .limit(3);
 
         if (error) throw error;
-        setFeaturedPosts((data as any[]) || []);
+        setMaltaPosts((data as any[]) || []);
         } catch (error) {
         console.error('Error fetching featured posts:', error);
         } finally {
@@ -39,14 +38,14 @@ export default function MaltaNews() {
         });
     };
 
-     if (featuredPosts.length === 0) {
+     if (maltaPosts.length === 0) {
         return (
             <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
-                                <h2>Latest <span className="theme-cl">Germany</span> News</h2>
+                                <h2>Latest <span className="theme-cl">Malta</span> News</h2>
                                 <h4>No Posts at this time</h4>
                             </div>
                         </div>
@@ -92,13 +91,13 @@ export default function MaltaNews() {
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
-                                <h2>Latest <span className="theme-cl">Germany</span> News</h2>
+                                <h2>Latest <span className="theme-cl">Malta</span> News</h2>
                             </div>
                         </div>
                     </div>
 
                     <div className="row justify-content-center">
-                        {featuredPosts.map(post => (
+                        {maltaPosts.map(post => (
                             <div className="col-lg-4 col-md-6" key={post.id}>
                                 <div className="blg_grid_box">
                                     {post.featured_image_url && (

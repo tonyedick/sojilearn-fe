@@ -4,26 +4,25 @@ import { BlogPost } from '../../types/blog';
 import { Link } from 'react-router-dom';
 
 export default function GYNews() {
-    const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
+    const [germanyPosts, setGermanyPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchGYJapanPosts('Germany','Japan');
+        fetchGYJapanPosts();
     }, []);
 
-    const fetchGYJapanPosts = async (country1: string, country2: string) => {
+    const fetchGYJapanPosts = async () => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', [country1, country2]) 
-            .eq('featured', true)
+            .contains('tags', ['Germany', 'Japan']) 
             .order('published_date', { ascending: false })
             .limit(3);
 
         if (error) throw error;
-        setFeaturedPosts((data as any[]) || []);
+        setGermanyPosts((data as any[]) || []);
         } catch (error) {
         console.error('Error fetching featured posts:', error);
         } finally {
@@ -39,7 +38,7 @@ export default function GYNews() {
         });
     };
 
-     if (featuredPosts.length === 0) {
+     if (germanyPosts.length === 0) {
         return (
             <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
@@ -98,7 +97,7 @@ export default function GYNews() {
                     </div>
 
                     <div className="row justify-content-center">
-                        {featuredPosts.map(post => (
+                        {germanyPosts.map(post => (
                             <div className="col-lg-4 col-md-6" key={post.id}>
                                 <div className="blg_grid_box">
                                     {post.featured_image_url && (

@@ -4,26 +4,25 @@ import { BlogPost } from '../../types/blog';
 import { Link } from 'react-router-dom';
 
 export default function CANews() {
-    const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
+    const [canadaPosts, setCanadaPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchCAPosts('Canada');
+        fetchCAPosts();
     }, []);
 
-    const fetchCAPosts = async (country: string) => {
+    const fetchCAPosts = async () => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', [country]) 
-            .eq('featured', true)
+            .contains('tags', ['Canada']) 
             .order('published_date', { ascending: false })
             .limit(3);
 
         if (error) throw error;
-        setFeaturedPosts((data as any[]) || []);
+        setCanadaPosts((data as any[]) || []);
         } catch (error) {
         console.error('Error fetching featured posts:', error);
         } finally {
@@ -39,7 +38,7 @@ export default function CANews() {
         });
     };
 
-     if (featuredPosts.length === 0) {
+     if (canadaPosts.length === 0) {
         return (
             <section className="min gray" style={{backgroundColor: '#DFFFFF'}}>
                 <div className="container">
@@ -98,7 +97,7 @@ export default function CANews() {
                     </div>
 
                     <div className="row justify-content-center">
-                        {featuredPosts.map(post => (
+                        {canadaPosts.map(post => (
                             <div className="col-lg-4 col-md-6" key={post.id}>
                                 <div className="blg_grid_box">
                                     {post.featured_image_url && (
