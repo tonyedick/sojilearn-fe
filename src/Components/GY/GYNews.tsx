@@ -17,7 +17,7 @@ export default function GYNews() {
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['Germany', 'Japan']) 
+            .contains('tags', ['Germany']) 
             .order('published_date', { ascending: false })
             .limit(3);
 
@@ -45,7 +45,7 @@ export default function GYNews() {
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
-                                <h2>Latest <span className="theme-cl">Germany &amp; Japan</span> News</h2>
+                                <h2>Latest <span className="theme-cl">Germany</span> News</h2>
                                 <h4>No Posts at this time</h4>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export default function GYNews() {
                     <div className="row justify-content-center">
                         <div className="col-lg-7 col-md-8">
                             <div className="sec-heading center">
-                                <h2>Latest <span className="theme-cl">Germany &amp; Japan</span> News</h2>
+                                <h2>Latest <span className="theme-cl">Germany</span> News</h2>
                             </div>
                         </div>
                     </div>
