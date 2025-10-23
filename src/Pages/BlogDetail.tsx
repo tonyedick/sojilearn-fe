@@ -9,6 +9,7 @@ import { BlogContentRenderer, TableOfContents } from '../Components/BlogContent'
 import BlogLayout from '../Components/Layouts/BlogLayout';
 import { RelatedPosts } from '../Components/RelatedPosts';
 import { CommentSection } from '../Components/Comments';
+import Meta from "../Components/Meta";
 
 export default function BlogDetail() {
     const { slug } = useParams();
@@ -137,6 +138,12 @@ export default function BlogDetail() {
     return (
         <BlogLayout>
             <>
+                <Meta
+                    title={post?.title}
+                    description={post?.seo_description || post?.excerpt || ""}
+                    canonical={`https://www.sojilearn.com/blog/${post?.slug}`}
+                    image={post?.featured_image_url || "https://www.sojilearn.com/logo.png"}
+                />
                 <section className="page-title gray">
                     <div className="container">
                         <div className="row">
