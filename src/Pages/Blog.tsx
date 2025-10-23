@@ -24,8 +24,8 @@ export default function Blog() {
     const [searchParams] = useSearchParams();
     const postsPerPage = 9;
 
-    const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta'];
-    const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships'];
+    const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta', 'Japan', 'USA'];
+    const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships', 'Work'];
 
     useEffect(() => {
         fetchPosts();
