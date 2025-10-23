@@ -8,16 +8,16 @@ export default function USANews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchFeaturedPosts();
+        fetchUSAPosts('USA');
     }, []);
 
-    const fetchFeaturedPosts = async () => {
+    const fetchUSAPosts = async (country: string) => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['USA']) 
+            .contains('tags', [country]) 
             .eq('featured', true)
             .order('published_date', { ascending: false })
             .limit(3);

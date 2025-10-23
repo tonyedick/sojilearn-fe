@@ -8,16 +8,16 @@ export default function MaltaNews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchFeaturedPosts();
+        fetchMaltaPosts('Malta');
     }, []);
 
-    const fetchFeaturedPosts = async () => {
+    const fetchMaltaPosts = async (country: string) => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['Malta']) 
+            .contains('tags', [country]) 
             .eq('featured', true)
             .order('published_date', { ascending: false })
             .limit(3);

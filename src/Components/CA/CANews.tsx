@@ -8,16 +8,16 @@ export default function CANews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchFeaturedPosts();
+        fetchCAPosts('Canada');
     }, []);
 
-    const fetchFeaturedPosts = async () => {
+    const fetchCAPosts = async (country: string) => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['Canada']) 
+            .contains('tags', [country]) 
             .eq('featured', true)
             .order('published_date', { ascending: false })
             .limit(3);

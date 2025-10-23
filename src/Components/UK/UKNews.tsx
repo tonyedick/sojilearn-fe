@@ -8,16 +8,16 @@ export default function UKNews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchFeaturedPosts();
+        fetchUKPosts('UK');
     }, []);
 
-    const fetchFeaturedPosts = async () => {
+    const fetchUKPosts = async (country: string) => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['UK']) 
+            .contains('tags', [country]) 
             .eq('featured', true)
             .order('published_date', { ascending: false })
             .limit(3);

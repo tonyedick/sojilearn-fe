@@ -8,16 +8,16 @@ export default function GYNews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchFeaturedPosts();
+        fetchGYJapanPosts('Germany','Japan');
     }, []);
 
-    const fetchFeaturedPosts = async () => {
+    const fetchGYJapanPosts = async (country1: string, country2: string) => {
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
             .select('*')
             .eq('is_published', true)
-            .contains('tags', ['Germany','Japan']) 
+            .contains('tags', [country1, country2]) 
             .eq('featured', true)
             .order('published_date', { ascending: false })
             .limit(3);
