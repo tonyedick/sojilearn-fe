@@ -92,7 +92,7 @@ export default function Contact() {
                                 >
                                     <div className="form-group">
                                         <h4>We'd love to hear from you</h4>
-                                        <span>Please fill the google form below </span>
+                                        <span>Please send us a mail, and we will get back to you </span>
                                     </div>
                                     <div className="row">
                                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -101,7 +101,7 @@ export default function Contact() {
                                             </div>
                                         </div>
                                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-4">
-                                            <Link to="/apply" className="link text-uppercase" rel="noopener noreferrer">Get Started</Link>
+                                            <Link to="mailto:sojilearn@gmail.com" className="link text-uppercase" rel="noopener noreferrer">Send an Email</Link>
                                         </div>
                                     </div>
                                 </form>
