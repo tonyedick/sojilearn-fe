@@ -15,8 +15,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
   });
 
   useEffect(() => {
-    // Target date: October 1, 2025 (3 months before January 2026 intake)
-    const targetDate = new Date('2025-11-01T00:00:00Z').getTime();
+    // Target date: November 7, 2025 
+    const targetDate = new Date('2025-11-07T00:00:00Z').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -49,7 +49,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
             {/* Hook */}
             <div className="tw-space-y-4">
               <h1 className="tw-text-4xl lg:tw-text-6xl tw-font-bold text-white tw-leading-tight">
-                Planning to study{' '}
+                Planning to study or work{' '}
                 <span className="tw-text-orange-400">ABROAD?</span>
               </h1>
             </div>
@@ -58,28 +58,28 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-bg-blue-800/50 tw-backdrop-blur-sm tw-rounded-2xl tw-p-6 tw-border tw-border-blue-700/50">
               <p className="tw-text-xl lg:tw-text-2xl tw-text-blue-100 tw-leading-relaxed">
                 With Sojilearn, it is a straight forward process. <br />
-                <br />Do you need financial support? <br /><br />We can help you secure student loan, to study in UK, USA or Canada with tuition and living expenses all {' '}<span className="tw-text-orange-400 tw-font-semibold">PAID FOR</span>.
+                <br />We help students achieve their career goals through tailored admission support into choice universities in UK, Canada, Germany, USA, Ireland, and Malta. <br />We don't stop there, you get help with covering tuition and living expenses, to pursue your study abroad dream through student loan (UK, USA, Canada){' '}<span className="tw-text-orange-400 tw-font-semibold">NO COSIGNER, NO COLLATERAL</span>.
               </p>
             </div>
 
             {/* Benefits */}
             <div className="tw-space-y-4">
                <p className="tw-text-sm tw-text-blue-200">
-                📌 Why you should start the simple process now.
+                📌 Key offerings to further support you:
               </p>
             </div>
             <div className="tw-grid sm:tw-grid-cols-3 tw-gap-4">
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">You don't lose momentum after school</span>
+                <span className="tw-text-sm tw-font-medium">Enroll for direct Masters with Third Class in the UK</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">You avoid confusing paperwork stress</span>
+                <span className="tw-text-sm tw-font-medium">Migrate to Japan, USA, Germamy as a Nurse within 6-9 months</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">You have peace of mind with quick progress</span>
+                <span className="tw-text-sm tw-font-medium">Secure student loan to study in Canada, USA, UK (Covers tuition and living expenses)</span>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
                 onClick={onGetStarted}
                 className="tw-group tw-bg-orange-500 tw-hover:bg-orange-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-xl tw-font-semibold tw-text-lg tw-transition-all tw-duration-300 tw-transform tw-hover:scale-105 tw-hover:shadow-xl tw-flex tw-items-center tw-space-x-3 pulse-zoom"
               >
-                <span>Start Your Study Abroad Journey Today</span>
+                <span>Start Your Journey Today</span>
                 <ArrowRight className="tw-w-5 tw-h-5 tw-group-hover:translate-x-1 tw-transition-transform" />
               </button>
               {/* <p className="tw-text-sm tw-text-blue-200">

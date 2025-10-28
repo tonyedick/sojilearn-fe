@@ -21,7 +21,7 @@ export default function Application() {
          <div className="tw-min-h-screen tw-bg-gray-50">
             <Meta
                 title="Sojilearn - Apply now to study abroad"
-                description="Sojilearn is a study abroad agency, helping students navigate their educational journey and achieve their dreams."
+                description="Sojilearn is a study abroad agency, helping students and professional nurses navigate their educational journey and achieve their dreams."
                 canonical="https://www.sojilearn.com/apply"
                 image="https://www.sojilearn.com/logo.png"
             />
@@ -161,7 +161,7 @@ export default function Application() {
             <div ref={formRef} className="tw-bg-white">
                 <div className="tw-max-w-7xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-text-center tw-mb-2">
                     <h2 className="tw-text-3xl tw-font-bold tw-text-gray-900">
-                        Ready to Start Your Study Abroad Journey?
+                        Ready to Start Your Journey?
                     </h2>
                     <p className="tw-text-lg tw-text-gray-600">
                         Fill out this quick form and get personalized guidance within 24 hours
