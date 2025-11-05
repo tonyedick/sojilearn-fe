@@ -48,7 +48,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
           <div className="tw-space-y-8">
             {/* Hook */}
             <div className="tw-space-y-4">
-              <h1 className="tw-text-4xl lg:tw-text-6xl tw-font-bold text-white tw-leading-tight">
+              <h1 className="tw-text-3xl lg:tw-text-3xl tw-font-bold text-white tw-leading-tight">
                 Planning to study or work{' '}
                 <span className="tw-text-orange-400">ABROAD?</span>
               </h1>
@@ -71,15 +71,15 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="tw-grid sm:tw-grid-cols-3 tw-gap-4">
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Enroll for direct Masters with Third Class in the UK</span>
+                <span className="tw-text-sm tw-font-medium">Enroll for direct Masters with HND/Third Class in the UK.</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Migrate to Japan, USA, Germamy as a Nurse within 6-9 months</span>
+                <span className="tw-text-sm tw-font-medium">Migrate to Japan, USA, Germamy as a Nurse within 6-9 months.</span>
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Secure student loan to study in Canada, USA, UK (Covers tuition and living expenses)</span>
+                <span className="tw-text-sm tw-font-medium">Secure student loan to covers tuition and living expenses.</span>
               </div>
             </div>
 
