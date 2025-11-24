@@ -15,8 +15,8 @@ export default function Hero({ onGetStarted }: HeroProps) {
   });
 
   useEffect(() => {
-    // Target date: November 7, 2025 
-    const targetDate = new Date('2025-11-07T00:00:00Z').getTime();
+    // Target date: February 7, 2026 
+    const targetDate = new Date('2026-02-07T00:00:00Z').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -79,7 +79,7 @@ export default function Hero({ onGetStarted }: HeroProps) {
               </div>
               <div className="tw-flex tw-items-center tw-space-x-3 tw-bg-green-500/10 tw-rounded-lg tw-p-4 tw-border tw-border-green-500/20">
                 <CheckCircle className="tw-w-6 tw-h-6 tw-text-green-400 tw-flex-shrink-0" />
-                <span className="tw-text-sm tw-font-medium">Secure student loan to covers tuition and living expenses.</span>
+                <span className="tw-text-sm tw-font-medium">Secure student loan to cover tuition and living expenses.</span>
               </div>
             </div>
 
