@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { Link, useSearchParams } from 'react-router-dom';
 import { usePageTracking, useSearchTracking, useConversionTracking } from '../utils/websiteAnalytics';
@@ -17,7 +17,7 @@ export default function Blog() {
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    // const [selectedFilter, setSelectedFilter] = useState('all');
+    const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
@@ -25,33 +25,7 @@ export default function Blog() {
 
     const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta', 'Japan', 'USA'];
 
-    useEffect(() => {
-        fetchPosts();
-    }, []);
-
-    useEffect(() => {
-        filterPosts();
-    });
-
-    const fetchPosts = async () => {
-        setIsLoading(true);
-        try {
-        const { data, error } = await supabase
-            .from('blog_posts' as any)
-            .select('*')
-            .eq('is_published', true)
-            .order('published_date', { ascending: false });
-
-        if (error) throw error;
-        setPosts((data as any[]) || []);
-        } catch (error) {
-        console.error('Error fetching posts:', error);
-        } finally {
-        setIsLoading(false);
-        }
-    };
-
-    const filterPosts = () => {
+    const filterPosts = useCallback(() => {
         let filtered = posts;
 
         // Filter by category from URL params
@@ -77,18 +51,47 @@ export default function Blog() {
         }
 
         // Filter by filter type
-        // if (selectedFilter !== 'all') {
-        // filtered = filtered.filter(post => post.filter_type === selectedFilter);
-        // }
+        if (selectedFilter !== 'all') {
+        filtered = filtered.filter(post => post.filter_type === selectedFilter);
+        }
         trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
         setCurrentPage(1);
+    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams, trackSearch]);
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    useEffect(() => {
+        filterPosts();
+    }, [filterPosts]);
+
+    const fetchPosts = async () => {
+        setIsLoading(true);
+        try {
+        const { data, error } = await supabase
+            .from('blog_posts' as any)
+            .select('*')
+            .eq('is_published', true)
+            .order('published_date', { ascending: false });
+
+        if (error) throw error;
+        setPosts((data as any[]) || []);
+        } catch (error) {
+        console.error('Error fetching posts:', error);
+        } finally {
+        setIsLoading(false);
+        }
     };
+
 
     const paginatedPosts = filteredPosts.slice(
         (currentPage - 1) * postsPerPage,
         currentPage * postsPerPage
     );
+
+    // const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('en-US', {
