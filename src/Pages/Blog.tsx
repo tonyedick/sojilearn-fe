@@ -17,7 +17,7 @@ export default function Blog() {
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedFilter, setSelectedFilter] = useState('all');
+    // const [selectedFilter, setSelectedFilter] = useState('all');
     const [selectedCountry, setSelectedCountry] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
@@ -31,9 +31,10 @@ export default function Blog() {
 
     useEffect(() => {
         filterPosts();
-    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
+    });
 
     const fetchPosts = async () => {
+        setIsLoading(true);
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
@@ -46,7 +47,9 @@ export default function Blog() {
         } catch (error) {
         console.error('Error fetching posts:', error);
         } finally {
-        s
+        setIsLoading(false);
+        }
+    };
 
     const filterPosts = () => {
         let filtered = posts;
@@ -74,9 +77,9 @@ export default function Blog() {
         }
 
         // Filter by filter type
-        if (selectedFilter !== 'all') {
-        filtered = filtered.filter(post => post.filter_type === selectedFilter);
-        }
+        // if (selectedFilter !== 'all') {
+        // filtered = filtered.filter(post => post.filter_type === selectedFilter);
+        // }
         trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
         setCurrentPage(1);
@@ -86,8 +89,6 @@ export default function Blog() {
         (currentPage - 1) * postsPerPage,
         currentPage * postsPerPage
     );
-
-    const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('en-US', {
