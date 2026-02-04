@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '../integrations/supabase/client';
 import { Link, useSearchParams } from 'react-router-dom';
 import { usePageTracking, useSearchTracking, useConversionTracking } from '../utils/websiteAnalytics';
@@ -15,6 +15,7 @@ export default function Blog() {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
     const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('all');
@@ -24,41 +25,7 @@ export default function Blog() {
     const postsPerPage = 9;
 
     const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta', 'Japan', 'USA'];
-
-    const filterPosts = useCallback((): void => {
-        let filtered: BlogPost[] = posts;
-
-        // Filter by category from URL params
-        const categoryParam: string | null = searchParams.get('category');
-        if (categoryParam && categoryParam !== 'all') {
-            filtered = filtered.filter((post: BlogPost) => post.category === categoryParam);
-        }
-
-        // Filter by search term
-        const term: string = searchTerm;
-        if (term) {
-            filtered = filtered.filter((post: BlogPost) =>
-                post.title.toLowerCase().includes(term.toLowerCase()) ||
-                post.excerpt?.toLowerCase().includes(term.toLowerCase()) ||
-                post.tags?.some((tag: string) => tag.toLowerCase().includes(term.toLowerCase()))
-            );
-        }
-
-        // Filter by country (now tags)
-        if (selectedCountry !== 'all') {
-            filtered = filtered.filter((post: BlogPost) => 
-                post.tags?.includes(selectedCountry)
-            );
-        }
-
-        // Filter by filter type
-        if (selectedFilter !== 'all') {
-            filtered = filtered.filter((post: BlogPost) => post.filter_type === selectedFilter);
-        }
-        trackSearch(term, filtered.length);
-        setFilteredPosts(filtered);
-        setCurrentPage(1);
-    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams, trackSearch]);
+    const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships', 'Work'];
 
     useEffect(() => {
         fetchPosts();
@@ -66,10 +33,9 @@ export default function Blog() {
 
     useEffect(() => {
         filterPosts();
-    }, [filterPosts]);
+    }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams]);
 
     const fetchPosts = async () => {
-        setIsLoading(true);
         try {
         const { data, error } = await supabase
             .from('blog_posts' as any)
@@ -82,17 +48,50 @@ export default function Blog() {
         } catch (error) {
         console.error('Error fetching posts:', error);
         } finally {
-        setIsLoading(false);
+        setLoading(false);
         }
     };
 
+    const filterPosts = () => {
+        let filtered = posts;
+
+        // Filter by category from URL params
+        const categoryParam = searchParams.get('category');
+        if (categoryParam && categoryParam !== 'all') {
+        filtered = filtered.filter(post => post.category === categoryParam);
+        }
+
+        // Filter by search term
+        if (searchTerm) {
+        filtered = filtered.filter(post =>
+            post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        );
+        }
+
+        // Filter by country (now tags)
+        if (selectedCountry !== 'all') {
+        filtered = filtered.filter(post => 
+            post.tags?.includes(selectedCountry)
+        );
+        }
+
+        // Filter by filter type
+        if (selectedFilter !== 'all') {
+        filtered = filtered.filter(post => post.filter_type === selectedFilter);
+        }
+        trackSearch(searchTerm, filtered.length);
+        setFilteredPosts(filtered);
+        setCurrentPage(1);
+    };
 
     const paginatedPosts = filteredPosts.slice(
         (currentPage - 1) * postsPerPage,
         currentPage * postsPerPage
     );
 
-    // const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+    const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('en-US', {
