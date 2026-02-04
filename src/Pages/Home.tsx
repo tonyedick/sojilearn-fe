@@ -11,7 +11,7 @@ import News from '../Components/News';
 import CTA from '../Components/CTA';
 import FAQ from '../Components/FAQ';
 import SimplifyAdmit from '../Components/SimplifyAdmit';
-import Meta from "../Components/Meta";
+import Meta from '../Components/Meta';
 
 export default function Home() {
     usePageTracking('home');

@@ -15,7 +15,6 @@ export default function Blog() {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
     const [email, setEmail] = useState('');
-    const [loading, setLoading] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('all');
@@ -25,7 +24,6 @@ export default function Blog() {
     const postsPerPage = 9;
 
     const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta', 'Japan', 'USA'];
-    const filters = ['Undergraduate', 'Postgraduate', 'Visa', 'SOPs', 'Scholarships', 'Work'];
 
     useEffect(() => {
         fetchPosts();
@@ -48,9 +46,7 @@ export default function Blog() {
         } catch (error) {
         console.error('Error fetching posts:', error);
         } finally {
-        setLoading(false);
-        }
-    };
+        s
 
     const filterPosts = () => {
         let filtered = posts;
@@ -83,8 +79,7 @@ export default function Blog() {
         }
         trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
-        setCurrentPage(1);
-    };
+        s
 
     const paginatedPosts = filteredPosts.slice(
         (currentPage - 1) * postsPerPage,

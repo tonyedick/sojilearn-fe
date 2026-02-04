@@ -15,13 +15,7 @@ export default function BlogDetail() {
     const { slug } = useParams();
     const [post, setPost] = useState<BlogPostType | null>(null);
     const [posts, setPosts] = useState<BlogPostType[]>([]);
-    const [filteredPosts, setFilteredPosts] = useState<BlogPostType[]>([]);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedFilter] = useState('all');
-    const [selectedCountry, setSelectedCountry] = useState('all');
-    const [currentPage, setCurrentPage] = useState(1);
     const [searchParams] = useSearchParams();
-    const postsPerPage = 9;
 
     const { trackConversion } = useConversionTracking();
 
@@ -35,8 +29,6 @@ export default function BlogDetail() {
             if (!error && Array.isArray(data)) {
                    // @ts-ignore
                 setPosts(data as BlogPostType[]);
-                  // @ts-ignore
-                setFilteredPosts(data as BlogPostType[]);
             }
         };
         fetchPosts();
