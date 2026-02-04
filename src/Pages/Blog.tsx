@@ -79,7 +79,8 @@ export default function Blog() {
         }
         trackSearch(searchTerm, filtered.length);
         setFilteredPosts(filtered);
-        s
+        setCurrentPage(1);
+    };
 
     const paginatedPosts = filteredPosts.slice(
         (currentPage - 1) * postsPerPage,
