@@ -25,36 +25,37 @@ export default function Blog() {
 
     const countries = ['Canada', 'UK', 'USA', 'France', 'Germany', 'Ireland', 'Malta', 'Japan', 'USA'];
 
-    const filterPosts = useCallback(() => {
-        let filtered = posts;
+    const filterPosts = useCallback((): void => {
+        let filtered: BlogPost[] = posts;
 
         // Filter by category from URL params
-        const categoryParam = searchParams.get('category');
+        const categoryParam: string | null = searchParams.get('category');
         if (categoryParam && categoryParam !== 'all') {
-        filtered = filtered.filter(post => post.category === categoryParam);
+            filtered = filtered.filter((post: BlogPost) => post.category === categoryParam);
         }
 
         // Filter by search term
-        if (searchTerm) {
-        filtered = filtered.filter(post =>
-            post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            post.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
+        const term: string = searchTerm;
+        if (term) {
+            filtered = filtered.filter((post: BlogPost) =>
+                post.title.toLowerCase().includes(term.toLowerCase()) ||
+                post.excerpt?.toLowerCase().includes(term.toLowerCase()) ||
+                post.tags?.some((tag: string) => tag.toLowerCase().includes(term.toLowerCase()))
+            );
         }
 
         // Filter by country (now tags)
         if (selectedCountry !== 'all') {
-        filtered = filtered.filter(post => 
-            post.tags?.includes(selectedCountry)
-        );
+            filtered = filtered.filter((post: BlogPost) => 
+                post.tags?.includes(selectedCountry)
+            );
         }
 
         // Filter by filter type
         if (selectedFilter !== 'all') {
-        filtered = filtered.filter(post => post.filter_type === selectedFilter);
+            filtered = filtered.filter((post: BlogPost) => post.filter_type === selectedFilter);
         }
-        trackSearch(searchTerm, filtered.length);
+        trackSearch(term, filtered.length);
         setFilteredPosts(filtered);
         setCurrentPage(1);
     }, [posts, searchTerm, selectedCountry, selectedFilter, searchParams, trackSearch]);
